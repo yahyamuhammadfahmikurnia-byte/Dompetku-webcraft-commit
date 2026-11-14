@@ -4,7 +4,10 @@
 ## Contributors
 
 **Project:** Dompetku  
-**Team:** [Team Name]
+**Team:** [6/11, 20.03] yahya: nama timnya apa
+[7/11, 16.17] ~hasan: nama tim kita ini aja
+[7/11, 16.18] yahya: yang lebih lucu dong san
+[7/11, 16.20] ~hasan: "nama timnya apa"ini aja
 
 |Yahya Muhammad Fahmi Kurnia| 
 |Hasan Izzudin|
