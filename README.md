@@ -1,5 +1,15 @@
 # Dompetku
 
+## Contributors
+
+**Project:** Dompetku  
+**Team:** [Team Name]
+
+|Yahya Muhammad Fahmi Kurnia| 
+|Hasan Izzudin|
+|Faisal Adi Nurhidayah|
+|Reiner Satrio Adi Saputro|
+
 **Personal Finance Management for Students**
 
 Dompetku is a web-based personal finance application designed to help university students, particularly those living independently, manage their monthly budgets and plan their savings more effectively.
