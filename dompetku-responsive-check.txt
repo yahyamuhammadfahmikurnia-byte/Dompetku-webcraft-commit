@@ -1,0 +1,8899 @@
+===== INDEX HTML =====
+<!doctype html>
+<html lang="en">
+  <head>
+   
+<link rel="icon" type="image/png" href="src/components/Logodompet.png"/>
+<meta name="theme-color" content="#147d66" />
+<meta name="description" content="Dompetku - Aplikasi pengelolaan keuangan dan tabungan anak kos." />
+    <title>Dompetku</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>
+===== GLOBAL CSS =====
+
+:root {
+  font-family: "Inter", sans-serif;
+  font-synthesis: none;
+}
+
+html, body, #root {
+  margin: 0;
+  min-height: 100%;
+  width: 100%;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap");
+
+/* =========================
+   RESET DAN GLOBAL
+========================= */
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  min-height: 100%;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  background-color: #f6f9f7;
+  color: #193b32;
+}
+
+button,
+input {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+/* =========================
+   LOGIN DAN REGISTER
+========================= */
+
+.login-page {
+  display: grid;
+  grid-template-columns: 47.92% 52.08%;
+  min-height: 100vh;
+  background: #f6f9f7;
+}
+
+.login-left {
+  background: #147d66;
+  color: #ffffff;
+  padding: 70px 12%;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 29px;
+  font-weight: 700;
+}
+
+.brand-logo {
+  width: 46px;
+  height: 46px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #ffffff;
+  color: #147d66;
+  border-radius: 12px;
+  font-size: 26px;
+  font-weight: 700;
+}
+
+.hero {
+  margin-top: 115px;
+}
+
+.hero h1 {
+  margin: 0;
+  color: #ffffff;
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 1.3;
+  letter-spacing: -1px;
+}
+
+.hero p {
+  margin-top: 35px;
+  color: #d0efe2;
+  font-size: 19px;
+  line-height: 1.6;
+}
+
+.quote {
+  max-width: 520px;
+  margin-top: 95px;
+  padding: 26px 24px;
+  background: #ffffff16;
+  border-radius: 17px;
+  font-size: 22px;
+  line-height: 1.65;
+  font-weight: 700;
+}
+
+.login-right {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 195px 40px 70px;
+}
+
+.login-form-container {
+  width: 100%;
+  max-width: 486px;
+}
+
+.login-form-container h2 {
+  margin: 0;
+  color: #193b32;
+  font-size: 31px;
+  font-weight: 700;
+}
+
+.description {
+  margin: 16px 0 55px;
+  color: #81918a;
+  font-size: 16px;
+}
+
+.form-group {
+  margin-bottom: 29px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 12px;
+  color: #81918a;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.form-group input {
+  width: 100%;
+  height: 52px;
+  padding: 0 16px;
+  background: #ffffff;
+  border: 1px solid #dce9e2;
+  border-radius: 10px;
+  color: #193b32;
+  font-size: 16px;
+  outline: none;
+}
+
+.form-group input:focus {
+  border-color: #147d66;
+  box-shadow: 0 0 0 3px #147d6620;
+}
+
+.forgot-password {
+  display: flex;
+  justify-content: flex-end;
+  margin: -2px 0 25px;
+}
+
+.forgot-password a,
+.register a {
+  color: #147d66;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.forgot-password a {
+  font-size: 14px;
+}
+
+.login-button {
+  width: 100%;
+  height: 46px;
+  background: #147d66;
+  color: #ffffff;
+  border: none;
+  border-radius: 11px;
+  font-size: 15px;
+  font-weight: 700;
+  transition: background 0.2s;
+}
+
+.login-button:hover {
+  background: #106752;
+}
+
+.register {
+  margin-top: 47px;
+  color: #81918a;
+  font-size: 15px;
+  text-align: center;
+}
+
+/* =========================
+   DASHBOARD LAYOUT
+========================= */
+
+.dashboard-layout {
+  display: flex;
+  width: 100%;
+  min-height: 100vh;
+  background: #f6f9f7;
+}
+
+/* =========================
+   SIDEBAR
+========================= */
+
+.sidebar {
+  width: 252px;
+  flex: 0 0 252px;
+  min-height: 100vh;
+  padding: 30px 16px;
+  background: #ffffff;
+  border-right: 1px solid #e5ebe7;
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebar h2 {
+  margin: 0 0 35px;
+  color: #193b32;
+  font-size: 23px;
+  font-weight: 700;
+}
+
+.sidebar nav {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.sidebar nav a {
+  display: flex;
+  align-items: center;
+  min-height: 46px;
+  padding: 12px 15px;
+  color: #81918a;
+  text-decoration: none;
+  font-size: 14px;
+  border-radius: 9px;
+  transition: background 0.2s, color 0.2s;
+}
+
+.sidebar nav a:hover {
+  background: #f0f7f3;
+  color: #147d66;
+}
+
+.sidebar nav a.active {
+  background: #e6f3ee;
+  color: #147d66;
+  font-weight: 700;
+}
+
+/* =========================
+   DASHBOARD CONTENT
+========================= */
+
+.dashboard-content {
+  flex: 1;
+  min-width: 0;
+  padding: 35px 44px 40px 42px;
+}
+
+.dashboard-content h1 {
+  margin: 0 0 10px;
+  color: #193b32;
+  font-size: 30px;
+  font-weight: 700;
+}
+
+.dashboard-content > p {
+  margin: 0;
+  color: #81918a;
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+/* =========================
+   KARTU RINGKASAN
+========================= */
+
+.summary-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+  margin-top: 37px;
+}
+
+.summary-card {
+  min-width: 0;
+  min-height: 145px;
+  padding: 20px 23px;
+  background: #ffffff;
+  border: 1px solid #e5ebe7;
+  border-radius: 14px;
+}
+
+.summary-card p {
+  margin: 0;
+  color: #81918a;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.summary-card h2 {
+  margin: 16px 0 0;
+  color: #193b32;
+  font-size: 30px;
+  font-weight: 700;
+  overflow-wrap: anywhere;
+}
+
+.summary-card.primary {
+  background: #147d66;
+  border-color: #147d66;
+}
+
+.summary-card.primary p,
+.summary-card.primary h2 {
+  color: #ffffff;
+}
+
+/* =========================
+   PANEL DASHBOARD
+========================= */
+
+.dashboard-panels {
+  display: grid;
+  grid-template-columns: minmax(0, 685fr) minmax(0, 398fr);
+  gap: 19px;
+  margin-top: 22px;
+  align-items: stretch;
+}
+
+.dashboard-panels .budget-card,
+.dashboard-panels .saving-assistant {
+  width: 100%;
+  max-width: none;
+  min-width: 0;
+  min-height: 339px;
+  margin: 0;
+}
+
+/* =========================
+   ALOKASI ANGGARAN
+========================= */
+
+.budget-card {
+  padding: 23px;
+  background: #ffffff;
+  border: 1px solid #e5ebe7;
+  border-radius: 14px;
+}
+
+.budget-card h3 {
+  margin: 0;
+  color: #193b32;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.budget-card > p {
+  margin: 8px 0 0;
+  color: #81918a;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.budget-body {
+  display: grid;
+  grid-template-columns: 188px minmax(0, 1fr);
+  gap: 26px;
+  align-items: center;
+  margin-top: 24px;
+}
+
+.budget-donut {
+  width: 188px;
+  height: 188px;
+  min-width: 0;
+  flex-shrink: 0;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.budget-center {
+  width: 130px;
+  height: 130px;
+  background: #ffffff;
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.budget-center strong {
+  color: #193b32;
+  font-size: 30px;
+  font-weight: 700;
+}
+
+.budget-center span {
+  color: #81918a;
+  font-size: 13px;
+}
+
+.budget-legend {
+  width: 100%;
+  min-width: 0;
+}
+
+.budget-item {
+  display: grid;
+  grid-template-columns: 12px minmax(0, 1fr) auto;
+  gap: 12px;
+  align-items: center;
+  margin-bottom: 20px;
+  min-width: 0;
+  font-size: 14px;
+}
+
+.budget-item:last-child {
+  margin-bottom: 0;
+}
+
+.budget-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 4px;
+}
+
+.budget-name {
+  min-width: 0;
+  color: #81918a;
+  line-height: 1.4;
+}
+
+.budget-item strong {
+  color: #193b32;
+  font-size: 13px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+/* =========================
+   ASISTEN HEMAT
+========================= */
+
+.saving-assistant {
+  display: flex;
+  flex-direction: column;
+  padding: 23px;
+  background: #ffffff;
+  border: 1px solid #e5ebe7;
+  border-radius: 14px;
+}
+
+.saving-assistant h3 {
+  margin: 0;
+  color: #193b32;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+.saving-description {
+  margin: 10px 0 24px;
+  color: #81918a;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.saving-insight {
+  flex: 1;
+  min-height: 155px;
+  padding: 18px 20px;
+  background: #e6f3ee;
+  border-radius: 12px;
+}
+
+.saving-insight h4 {
+  margin: 0 0 14px;
+  color: #147d66;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.saving-insight p {
+  margin: 0;
+  color: #193b32;
+  font-size: 14px;
+  line-height: 1.65;
+}
+
+.saving-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  min-height: 46px;
+  margin-top: 19px;
+  padding: 10px 14px;
+  background: #147d66;
+  color: #ffffff;
+  border-radius: 10px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.4;
+}
+
+.saving-button:hover {
+  background: #106752;
+}
+
+/* =========================
+   SIMULASI CEPAT
+========================= */
+
+.quick-simulation {
+  width: 100%;
+  min-height: 184px;
+  margin-top: 19px;
+  padding: 20px 24px 24px;
+  background: #ffffff;
+  border: 1px solid #e5ebe7;
+  border-radius: 14px;
+}
+
+.quick-simulation h3 {
+  margin: 0;
+  color: #193b32;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.quick-simulation > p {
+  margin: 8px 0 16px;
+  color: #81918a;
+  font-size: 13px;
+}
+
+.quick-form {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr 0.82fr;
+  gap: 19px;
+  align-items: end;
+}
+
+.quick-field {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+  min-width: 0;
+}
+
+.quick-field label {
+  color: #81918a;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.quick-field input {
+  width: 100%;
+  height: 52px;
+  padding: 0 16px;
+  background: #ffffff;
+  border: 1px solid #dce9e2;
+  border-radius: 10px;
+  color: #193b32;
+  font-size: 16px;
+  outline: none;
+}
+
+.quick-field input:focus {
+  border-color: #147d66;
+}
+
+.quick-button {
+  height: 46px;
+  padding: 0 14px;
+  background: #147d66;
+  color: #ffffff;
+  border: none;
+  border-radius: 10px;
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.quick-button:hover {
+  background: #106752;
+}
+
+/* =========================
+   RESPONSIVE TABLET
+========================= */
+
+@media (max-width: 1250px) {
+  .dashboard-panels {
+    grid-template-columns: 1fr;
+  }
+
+  .dashboard-panels .budget-card,
+  .dashboard-panels .saving-assistant {
+    min-height: auto;
+  }
+
+  .saving-insight {
+    flex: initial;
+  }
+}
+
+@media (max-width: 1000px) {
+  .quick-form {
+    grid-template-columns: 1fr;
+  }
+
+  .quick-button {
+    width: 100%;
+  }
+}
+
+@media (max-width: 900px) {
+  .login-page {
+    grid-template-columns: 1fr;
+  }
+
+  .login-left {
+    padding: 35px 8%;
+  }
+
+  .hero {
+    margin-top: 45px;
+  }
+
+  .hero h1 {
+    font-size: 35px;
+  }
+
+  .hero p {
+    font-size: 15px;
+  }
+
+  .hero p br {
+    display: none;
+  }
+
+  .quote {
+    margin-top: 30px;
+    font-size: 17px;
+  }
+
+  .login-right {
+    padding: 65px 25px;
+  }
+
+  .login-form-container h2 {
+    font-size: 25px;
+  }
+
+  .sidebar {
+    width: 200px;
+    flex-basis: 200px;
+    padding: 24px 12px;
+  }
+
+  .dashboard-content {
+    padding: 25px;
+  }
+}
+
+@media (max-width: 800px) {
+  .summary-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* =========================
+   RESPONSIVE MOBILE
+========================= */
+
+@media (max-width: 600px) {
+  .dashboard-layout {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100%;
+    min-height: auto;
+    flex-basis: auto;
+    padding: 20px;
+    border-right: none;
+    border-bottom: 1px solid #e5ebe7;
+  }
+
+  .sidebar nav {
+    flex-direction: row;
+    overflow-x: auto;
+    gap: 8px;
+  }
+
+  .sidebar nav a {
+    white-space: nowrap;
+  }
+
+  .dashboard-content {
+    padding: 20px;
+  }
+
+  .dashboard-content h1 {
+    font-size: 25px;
+  }
+
+  .budget-body {
+    grid-template-columns: 1fr;
+    justify-items: center;
+  }
+
+  .budget-legend {
+    width: 100%;
+  }
+
+  .summary-card h2 {
+    font-size: 26px;
+  }
+
+  .quick-simulation {
+    padding: 20px;
+  }
+  
+}
+
+.dashboard-panels {
+  display: flex !important;
+  flex-wrap: wrap !important;
+  align-items: stretch;
+  gap: 19px;
+  width: 100%;
+}
+
+.dashboard-panels > .budget-card {
+  flex: 1 1 600px !important;
+  width: auto !important;
+  max-width: none !important;
+  min-width: 0;
+  margin: 0 !important;
+  overflow: visible !important;
+}
+
+.dashboard-panels > .saving-assistant {
+  flex: 1 1 350px !important;
+  width: auto !important;
+  max-width: none !important;
+  min-width: 0;
+  margin: 0 !important;
+}
+
+.budget-body {
+  display: grid;
+  grid-template-columns: 188px minmax(0, 1fr);
+  gap: 24px;
+}
+
+.budget-legend {
+  min-width: 0;
+}
+
+.budget-item {
+  display: grid;
+  grid-template-columns: 12px minmax(0, 1fr) auto;
+  gap: 10px;
+}
+
+@media (max-width: 550px) {
+  .budget-body {
+    grid-template-columns: 1fr;
+  }
+
+  .budget-legend {
+    width: 100%;
+  }
+}
+
+===== src/pages/Dashboard.jsx =====
+
+import { useCallback, useEffect, useState } from "react";
+import { onAuthStateChanged } from "firebase/auth";
+import Sidebar from "../components/Sidebar";
+import SummaryCard from "../components/SummaryCard";
+import BudgetChart from "../components/BudgetChart";
+import SavingAssistant from "../components/SavingAssistant";
+import QuickSimulation from "../components/QuickSimulation";
+import { auth } from "../lib/firebase";
+import { ambilSimulasi } from "../lib/firestore";
+import "./Dashboard.css";
+
+function formatRupiah(value) {
+  const angka = Number(value) || 0;
+  const hasil = `Rp${Math.abs(angka).toLocaleString("id-ID")}`;
+
+  return angka < 0 ? `-${hasil}` : hasil;
+}
+
+function cariSimulasiTerbaru(data) {
+  if (!Array.isArray(data) || data.length === 0) {
+    return null;
+  }
+
+  const urut = [...data].sort((a, b) => {
+    const waktuA = Number(a.dibuatPada) || 0;
+    const waktuB = Number(b.dibuatPada) || 0;
+
+    if (waktuA !== waktuB) {
+      return waktuB - waktuA;
+    }
+
+    return String(b.tanggal || "").localeCompare(
+      String(a.tanggal || "")
+    );
+  });
+
+  return urut[0];
+}
+
+export default function Dashboard() {
+  const [simulasiTerbaru, setSimulasiTerbaru] = useState(null);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState("");
+  const [menuTerbuka, setMenuTerbuka] = useState(false);
+
+  const perbaruiData = useCallback(async () => {
+    const user = auth.currentUser;
+
+    if (!user) {
+      setSimulasiTerbaru(null);
+      setLoading(false);
+      return;
+    }
+
+    setLoading(true);
+    setError("");
+
+    try {
+      const uid = user.uid;
+      const data = await ambilSimulasi();
+
+      if (auth.currentUser?.uid !== uid) {
+        return;
+      }
+
+      setSimulasiTerbaru(cariSimulasiTerbaru(data));
+    } catch (err) {
+      if (auth.currentUser?.uid !== user.uid) return;
+
+      console.error("Gagal mengambil data Dashboard:", err);
+
+      setError(
+        "Gagal memuat data dari Firebase. Periksa koneksi dan Security Rules."
+      );
+    } finally {
+      if (auth.currentUser?.uid === user.uid) {
+        setLoading(false);
+      }
+    }
+  }, []);
+
+  useEffect(() => {
+    const unsubscribe = onAuthStateChanged(
+      auth,
+      (user) => {
+        if (user) {
+          perbaruiData();
+        } else {
+          setSimulasiTerbaru(null);
+          setLoading(false);
+        }
+      }
+    );
+
+    return () => unsubscribe();
+  }, [perbaruiData]);
+
+  useEffect(() => {
+    const onEscape = (event) => {
+      if (event.key === "Escape") {
+        setMenuTerbuka(false);
+      }
+    };
+
+    window.addEventListener("keydown", onEscape);
+
+    return () => {
+      window.removeEventListener("keydown", onEscape);
+    };
+  }, []);
+
+  const uangBulanan = simulasiTerbaru
+    ? Number(simulasiTerbaru.uangBulanan) || 0
+    : 0;
+
+  const totalPengeluaran = simulasiTerbaru
+    ? Number(simulasiTerbaru.pengeluaran) || 0
+    : 0;
+
+  const sisaUang = simulasiTerbaru
+    ? Number(simulasiTerbaru.sisa) || 0
+    : 0;
+
+  return (
+    <div className="dashboard-layout">
+      <div className="dashboard-mobile-header">
+        <button
+          type="button"
+          className="dashboard-menu-toggle"
+          onClick={() => setMenuTerbuka((prev) => !prev)}
+          aria-label={
+            menuTerbuka ? "Tutup menu navigasi" : "Buka menu navigasi"
+          }
+          aria-expanded={menuTerbuka}
+          aria-controls="dashboard-sidebar"
+        >
+          {menuTerbuka ? "✕" : "☰"}
+        </button>
+
+        <span className="dashboard-mobile-brand">
+          Dompetku
+        </span>
+      </div>
+
+      {menuTerbuka && (
+        <button
+          type="button"
+          className="dashboard-sidebar-overlay"
+          onClick={() => setMenuTerbuka(false)}
+          aria-label="Tutup menu"
+        />
+      )}
+
+      <div
+        id="dashboard-sidebar"
+        className={`dashboard-sidebar-wrapper ${
+          menuTerbuka ? "is-open" : ""
+        }`}
+      >
+        <Sidebar onNavigate={() => setMenuTerbuka(false)} />
+      </div>
+
+      <main className="dashboard-content">
+        <div className="dashboard-header">
+          <div>
+            <h1>Halo sobat hemat</h1>
+            <p>
+              Perhatikan keuanganmu seperti kamu
+              memperhatikan dosen kalkulusmu!
+            </p>
+          </div>
+
+          <span className="simulation-badge">
+            Simulasi
+          </span>
+        </div>
+
+        {error && (
+          <p
+            role="alert"
+            style={{
+              padding: "14px 18px",
+              marginBottom: "20px",
+              background: "#fff1f0",
+              color: "#c0392b",
+              borderRadius: "10px",
+              fontSize: "13px",
+            }}
+          >
+            {error}
+          </p>
+        )}
+
+        {loading && (
+          <p
+            role="status"
+            style={{
+              marginBottom: "16px",
+              color: "#147d66",
+              fontSize: "13px",
+            }}
+          >
+            Memuat data keuangan dari Firebase...
+          </p>
+        )}
+
+        {!loading && !error && !simulasiTerbaru && (
+          <p
+            style={{
+              padding: "14px 18px",
+              marginBottom: "20px",
+              background: "#e6f3ee",
+              color: "#147d66",
+              borderRadius: "10px",
+              fontSize: "13px",
+            }}
+          >
+            Belum ada simulasi tersimpan di Firebase.
+            Buka Simulator untuk membuat simulasi pertamamu.
+          </p>
+        )}
+
+        <div className="summary-grid">
+          <SummaryCard
+            title="Uang Bulanan"
+            amount={formatRupiah(uangBulanan)}
+            description="Uang saku dari simulasi terbaru"
+            primary
+          />
+
+          <SummaryCard
+            title="Total Pengeluaran"
+            amount={formatRupiah(totalPengeluaran)}
+            description="Pengeluaran dari simulasi terbaru"
+          />
+
+          <SummaryCard
+            title="Sisa Uang"
+            amount={formatRupiah(sisaUang)}
+            description="Saldo berdasarkan simulasi"
+          />
+        </div>
+
+        <div className="dashboard-panels">
+          <BudgetChart simulasi={simulasiTerbaru} />
+          <SavingAssistant simulasi={simulasiTerbaru} />
+        </div>
+
+        <QuickSimulation onSimpan={perbaruiData} />
+      </main>
+    </div>
+  );
+}
+
+===== src/pages/Login.jsx =====
+
+import { useState } from "react";
+import {
+  Link,
+  useLocation,
+  useNavigate,
+} from "react-router-dom";
+import {
+  signInWithEmailAndPassword,
+  sendPasswordResetEmail,
+} from "firebase/auth";
+import { auth } from "../lib/firebase";
+import logoDompetku from "../components/Logodompet.png";
+
+function pesanErrorFirebase(error) {
+  switch (error.code) {
+    case "auth/invalid-email":
+      return "Format email tidak valid.";
+    case "auth/invalid-credential":
+    case "auth/user-not-found":
+    case "auth/wrong-password":
+      return "Email atau kata sandi tidak sesuai.";
+    case "auth/too-many-requests":
+      return "Terlalu banyak percobaan. Coba lagi nanti.";
+    case "auth/network-request-failed":
+      return "Koneksi internet bermasalah.";
+    case "auth/operation-not-allowed":
+      return "Metode autentikasi belum diaktifkan di Firebase.";
+    default:
+      return "Terjadi kesalahan. Silakan coba lagi.";
+  }
+}
+
+export default function Login() {
+  const navigate = useNavigate();
+  const location = useLocation();
+
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [showPassword, setShowPassword] = useState(false);
+  const [lupaPassword, setLupaPassword] = useState(false);
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState("");
+  const [pesan, setPesan] = useState(
+    location.state?.pesan || ""
+  );
+
+  function bersihkanPesan() {
+    setError("");
+    setPesan("");
+  }
+
+  async function handleLogin(event) {
+    event.preventDefault();
+
+    if (loading) return;
+
+    bersihkanPesan();
+    setLoading(true);
+
+    try {
+      await signInWithEmailAndPassword(
+        auth,
+        email.trim(),
+        password
+      );
+
+      navigate("/dashboard", { replace: true });
+    } catch (err) {
+      console.error("Login Firebase:", err.code);
+      setError(pesanErrorFirebase(err));
+    } finally {
+      setLoading(false);
+    }
+  }
+
+  async function handleResetPassword(event) {
+    event.preventDefault();
+
+    if (loading) return;
+
+    bersihkanPesan();
+
+    const emailBersih = email.trim();
+
+    if (!emailBersih) {
+      setError("Masukkan alamat email terlebih dahulu.");
+      return;
+    }
+
+    setLoading(true);
+
+    try {
+      await sendPasswordResetEmail(auth, emailBersih);
+
+      setPesan(
+        "Jika email terdaftar, tautan reset kata sandi akan dikirim. Periksa kotak masuk dan folder spam."
+      );
+    } catch (err) {
+      console.error("Reset Password Firebase:", err.code);
+      setError(pesanErrorFirebase(err));
+    } finally {
+      setLoading(false);
+    }
+  }
+
+  function kembaliLogin() {
+    setLupaPassword(false);
+    setPassword("");
+    bersihkanPesan();
+  }
+
+  return (
+    <main className="login-page">
+      <section className="login-left">
+        <div className="brand">
+          <img
+            src={logoDompetku}
+            alt="Logo Dompetku"
+            style={{
+              width: "120px",
+              height: "120px",
+              objectFit: "contain",
+              flexShrink: 0,
+            }}
+          />
+
+          <span>Dompetku</span>
+        </div>
+
+        <div className="hero">
+          <h1>
+           Atur keuangan
+            <br />
+           Hemat anggaran.
+          </h1>
+
+          <p>
+            Simulasikan pengeluaran
+            <br />
+            bandingkan skenario.
+            <br />
+            dan rencanakan tabungan.
+          </p>
+
+          <div className="quote">
+            "Nilai pas-pasan bukan berarti
+            <br />
+              tabungan pas-pasan juga.”
+          </div>
+        </div>
+      </section>
+
+      <section className="login-right">
+        <div className="login-form-container">
+          {lupaPassword ? (
+            <>
+              <h2>Lupa kata sandi? 🔐</h2>
+
+              <p className="description">
+                Masukkan email yang terdaftar di Dompetku.
+                Kami akan mengirimkan tautan untuk
+                mengatur ulang kata sandimu.
+              </p>
+
+              <form onSubmit={handleResetPassword}>
+                <div className="form-group">
+                  <label htmlFor="reset-email">
+                    Email akun
+                  </label>
+
+                  <input
+                    id="reset-email"
+                    type="email"
+                    placeholder="nama@email.com"
+                    value={email}
+                    onChange={(event) => {
+                      setEmail(event.target.value);
+                      bersihkanPesan();
+                    }}
+                    autoComplete="email"
+                    required
+                  />
+                </div>
+
+                {error && (
+                  <p
+                    role="alert"
+                    style={{
+                      padding: "12px",
+                      marginBottom: "14px",
+                      background: "#fff1f0",
+                      color: "#c0392b",
+                      borderRadius: "8px",
+                      fontSize: "13px",
+                    }}
+                  >
+                    {error}
+                  </p>
+                )}
+
+                {pesan && (
+                  <p
+                    role="status"
+                    style={{
+                      padding: "12px",
+                      marginBottom: "14px",
+                      background: "#e6f3ee",
+                      color: "#147d66",
+                      borderRadius: "8px",
+                      fontSize: "13px",
+                      lineHeight: 1.7,
+                    }}
+                  >
+                    {pesan}
+                  </p>
+                )}
+
+                <button
+                  className="login-button"
+                  type="submit"
+                  disabled={loading}
+                >
+                  {loading
+                    ? "Mengirim email..."
+                    : "Kirim Link Reset Password →"}
+                </button>
+              </form>
+
+              <p className="register">
+                Sudah ingat kata sandi?{" "}
+                <button
+                  type="button"
+                  onClick={kembaliLogin}
+                  style={{
+                    border: "none",
+                    background: "transparent",
+                    color: "#147d66",
+                    fontWeight: "700",
+                    cursor: "pointer",
+                    padding: 0,
+                    font: "inherit",
+                  }}
+                >
+                  Kembali ke Login
+                </button>
+              </p>
+            </>
+          ) : (
+            <>
+              <h2>Selamat datang di Dompetku</h2>
+
+              <p className="description">
+                Masuk untuk melanjutkan simulasi
+                keuanganmu.
+              </p>
+
+              <form onSubmit={handleLogin}>
+                <div className="form-group">
+                  <label htmlFor="email">
+                    Email
+                  </label>
+
+                  <input
+                    id="email"
+                    type="email"
+                    placeholder="nama@email.com"
+                    value={email}
+                    onChange={(event) => {
+                      setEmail(event.target.value);
+                      bersihkanPesan();
+                    }}
+                    autoComplete="email"
+                    required
+                  />
+                </div>
+
+                <div className="form-group">
+                  <label htmlFor="password">
+                    Kata sandi
+                  </label>
+
+                  <div style={{ position: "relative" }}>
+                    <input
+                      id="password"
+                      type={showPassword ? "text" : "password"}
+                      placeholder="••••••••"
+                      value={password}
+                      onChange={(event) => {
+                        setPassword(event.target.value);
+                        bersihkanPesan();
+                      }}
+                      autoComplete="current-password"
+                      required
+                      style={{
+                        width: "100%",
+                        paddingRight: "95px",
+                        boxSizing: "border-box",
+                      }}
+                    />
+
+                    <button
+                      type="button"
+                      onClick={() =>
+                        setShowPassword((prev) => !prev)
+                      }
+                      style={{
+                        position: "absolute",
+                        right: "12px",
+                        top: "50%",
+                        transform: "translateY(-50%)",
+                        border: "none",
+                        background: "transparent",
+                        color: "#147d66",
+                        fontSize: "12px",
+                        fontWeight: "700",
+                        cursor: "pointer",
+                      }}
+                    >
+                      {showPassword
+                        ? "Sembunyikan"
+                        : "Lihat"}
+                    </button>
+                  </div>
+                </div>
+
+                <div
+                  style={{
+                    display: "flex",
+                    justifyContent: "flex-end",
+                    margin: "0 0 18px",
+                  }}
+                >
+                  <button
+                    type="button"
+                    onClick={() => {
+                      setLupaPassword(true);
+                      setPassword("");
+                      bersihkanPesan();
+                    }}
+                    style={{
+                      border: "none",
+                      background: "transparent",
+                      color: "#147d66",
+                      fontSize: "13px",
+                      fontWeight: "700",
+                      cursor: "pointer",
+                      padding: 0,
+                    }}
+                  >
+                    Lupa kata sandi?
+                  </button>
+                </div>
+
+                {error && (
+                  <p
+                    role="alert"
+                    style={{
+                      padding: "12px",
+                      marginBottom: "14px",
+                      background: "#fff1f0",
+                      color: "#c0392b",
+                      borderRadius: "8px",
+                      fontSize: "13px",
+                    }}
+                  >
+                    {error}
+                  </p>
+                )}
+
+                {pesan && (
+                  <p
+                    role="status"
+                    style={{
+                      padding: "12px",
+                      marginBottom: "14px",
+                      background: "#e6f3ee",
+                      color: "#147d66",
+                      borderRadius: "8px",
+                      fontSize: "13px",
+                    }}
+                  >
+                    {pesan}
+                  </p>
+                )}
+
+                <button
+                  className="login-button"
+                  type="submit"
+                  disabled={loading}
+                >
+                  {loading
+                    ? "Sedang masuk..."
+                    : "Masuk ke Dompetku →"}
+                </button>
+              </form>
+
+              <p className="register">
+                Belum punya akun?{" "}
+                <Link to="/register">
+                  Daftar sekarang
+                </Link>
+              </p>
+            </>
+          )}
+        </div>
+      </section>
+    </main>
+  );
+}
+
+===== src/pages/Profil.jsx =====
+
+import { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
+import {
+  onAuthStateChanged,
+  signOut,
+  updateProfile,
+} from "firebase/auth";
+import Sidebar from "../components/Sidebar";
+import { auth } from "../lib/firebase";
+import { ambilProfil, simpanProfil } from "../lib/firestore";
+import "./Profil.css";
+
+const defaultProfile = {
+  nama: "",
+  email: "",
+  kampus: "",
+  status: "Mahasiswa",
+};
+
+export default function Profil() {
+  const navigate = useNavigate();
+
+  const [profile, setProfile] = useState({
+    ...defaultProfile,
+  });
+
+  const [profileTersimpan, setProfileTersimpan] = useState({
+    ...defaultProfile,
+  });
+
+  const [editMode, setEditMode] = useState(false);
+  const [loading, setLoading] = useState(true);
+  const [saving, setSaving] = useState(false);
+  const [loggingOut, setLoggingOut] = useState(false);
+  const [pesan, setPesan] = useState("");
+  const [pesanError, setPesanError] = useState(false);
+
+  // State sidebar mobile
+  const [menuTerbuka, setMenuTerbuka] = useState(false);
+
+  // Mengambil profil dari Firebase
+  useEffect(() => {
+    let aktif = true;
+    let requestId = 0;
+
+    const unsubscribe = onAuthStateChanged(
+      auth,
+      async (user) => {
+        const currentRequest = ++requestId;
+
+        if (!user) {
+          if (aktif) {
+            setLoading(false);
+            navigate("/login", { replace: true });
+          }
+          return;
+        }
+
+        setLoading(true);
+
+        const profilFirebase = {
+          nama: user.displayName || "",
+          email: user.email || "",
+          kampus: "",
+          status: "Mahasiswa",
+        };
+
+        try {
+          const data = await ambilProfil();
+
+          if (!aktif || currentRequest !== requestId) {
+            return;
+          }
+
+          const profilLengkap = {
+            nama: data?.nama || profilFirebase.nama,
+            email: user.email || "",
+            kampus: data?.kampus || "",
+            status: data?.status || "Mahasiswa",
+          };
+
+          setProfile(profilLengkap);
+          setProfileTersimpan(profilLengkap);
+          setPesan("");
+          setPesanError(false);
+        } catch (error) {
+          if (!aktif || currentRequest !== requestId) {
+            return;
+          }
+
+          console.error("Gagal memuat profil:", error);
+
+          setProfile(profilFirebase);
+          setProfileTersimpan(profilFirebase);
+
+          setPesan(
+            "Profil tambahan belum bisa dimuat dari Firestore. Periksa koneksi dan Security Rules."
+          );
+          setPesanError(true);
+        } finally {
+          if (aktif && currentRequest === requestId) {
+            setLoading(false);
+          }
+        }
+      },
+      (error) => {
+        console.error("Gagal memeriksa sesi:", error);
+
+        if (aktif) {
+          setLoading(false);
+          setPesan("Gagal memeriksa sesi Firebase.");
+          setPesanError(true);
+        }
+      }
+    );
+
+    return () => {
+      aktif = false;
+      requestId++;
+      unsubscribe();
+    };
+  }, [navigate]);
+
+  // Menutup sidebar dengan tombol Escape
+  useEffect(() => {
+    const handleEscape = (event) => {
+      if (event.key === "Escape") {
+        setMenuTerbuka(false);
+      }
+    };
+
+    window.addEventListener("keydown", handleEscape);
+
+    return () => {
+      window.removeEventListener("keydown", handleEscape);
+    };
+  }, []);
+
+  // Mengubah field profil
+  const updateField = (field, value) => {
+    setProfile((prev) => ({
+      ...prev,
+      [field]: value,
+    }));
+
+    setPesan("");
+    setPesanError(false);
+  };
+
+  // Mengaktifkan edit profil
+  const handleEdit = () => {
+    setEditMode(true);
+    setPesan("");
+    setPesanError(false);
+  };
+
+  // Menyimpan profil ke Firebase
+  const handleSave = async (event) => {
+    event.preventDefault();
+
+    if (saving) return;
+
+    const user = auth.currentUser;
+
+    if (!user) {
+      setPesan(
+        "Sesi login berakhir. Silakan login kembali."
+      );
+      setPesanError(true);
+      return;
+    }
+
+    const dataBaru = {
+      nama: profile.nama.trim(),
+      email: user.email || "",
+      kampus: profile.kampus.trim(),
+      status: profile.status,
+    };
+
+    if (!dataBaru.nama) {
+      setPesan("Nama lengkap wajib diisi.");
+      setPesanError(true);
+      return;
+    }
+
+    setSaving(true);
+    setPesan("");
+    setPesanError(false);
+
+    try {
+      await simpanProfil(dataBaru);
+
+      setProfile(dataBaru);
+      setProfileTersimpan(dataBaru);
+      setEditMode(false);
+
+      try {
+        await updateProfile(user, {
+          displayName: dataBaru.nama,
+        });
+
+        setPesan(
+          "Profil berhasil disimpan ke Firebase."
+        );
+        setPesanError(false);
+      } catch (error) {
+        console.error(
+          "Gagal memperbarui nama Firebase Auth:",
+          error
+        );
+
+        setPesan(
+          "Profil berhasil disimpan di Firestore, tetapi nama di Firebase Authentication belum diperbarui."
+        );
+        setPesanError(true);
+      }
+    } catch (error) {
+      console.error("Gagal menyimpan profil:", error);
+
+      const detailError =
+        error.code === "permission-denied"
+          ? "Izin ditolak. Periksa Security Rules Firestore."
+          : error.code === "unavailable"
+            ? "Firestore tidak tersedia. Periksa koneksi internet."
+            : error.message || "Terjadi kesalahan.";
+
+      setPesan(
+        `Gagal menyimpan profil: ${detailError}`
+      );
+      setPesanError(true);
+    } finally {
+      setSaving(false);
+    }
+  };
+
+  // Membatalkan perubahan
+  const handleCancel = () => {
+    setProfile({ ...profileTersimpan });
+    setEditMode(false);
+    setPesan("");
+    setPesanError(false);
+  };
+
+  // Logout Firebase
+  const handleLogout = async () => {
+    if (loggingOut) return;
+
+    setLoggingOut(true);
+    setPesan("");
+
+    try {
+      await signOut(auth);
+      navigate("/login", { replace: true });
+    } catch (error) {
+      console.error("Gagal logout:", error);
+
+      setPesan(
+        "Gagal keluar dari akun. Silakan coba lagi."
+      );
+      setPesanError(true);
+      setLoggingOut(false);
+    }
+  };
+
+  const initial = profile.nama.trim()
+    ? profile.nama.trim().charAt(0).toUpperCase()
+    : "D";
+
+  return (
+    <div className="dashboard-layout profil-layout">
+
+      {/* HEADER KHUSUS HP */}
+      <div className="dashboard-mobile-header">
+        <button
+          type="button"
+          className="dashboard-menu-toggle"
+          onClick={() =>
+            setMenuTerbuka((prev) => !prev)
+          }
+          aria-label={
+            menuTerbuka
+              ? "Tutup menu navigasi"
+              : "Buka menu navigasi"
+          }
+          aria-expanded={menuTerbuka}
+          aria-controls="profil-sidebar"
+        >
+          {menuTerbuka ? "✕" : "☰"}
+        </button>
+
+        <span className="dashboard-mobile-brand">
+          Dompetku
+        </span>
+      </div>
+
+      {/* OVERLAY SAAT SIDEBAR TERBUKA */}
+      {menuTerbuka && (
+        <button
+          type="button"
+          className="dashboard-sidebar-overlay"
+          onClick={() => setMenuTerbuka(false)}
+          aria-label="Tutup menu"
+        />
+      )}
+
+      {/* SIDEBAR DESKTOP DAN MOBILE */}
+      <div
+        id="profil-sidebar"
+        className={`dashboard-sidebar-wrapper ${
+          menuTerbuka ? "is-open" : ""
+        }`}
+      >
+        <Sidebar
+          onNavigate={() => setMenuTerbuka(false)}
+        />
+      </div>
+
+      <main className="profil-content">
+        {loading ? (
+          <p
+            role="status"
+            style={{
+              padding: "24px",
+              color: "#147d66",
+              fontWeight: 600,
+            }}
+          >
+            Memuat profil Dompetku...
+          </p>
+        ) : (
+          <>
+            {/* HEADER PROFIL */}
+            <header className="profil-header">
+              <div>
+                <h1>Profil</h1>
+
+                <p>
+                  Kelola informasi akun dan identitasmu
+                  di Dompetku.
+                </p>
+              </div>
+
+              <span className="profil-badge">
+                <span className="profil-badge-dot" />
+                Akun Saya
+              </span>
+            </header>
+
+            {/* BANNER IDENTITAS */}
+            <section className="profil-banner">
+              <div className="profil-avatar">
+                {initial}
+              </div>
+
+              <div className="profil-banner-info">
+                <h2>
+                  {profile.nama || "Pengguna Dompetku"}
+                </h2>
+
+                <p>{profile.email}</p>
+                <span>{profile.status}</span>
+              </div>
+            </section>
+
+            <div className="profil-grid">
+
+              {/* INFORMASI PRIBADI */}
+              <section className="profil-card">
+                <div className="profil-card-header">
+                  <div>
+                    <h2>Informasi Pribadi</h2>
+
+                    <p>
+                      Informasi yang digunakan
+                      pada profilmu.
+                    </p>
+                  </div>
+
+                  {!editMode && (
+                    <button
+                      type="button"
+                      className="profil-edit-button"
+                      onClick={handleEdit}
+                    >
+                      Edit Profil
+                    </button>
+                  )}
+                </div>
+
+                <form onSubmit={handleSave}>
+
+                  {/* NAMA */}
+                  <div className="profil-field">
+                    <label htmlFor="profil-nama">
+                      Nama lengkap
+                    </label>
+
+                    <input
+                      id="profil-nama"
+                      type="text"
+                      value={profile.nama}
+                      disabled={!editMode || saving}
+                      onChange={(event) =>
+                        updateField(
+                          "nama",
+                          event.target.value
+                        )
+                      }
+                      placeholder="Masukkan nama lengkap"
+                      required
+                    />
+                  </div>
+
+                  {/* EMAIL */}
+                  <div className="profil-field">
+                    <label htmlFor="profil-email">
+                      Email akun
+                    </label>
+
+                    <input
+                      id="profil-email"
+                      type="email"
+                      value={profile.email}
+                      disabled
+                      readOnly
+                    />
+
+                    <p
+                      style={{
+                        marginTop: "6px",
+                        fontSize: "12px",
+                        color: "#81918a",
+                      }}
+                    >
+                      Email mengikuti akun Firebase
+                      yang digunakan untuk login.
+                    </p>
+                  </div>
+
+                  {/* KAMPUS */}
+                  <div className="profil-field">
+                    <label htmlFor="profil-kampus">
+                      Kampus
+                    </label>
+
+                    <input
+                      id="profil-kampus"
+                      type="text"
+                      value={profile.kampus}
+                      disabled={!editMode || saving}
+                      onChange={(event) =>
+                        updateField(
+                          "kampus",
+                          event.target.value
+                        )
+                      }
+                      placeholder="Masukkan nama kampus"
+                    />
+                  </div>
+
+                  {/* STATUS */}
+                  <div className="profil-field">
+                    <label htmlFor="profil-status">
+                      Status
+                    </label>
+
+                    <select
+                      id="profil-status"
+                      value={profile.status}
+                      disabled={!editMode || saving}
+                      onChange={(event) =>
+                        updateField(
+                          "status",
+                          event.target.value
+                        )
+                      }
+                    >
+                      <option value="Mahasiswa">
+                        Mahasiswa
+                      </option>
+
+                      <option value="Pelajar">
+                        Pelajar
+                      </option>
+
+                      <option value="Pekerja">
+                        Pekerja
+                      </option>
+
+                      <option value="Lainnya">
+                        Lainnya
+                      </option>
+                    </select>
+                  </div>
+
+                  {/* PESAN FIREBASE */}
+                  {pesan && (
+                    <p
+                      className="profil-message"
+                      role="status"
+                      style={{
+                        color: pesanError
+                          ? "#c0392b"
+                          : "#147d66",
+                      }}
+                    >
+                      {pesan}
+                    </p>
+                  )}
+
+                  {/* TOMBOL EDIT */}
+                  {editMode && (
+                    <div className="profil-actions">
+                      <button
+                        type="submit"
+                        className="profil-save-button"
+                        disabled={saving}
+                      >
+                        {saving
+                          ? "Menyimpan..."
+                          : "Simpan Perubahan"}
+                      </button>
+
+                      <button
+                        type="button"
+                        className="profil-cancel-button"
+                        onClick={handleCancel}
+                        disabled={saving}
+                      >
+                        Batal
+                      </button>
+                    </div>
+                  )}
+                </form>
+              </section>
+
+              {/* KOLOM KANAN */}
+              <aside className="profil-side">
+
+                {/* TENTANG DOMPETKU */}
+                <section className="profil-card profil-info-card">
+                  <h2>Tentang Dompetku</h2>
+
+                  <p>
+                    Dompetku membantu kamu membuat
+                    simulasi keuangan, membandingkan
+                    pengeluaran, dan merencanakan tabungan.
+                  </p>
+
+                  <div className="profil-info-highlight">
+                    <strong>
+                      Kelola uang dengan lebih bijak
+                    </strong>
+
+                    <span>
+                      Mulai dari kebiasaan kecil setiap hari.
+                    </span>
+                  </div>
+                </section>
+
+                {/* PENGATURAN AKUN */}
+                <section className="profil-card profil-account-card">
+                  <h2>Pengaturan Akun</h2>
+
+                  <p>
+                    Selesai menggunakan Dompetku?
+                  </p>
+
+                  <button
+                    type="button"
+                    className="profil-logout-button"
+                    onClick={handleLogout}
+                    disabled={loggingOut}
+                  >
+                    {loggingOut
+                      ? "Sedang keluar..."
+                      : "Keluar dari Akun →"}
+                  </button>
+                </section>
+              </aside>
+            </div>
+          </>
+        )}
+      </main>
+    </div>
+  );
+}
+
+===== src/pages/Register.jsx =====
+
+import { useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
+import {
+  createUserWithEmailAndPassword,
+  updateProfile,
+  signOut,
+} from "firebase/auth";
+import { auth } from "../lib/firebase";
+import logoDompetku from "../components/Logodompet.png";
+
+
+function pesanErrorFirebase(error) {
+  switch (error.code) {
+    case "auth/email-already-in-use":
+      return "Email sudah terdaftar. Silakan masuk melalui Login.";
+
+    case "auth/invalid-email":
+      return "Format alamat email tidak valid.";
+
+    case "auth/weak-password":
+      return "Kata sandi terlalu lemah.";
+
+    case "auth/password-does-not-meet-requirements":
+      return "Kata sandi belum memenuhi persyaratan keamanan Firebase.";
+
+    case "auth/network-request-failed":
+      return "Koneksi internet bermasalah.";
+
+    case "auth/operation-not-allowed":
+      return "Email/Password belum diaktifkan di Firebase Authentication.";
+
+    case "auth/invalid-api-key":
+      return "API key Firebase tidak valid. Periksa konfigurasi.";
+
+    case "auth/unauthorized-domain":
+      return "Domain aplikasi belum diizinkan di Firebase.";
+
+    case "auth/configuration-not-found":
+      return "Konfigurasi Authentication tidak ditemukan di proyek Firebase.";
+
+    case "auth/too-many-requests":
+      return "Terlalu banyak percobaan. Coba lagi nanti.";
+
+    default:
+      return `Pendaftaran gagal. Kode: ${error.code || "unknown"}`;
+  }
+}
+
+export default function Register() {
+  const navigate = useNavigate();
+
+  const [nama, setNama] = useState("");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [konfirmasiPassword, setKonfirmasiPassword] = useState("");
+  const [showPassword, setShowPassword] = useState(false);
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState("");
+
+  async function handleRegister(event) {
+    event.preventDefault();
+    setError("");
+
+    const namaBersih = nama.trim();
+    const emailBersih = email.trim();
+
+    if (!namaBersih) {
+      setError("Nama lengkap wajib diisi.");
+      return;
+    }
+
+    if (password.length < 8) {
+      setError("Kata sandi minimal 8 karakter.");
+      return;
+    }
+
+    if (password !== konfirmasiPassword) {
+      setError("Konfirmasi kata sandi tidak cocok.");
+      return;
+    }
+
+    setLoading(true);
+
+    try {
+      const credential = await createUserWithEmailAndPassword(
+        auth,
+        emailBersih,
+        password
+      );
+
+      await updateProfile(credential.user, {
+        displayName: namaBersih,
+      });
+
+      await signOut(auth);
+
+      navigate("/login", {
+        replace: true,
+        state: {
+          pesan: "Akun berhasil dibuat. Silakan login.",
+        },
+      });
+
+    } catch (err) {
+      console.error("Firebase Register Error:", err);
+      console.error("Error Code:", err.code);
+
+      setError(pesanErrorFirebase(err));
+    } finally {
+      setLoading(false);
+    }
+  }
+
+
+  const passwordStyle = {
+    width: "100%",
+    boxSizing: "border-box",
+    paddingRight: "95px",
+  };
+
+  return (
+    <main className="login-page">
+      <section className="login-left">
+        <div className="brand">
+          <img
+            src={logoDompetku}
+            alt="Logo Dompetku"
+            style={{
+              width: "120px",
+              height: "120px",
+              objectFit: "contain",
+            }}
+          />
+
+          <span>Dompetku</span>
+        </div>
+
+        <div className="hero">
+          <h1>
+            Hemat uangmu
+            <br />
+           Kurangi jajanmu
+          </h1>
+
+          <p>
+            Catat rencana keuangan,
+            <br />
+            simulasikan pengeluaran,
+            <br />
+            bangun kebiasaan menabung.
+          </p>
+
+          <div className="quote">
+            “Kalau kalkulusmu kecil
+            <br />
+            setidaknya tabunganmu besar.”
+          </div>
+        </div>
+      </section>
+
+      <section className="login-right">
+        <div className="login-form-container">
+          <h2>Buat akun Dompetku ✨</h2>
+
+          <p className="description">
+            Daftar untuk mulai merencanakan keuanganmu.
+          </p>
+
+          <form onSubmit={handleRegister}>
+            <div className="form-group">
+              <label htmlFor="register-nama">
+                Nama lengkap
+              </label>
+
+              <input
+                id="register-nama"
+                type="text"
+                placeholder="Nama lengkapmu"
+                value={nama}
+                onChange={(event) => setNama(event.target.value)}
+                autoComplete="name"
+                required
+              />
+            </div>
+
+            <div className="form-group">
+              <label htmlFor="register-email">
+                Email
+              </label>
+
+              <input
+                id="register-email"
+                type="email"
+                placeholder="nama@email.com"
+                value={email}
+                onChange={(event) => setEmail(event.target.value)}
+                autoComplete="email"
+                required
+              />
+            </div>
+
+            <div className="form-group">
+              <label htmlFor="register-password">
+                Kata sandi
+              </label>
+
+              <div style={{ position: "relative" }}>
+                <input
+                  id="register-password"
+                  type={showPassword ? "text" : "password"}
+                  placeholder="Minimal 8 karakter"
+                  value={password}
+                  onChange={(event) =>
+                    setPassword(event.target.value)
+                  }
+                  autoComplete="new-password"
+                  minLength={8}
+                  style={passwordStyle}
+                  required
+                />
+
+                <button
+                  type="button"
+                  onClick={() =>
+                    setShowPassword((prev) => !prev)
+                  }
+                  style={{
+                    position: "absolute",
+                    right: "12px",
+                    top: "50%",
+                    transform: "translateY(-50%)",
+                    border: "none",
+                    background: "transparent",
+                    color: "#147d66",
+                    fontSize: "12px",
+                    fontWeight: 700,
+                    cursor: "pointer",
+                  }}
+                >
+                  {showPassword ? "Sembunyikan" : "Lihat"}
+                </button>
+              </div>
+            </div>
+
+            <div className="form-group">
+              <label htmlFor="register-konfirmasi">
+                Konfirmasi kata sandi
+              </label>
+
+              <input
+                id="register-konfirmasi"
+                type={showPassword ? "text" : "password"}
+                placeholder="Ulangi kata sandi"
+                value={konfirmasiPassword}
+                onChange={(event) =>
+                  setKonfirmasiPassword(event.target.value)
+                }
+                autoComplete="new-password"
+                required
+              />
+            </div>
+
+            {error && (
+              <p
+                role="alert"
+                style={{
+                  padding: "12px",
+                  marginBottom: "14px",
+                  background: "#fff1f0",
+                  color: "#c0392b",
+                  borderRadius: "8px",
+                  fontSize: "13px",
+                }}
+              >
+                {error}
+              </p>
+            )}
+
+            <button
+              type="submit"
+              className="login-button"
+              disabled={loading}
+            >
+              {loading
+                ? "Membuat akun..."
+                : "Daftar ke Dompetku →"}
+            </button>
+          </form>
+
+          <p className="register">
+            Sudah punya akun?{" "}
+            <Link to="/login">
+              Masuk sekarang
+            </Link>
+          </p>
+        </div>
+      </section>
+    </main>
+  );
+}
+
+===== src/pages/Riwayat.jsx =====
+
+
+import { useEffect, useMemo, useState } from "react";
+
+import { Link } from "react-router-dom";
+
+import { onAuthStateChanged } from "firebase/auth";
+
+import Sidebar from "../components/Sidebar";
+
+import { auth } from "../lib/firebase";
+
+import {
+
+  ambilSimulasi,
+
+  hapusSimulasi,
+
+} from "../lib/firestore";
+
+import "./Riwayat.css";
+
+function rupiah(angka) {
+
+  const nilai = Number(angka) || 0;
+
+  const hasil = `Rp${Math.abs(nilai).toLocaleString("id-ID")}`;
+
+  return nilai < 0 ? `−${hasil}` : hasil;
+
+}
+
+function tanggalIndonesia(tanggal) {
+
+  if (!tanggal) return "-";
+
+  const [tahun, bulan, hari] = String(tanggal)
+
+    .split("-")
+
+    .map(Number);
+
+  const date = new Date(tahun, bulan - 1, hari);
+
+  if (Number.isNaN(date.getTime())) return "-";
+
+  return new Intl.DateTimeFormat("id-ID", {
+
+    day: "numeric",
+
+    month: "short",
+
+    year: "numeric",
+
+  }).format(date);
+
+}
+
+function pesanErrorFirestore(error) {
+
+  if (
+
+    error?.code === "permission-denied" ||
+
+    error?.code === "firestore/permission-denied"
+
+  ) {
+
+    return "Akses ditolak. Periksa Security Rules Firestore.";
+
+  }
+
+  if (
+
+    error?.code === "unavailable" ||
+
+    error?.code === "firestore/unavailable"
+
+  ) {
+
+    return "Firebase tidak tersedia. Periksa koneksi internet.";
+
+  }
+
+  return error?.message || "Terjadi kesalahan saat mengakses Firestore.";
+
+}
+
+export default function Riwayat() {
+
+  const [pencarian, setPencarian] = useState("");
+
+  const [detail, setDetail] = useState(null);
+
+  const [riwayatTersimpan, setRiwayatTersimpan] = useState([]);
+
+  const [loading, setLoading] = useState(true);
+
+  const [menghapus, setMenghapus] = useState(false);
+
+  const [konfirmasiHapus, setKonfirmasiHapus] = useState(false);
+
+  const [error, setError] = useState("");
+
+  const [pesan, setPesan] = useState("");
+  const [menuTerbuka, setMenuTerbuka] = useState(false);
+
+  useEffect(() => {
+
+    let aktif = true;
+
+    let versi = 0;
+
+    const unsubscribe = onAuthStateChanged(
+
+      auth,
+
+      async (user) => {
+
+        const versiSekarang = ++versi;
+
+        setLoading(true);
+
+        setError("");
+
+        if (!user) {
+
+          setRiwayatTersimpan([]);
+
+          setLoading(false);
+
+          return;
+
+        }
+
+        try {
+
+          const data = await ambilSimulasi();
+
+          if (!aktif || versiSekarang !== versi) return;
+
+          const urut = [...data].sort((a, b) => {
+
+            const waktuA = Number(a.dibuatPada) || 0;
+
+            const waktuB = Number(b.dibuatPada) || 0;
+
+            if (waktuA !== waktuB) {
+
+              return waktuB - waktuA;
+
+            }
+
+            return String(b.tanggal || "").localeCompare(
+
+              String(a.tanggal || "")
+
+            );
+
+          });
+
+          setRiwayatTersimpan(urut);
+
+        } catch (err) {
+
+          if (!aktif || versiSekarang !== versi) return;
+
+          console.error("Gagal mengambil riwayat:", err);
+
+          setError(pesanErrorFirestore(err));
+
+        } finally {
+
+          if (aktif && versiSekarang === versi) {
+
+            setLoading(false);
+
+          }
+
+        }
+
+      },
+
+      (err) => {
+
+        console.error("Gagal memeriksa sesi Firebase:", err);
+
+        if (aktif) {
+
+          setError("Gagal memeriksa sesi pengguna.");
+
+          setLoading(false);
+
+        }
+
+      }
+
+    );
+
+    return () => {
+
+      aktif = false;
+
+      versi++;
+
+      unsubscribe();
+
+    };
+
+  }, []);
+
+  useEffect(() => {
+    const handleEscape = (event) => {
+      if (event.key === "Escape") {
+        setMenuTerbuka(false);
+        if (!menghapus) {
+          setDetail(null);
+          setKonfirmasiHapus(false);
+        }
+      }
+    };
+    window.addEventListener("keydown", handleEscape);
+    return () => window.removeEventListener("keydown", handleEscape);
+  }, [menghapus]);
+
+  const hasilPencarian = useMemo(() => {
+
+    const kata = pencarian.toLowerCase().trim();
+
+    return riwayatTersimpan.filter((item) => {
+
+      const nama = String(item.nama || "").toLowerCase();
+
+      const tanggal = tanggalIndonesia(
+
+        item.tanggal
+
+      ).toLowerCase();
+
+      return nama.includes(kata) || tanggal.includes(kata);
+
+    });
+
+  }, [pencarian, riwayatTersimpan]);
+
+  const handleHapus = async () => {
+
+    if (!detail || menghapus) return;
+
+    const id = detail.id;
+
+    setMenghapus(true);
+
+    setError("");
+
+    setPesan("");
+
+    try {
+
+      await hapusSimulasi(id);
+
+      setRiwayatTersimpan((sebelumnya) =>
+
+        sebelumnya.filter((item) => item.id !== id)
+
+      );
+
+      setDetail(null);
+
+      setKonfirmasiHapus(false);
+
+      setPesan("Simulasi berhasil dihapus dari Firebase.");
+
+    } catch (err) {
+
+      console.error("Gagal menghapus simulasi:", err);
+
+      setError(pesanErrorFirestore(err));
+
+      setKonfirmasiHapus(false);
+
+      setDetail(null);
+
+    } finally {
+
+      setMenghapus(false);
+
+    }
+
+  };
+
+  const bukaDetail = (item) => {
+
+    setDetail(item);
+
+    setKonfirmasiHapus(false);
+
+    setPesan("");
+
+  };
+
+  const tutupDetail = () => {
+
+    if (menghapus) return;
+
+    setDetail(null);
+
+    setKonfirmasiHapus(false);
+
+  };
+
+  return (
+
+    <div className="dashboard-layout riwayat-layout">
+
+      <div className="dashboard-mobile-header">
+      <button
+        type="button"
+        className="dashboard-menu-toggle"
+        onClick={() => setMenuTerbuka((prev) => !prev)}
+        aria-label={menuTerbuka ? "Tutup menu navigasi" : "Buka menu navigasi"}
+        aria-expanded={menuTerbuka}
+        aria-controls="riwayat-sidebar"
+      >
+        {menuTerbuka ? "✕" : "☰"}
+      </button>
+      <span className="dashboard-mobile-brand">Dompetku</span>
+    </div>
+
+    {menuTerbuka && (
+      <button
+        type="button"
+        className="dashboard-sidebar-overlay"
+        onClick={() => setMenuTerbuka(false)}
+        aria-label="Tutup menu"
+      />
+    )}
+
+    <div
+      id="riwayat-sidebar"
+      className={`dashboard-sidebar-wrapper ${menuTerbuka ? "is-open" : ""}`}
+    >
+      <Sidebar onNavigate={() => setMenuTerbuka(false)} />
+    </div>
+
+      <main className="riwayat-content">
+
+        <header className="riwayat-header">
+
+          <div>
+
+            <h1>Riwayat Simulasi</h1>
+
+            <p>
+
+              Tinjau percobaan sebelumnya dan bandingkan
+
+              keputusan keuangan.
+
+            </p>
+
+          </div>
+
+          <span className="riwayat-badge">
+
+            <span className="riwayat-badge-dot" />
+
+            Simulasi
+
+          </span>
+
+        </header>
+
+        <section className="riwayat-search-card">
+
+          <div className="riwayat-search-field">
+
+            <label htmlFor="cari-simulasi">
+
+              Cari simulasi
+
+            </label>
+
+            <input
+
+id="cari-simulasi"
+
+type="search"
+
+placeholder="Cari nama atau tanggal simulasi..."
+
+value={pencarian}
+
+onChange={(event) =>
+
+                setPencarian(event.target.value)
+
+              }
+
+            />
+
+          </div>
+
+          <Link
+
+to="/simulator"
+
+className="riwayat-new-button"
+
+          >
+
+            + Simulasi Baru
+
+          </Link>
+
+        </section>
+
+        <section className="riwayat-table-card">
+
+          <div className="riwayat-table-heading">
+
+            <h2>Daftar Simulasi</h2>
+
+            <p>
+
+              Hasil simulasi yang tersimpan di Firebase.
+
+            </p>
+
+          </div>
+
+          {error && (
+
+            <p
+
+role="alert"
+
+style={{
+
+                padding: "12px 16px",
+
+                margin: "12px 0",
+
+                borderRadius: "9px",
+
+                background: "#fff1f0",
+
+                color: "#c0392b",
+
+                fontSize: "13px",
+
+              }}
+
+            >
+
+              {error}
+
+            </p>
+
+          )}
+
+          {pesan && (
+
+            <p
+
+role="status"
+
+style={{
+
+                padding: "12px 16px",
+
+                margin: "12px 0",
+
+                borderRadius: "9px",
+
+                background: "#e6f3ee",
+
+                color: "#147d66",
+
+                fontSize: "13px",
+
+              }}
+
+            >
+
+              {pesan}
+
+            </p>
+
+          )}
+
+          <div className="riwayat-table-scroll">
+
+            <table className="riwayat-table">
+
+              <thead>
+
+                <tr>
+
+                  <th>Nama</th>
+
+                  <th>Tanggal</th>
+
+                  <th>Pengeluaran</th>
+
+                  <th>Sisa Uang</th>
+
+                  <th>Aksi</th>
+
+                </tr>
+
+              </thead>
+
+              <tbody>
+
+                {loading ? (
+
+                  <tr>
+
+                    <td
+
+colSpan={5}
+
+className="riwayat-empty"
+
+                    >
+
+                      Memuat riwayat dari Firebase...
+
+                    </td>
+
+                  </tr>
+
+                ) : (
+
+                  <>
+
+                    {hasilPencarian.map((item) => (
+
+                      <tr key={item.id}>
+
+                        <td className="riwayat-nama">
+
+                          {item.nama}
+
+                        </td>
+
+                        <td>
+
+                          {tanggalIndonesia(item.tanggal)}
+
+                        </td>
+
+                        <td>
+
+                          {rupiah(item.pengeluaran)}
+
+                        </td>
+
+                        <td
+
+className={
+
+                            item.sisa < 0
+
+                              ? "riwayat-negative"
+
+                              : "riwayat-positive"
+
+                          }
+
+                        >
+
+                          {rupiah(item.sisa)}
+
+                        </td>
+
+                        <td>
+
+                          <button
+
+type="button"
+
+className="riwayat-detail-button"
+
+onClick={() => bukaDetail(item)}
+
+                          >
+
+                            Detail →
+
+                          </button>
+
+                        </td>
+
+                      </tr>
+
+                    ))}
+
+                    {hasilPencarian.length === 0 && (
+
+                      <tr>
+
+                        <td
+
+colSpan={5}
+
+className="riwayat-empty"
+
+                        >
+
+                          {error
+
+                            ? "Riwayat belum bisa ditampilkan."
+
+                            : riwayatTersimpan.length === 0
+
+                              ? "Belum ada simulasi tersimpan di Firebase."
+
+                              : "Tidak ada simulasi yang cocok dengan pencarian."}
+
+                        </td>
+
+                      </tr>
+
+                    )}
+
+                  </>
+
+                )}
+
+              </tbody>
+
+            </table>
+
+          </div>
+
+        </section>
+
+        <div className="riwayat-tip">
+
+          Tip: simpan beberapa skenario supaya kamu bisa
+
+          membandingkan mana yang paling hemat.
+
+        </div>
+
+      </main>
+
+      {detail && (
+
+        <div
+
+className="riwayat-modal-overlay"
+
+onClick={tutupDetail}
+
+        >
+
+          <section
+
+className="riwayat-modal"
+
+role="dialog"
+
+aria-modal="true"
+
+aria-labelledby="riwayat-modal-title"
+
+onClick={(event) => event.stopPropagation()}
+
+          >
+
+            <div className="riwayat-modal-heading">
+
+              <h2 id="riwayat-modal-title">
+
+                Detail Simulasi
+
+              </h2>
+
+              <button
+
+type="button"
+
+onClick={tutupDetail}
+
+aria-label="Tutup detail"
+
+disabled={menghapus}
+
+              >
+
+                ×
+
+              </button>
+
+            </div>
+
+            <h3>{detail.nama}</h3>
+
+            <p className="riwayat-modal-date">
+
+              {tanggalIndonesia(detail.tanggal)}
+
+            </p>
+
+            <div className="riwayat-modal-row">
+
+              <span>Uang bulanan</span>
+
+              <strong>
+
+                {rupiah(detail.uangBulanan)}
+
+              </strong>
+
+            </div>
+
+            <div className="riwayat-modal-row">
+
+              <span>Total pengeluaran</span>
+
+              <strong>
+
+                {rupiah(detail.pengeluaran)}
+
+              </strong>
+
+            </div>
+
+            <div className="riwayat-modal-row">
+
+              <span>Sisa uang</span>
+
+              <strong
+
+className={
+
+                  detail.sisa < 0
+
+                    ? "riwayat-negative"
+
+                    : "riwayat-positive"
+
+                }
+
+              >
+
+                {rupiah(detail.sisa)}
+
+              </strong>
+
+            </div>
+
+            {detail.rincian && (
+
+              <>
+
+                <div className="riwayat-modal-row">
+
+                  <span>Biaya kos</span>
+
+                  <strong>
+
+                    {rupiah(detail.rincian.kos)}
+
+                  </strong>
+
+                </div>
+
+                <div className="riwayat-modal-row">
+
+                  <span>Makan per hari</span>
+
+                  <strong>
+
+                    {rupiah(detail.rincian.makanPerHari)}
+
+                  </strong>
+
+                </div>
+
+                <div className="riwayat-modal-row">
+
+                  <span>Transportasi</span>
+
+                  <strong>
+
+                    {rupiah(detail.rincian.transportasi)}
+
+                  </strong>
+
+                </div>
+
+                <div className="riwayat-modal-row">
+
+                  <span>Lain-lain</span>
+
+                  <strong>
+
+                    {rupiah(detail.rincian.lainnya)}
+
+                  </strong>
+
+                </div>
+
+                <div className="riwayat-modal-row">
+
+                  <span>Periode simulasi</span>
+
+                  <strong>
+
+                    {detail.rincian.periode} hari
+
+                  </strong>
+
+                </div>
+
+              </>
+
+            )}
+
+            <div className="riwayat-modal-note">
+
+              {detail.keterangan ||
+
+                "Hasil simulasi keuangan bulanan."}
+
+            </div>
+
+            <button
+
+type="button"
+
+className="riwayat-modal-close"
+
+onClick={tutupDetail}
+
+disabled={menghapus}
+
+            >
+
+              Tutup
+
+            </button>
+
+            {konfirmasiHapus ? (
+
+              <div
+
+style={{
+
+                  marginTop: "12px",
+
+                  padding: "14px",
+
+                  background: "#fff5f5",
+
+                  borderRadius: "10px",
+
+                }}
+
+              >
+
+                <p
+
+style={{
+
+                    fontSize: "13px",
+
+                    color: "#c0392b",
+
+                    margin: "0 0 12px",
+
+                  }}
+
+                >
+
+                  Yakin ingin menghapus simulasi ini
+
+                  dari Firebase?
+
+                </p>
+
+                <div
+
+style={{
+
+                    display: "flex",
+
+                    gap: "8px",
+
+                  }}
+
+                >
+
+                  <button
+
+type="button"
+
+onClick={handleHapus}
+
+disabled={menghapus}
+
+style={{
+
+                      flex: 1,
+
+                      padding: "11px",
+
+                      background: "#c0392b",
+
+                      border: "none",
+
+                      borderRadius: "9px",
+
+                      color: "#fff",
+
+                      fontWeight: 700,
+
+                      cursor: menghapus
+
+                        ? "wait"
+
+                        : "pointer",
+
+                    }}
+
+                  >
+
+                    {menghapus
+
+                      ? "Menghapus..."
+
+                      : "Ya, Hapus"}
+
+                  </button>
+
+                  <button
+
+type="button"
+
+onClick={() =>
+
+                      setKonfirmasiHapus(false)
+
+                    }
+
+disabled={menghapus}
+
+style={{
+
+                      flex: 1,
+
+                      padding: "11px",
+
+                      background: "#fff",
+
+                      border: "1px solid #dce9e2",
+
+                      borderRadius: "9px",
+
+                      color: "#193b32",
+
+                      fontWeight: 700,
+
+                      cursor: "pointer",
+
+                    }}
+
+                  >
+
+                    Batal
+
+                  </button>
+
+                </div>
+
+              </div>
+
+            ) : (
+
+              <button
+
+type="button"
+
+onClick={() =>
+
+                  setKonfirmasiHapus(true)
+
+                }
+
+style={{
+
+                  width: "100%",
+
+                  height: "44px",
+
+                  marginTop: "10px",
+
+                  background: "#fff1f0",
+
+                  color: "#c0392b",
+
+                  border: "1px solid #f3c9c4",
+
+                  borderRadius: "9px",
+
+                  fontWeight: 700,
+
+                  cursor: "pointer",
+
+                }}
+
+              >
+
+                Hapus Simulasi
+
+              </button>
+
+            )}
+
+          </section>
+
+        </div>
+
+      )}
+
+    </div>
+
+  );
+
+}
+===== src/pages/Simulator.jsx =====
+
+import { useState, useEffect } from "react";
+import Sidebar from "../components/Sidebar";
+import { simpanSimulasi } from "../lib/firestore";
+import "./Simulator.css";
+
+const initialData = {
+  uangSaku: "1500000",
+  kos: "500000",
+  makan: "25000",
+  transportasi: "100000",
+  lainnya: "150000",
+  periode: "30",
+  hitungMakan: true,
+};
+
+function tanggalLokal() {
+  const sekarang = new Date();
+  const tahun = sekarang.getFullYear();
+  const bulan = String(sekarang.getMonth() + 1).padStart(2, "0");
+  const hari = String(sekarang.getDate()).padStart(2, "0");
+
+  return `${tahun}-${bulan}-${hari}`;
+}
+
+function formatRupiah(value) {
+  return `Rp${Number(value || 0).toLocaleString("id-ID")}`;
+}
+
+function hitungAnggaran(data) {
+  const hari = Number(data.periode);
+  const uang = Number(data.uangSaku);
+  const kos = Number(data.kos);
+  const makan = Number(data.makan);
+  const transportasi = Number(data.transportasi);
+  const lainnya = Number(data.lainnya);
+
+  const kebutuhanMakan = data.hitungMakan
+    ? makan * hari
+    : 0;
+
+  const pengeluaranTetap = kos + transportasi + lainnya;
+  const totalPengeluaran = pengeluaranTetap + kebutuhanMakan;
+  const sisa = uang - totalPengeluaran;
+
+  const batasAman =
+    hari > 0
+      ? Math.max(
+          0,
+          Math.floor((uang - pengeluaranTetap) / hari)
+        )
+      : 0;
+
+  return {
+    totalPengeluaran,
+    sisa,
+    makan,
+    batasAman,
+    potensiTabungan: Math.max(0, sisa),
+  };
+}
+
+export default function Simulator() {
+  const [form, setForm] = useState({ ...initialData });
+  const [hasil, setHasil] = useState(() =>
+    hitungAnggaran(initialData)
+  );
+  const [formTerhitung, setFormTerhitung] = useState({
+    ...initialData,
+  });
+
+  const [namaSimulasi, setNamaSimulasi] = useState("");
+  const [pesanSimpan, setPesanSimpan] = useState("");
+  const [tipePesan, setTipePesan] = useState("success");
+  const [menyimpan, setMenyimpan] = useState(false);
+
+  // Navigasi mobile
+  const [menuTerbuka, setMenuTerbuka] = useState(false);
+
+  useEffect(() => {
+    const handleEscape = (event) => {
+      if (event.key === "Escape") {
+        setMenuTerbuka(false);
+      }
+    };
+
+    window.addEventListener("keydown", handleEscape);
+
+    return () => {
+      window.removeEventListener("keydown", handleEscape);
+    };
+  }, []);
+
+  const perluDihitungUlang =
+    JSON.stringify(form) !== JSON.stringify(formTerhitung);
+
+  const updateField = (name, value) => {
+    setForm((prev) => ({
+      ...prev,
+      [name]: value.replace(/\D/g, ""),
+    }));
+
+    setPesanSimpan("");
+  };
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+
+    setHasil(hitungAnggaran(form));
+    setFormTerhitung({ ...form });
+    setPesanSimpan("");
+  };
+
+  const handleReset = () => {
+    setForm({ ...initialData });
+    setFormTerhitung({ ...initialData });
+    setHasil(hitungAnggaran(initialData));
+    setNamaSimulasi("");
+    setPesanSimpan("");
+  };
+
+  const handleSimpan = async () => {
+    if (menyimpan) return;
+
+    if (perluDihitungUlang) {
+      setTipePesan("error");
+      setPesanSimpan(
+        "Hitung ulang sebelum menyimpan simulasi."
+      );
+      return;
+    }
+
+    const nama =
+      namaSimulasi.trim() || "Simulasi Keuangan";
+
+    const dataBaru = {
+      nama,
+      tanggal: tanggalLokal(),
+      dibuatPada: Date.now(),
+      sumber: "simulator",
+      uangBulanan: Number(formTerhitung.uangSaku),
+      pengeluaran: hasil.totalPengeluaran,
+      sisa: hasil.sisa,
+      keterangan:
+        `Simulasi selama ${formTerhitung.periode} hari.`,
+      rincian: {
+        kos: Number(formTerhitung.kos),
+        makanPerHari: Number(formTerhitung.makan),
+        transportasi: Number(formTerhitung.transportasi),
+        lainnya: Number(formTerhitung.lainnya),
+        periode: Number(formTerhitung.periode),
+        hitungMakan: formTerhitung.hitungMakan,
+      },
+    };
+
+    setMenyimpan(true);
+    setPesanSimpan("");
+    setTipePesan("success");
+
+    try {
+      await simpanSimulasi(dataBaru);
+
+      setPesanSimpan(
+        `"${nama}" berhasil disimpan ke Firebase Firestore.`
+      );
+
+      setNamaSimulasi("");
+    } catch (error) {
+      console.error(
+        "Gagal menyimpan simulasi ke Firebase:",
+        error
+      );
+
+      setTipePesan("error");
+
+      if (
+        error.code === "permission-denied" ||
+        error.code === "firestore/permission-denied"
+      ) {
+        setPesanSimpan(
+          "Izin Firestore ditolak. Periksa Security Rules."
+        );
+      } else if (
+        error.code === "unavailable" ||
+        error.code === "firestore/unavailable"
+      ) {
+        setPesanSimpan(
+          "Firebase tidak tersedia. Periksa koneksi internet."
+        );
+      } else {
+        setPesanSimpan(
+          error.message ||
+            "Gagal menyimpan simulasi ke Firebase."
+        );
+      }
+    } finally {
+      setMenyimpan(false);
+    }
+  };
+
+  const fields = [
+    { name: "uangSaku", label: "Uang saku bulanan" },
+    { name: "kos", label: "Biaya kos" },
+    { name: "makan", label: "Makan per hari" },
+    { name: "transportasi", label: "Transportasi bulanan" },
+    { name: "lainnya", label: "Kebutuhan lainnya" },
+  ];
+
+  const kondisi =
+    hasil.sisa > 0
+      ? "Budget aman"
+      : hasil.sisa === 0
+        ? "Budget pas"
+        : "Budget kurang";
+
+  const saran =
+    hasil.sisa > 0
+      ? "Masih ada sisa uang. Sisihkan sebagian untuk tabungan."
+      : hasil.sisa === 0
+        ? "Kurangi pengeluaran untuk mulai menabung."
+        : "Pengeluaran melebihi anggaran. Coba kurangi biaya yang tidak mendesak.";
+
+  return (
+    <div className="dashboard-layout simulator-layout">
+      <div className="dashboard-mobile-header">
+        <button
+          type="button"
+          className="dashboard-menu-toggle"
+          onClick={() => setMenuTerbuka((prev) => !prev)}
+          aria-label={
+            menuTerbuka
+              ? "Tutup menu navigasi"
+              : "Buka menu navigasi"
+          }
+          aria-expanded={menuTerbuka}
+          aria-controls="simulator-sidebar"
+        >
+          {menuTerbuka ? "✕" : "☰"}
+        </button>
+
+        <span className="dashboard-mobile-brand">
+          Dompetku
+        </span>
+      </div>
+
+      {/* Overlay saat menu terbuka */}
+      {menuTerbuka && (
+        <button
+          type="button"
+          className="dashboard-sidebar-overlay"
+          onClick={() => setMenuTerbuka(false)}
+          aria-label="Tutup menu"
+        />
+      )}
+
+      {/* Sidebar Desktop dan Mobile */}
+      <div
+        id="simulator-sidebar"
+        className={`dashboard-sidebar-wrapper ${
+          menuTerbuka ? "is-open" : ""
+        }`}
+      >
+        <Sidebar
+          onNavigate={() => setMenuTerbuka(false)}
+        />
+      </div>
+
+      <main className="simulator-content">
+        <header className="simulator-header">
+          <div>
+            <h1>Simulator Keuangan</h1>
+            <p>
+             Isi kebutuhanmu untuk melihat anggaranmu.
+            </p>
+          </div>
+
+          <span className="simulator-badge">
+            <span className="simulator-badge-dot" />
+            Simulasi
+          </span>
+        </header>
+
+        <div className="simulator-grid">
+          <section className="simulator-card simulator-form-card">
+            <div className="simulator-card-heading">
+              <h2>Informasi anggaran</h2>
+              <p>
+                Semua nilai menggunakan rupiah
+                dan hanya untuk simulasi.
+              </p>
+            </div>
+
+            <form onSubmit={handleSubmit}>
+              <div className="simulator-fields-grid">
+                {fields.map((field) => (
+                  <div
+                    className="simulator-field"
+                    key={field.name}
+                  >
+                    <label htmlFor={`sim-${field.name}`}>
+                      {field.label}
+                    </label>
+
+                    <input
+                      id={`sim-${field.name}`}
+                      type="text"
+                      inputMode="numeric"
+                      value={formatRupiah(form[field.name])}
+                      onChange={(event) =>
+                        updateField(
+                          field.name,
+                          event.target.value
+                        )
+                      }
+                      autoComplete="off"
+                    />
+                  </div>
+                ))}
+
+                <div className="simulator-field">
+                  <label htmlFor="sim-periode">
+                    Periode simulasi
+                  </label>
+
+                  <select
+                    id="sim-periode"
+                    value={form.periode}
+                    onChange={(event) => {
+                      setForm((prev) => ({
+                        ...prev,
+                        periode: event.target.value,
+                      }));
+
+                      setPesanSimpan("");
+                    }}
+                  >
+                    <option value="7">7 hari</option>
+                    <option value="14">14 hari</option>
+                    <option value="30">30 hari</option>
+                    <option value="31">31 hari</option>
+                  </select>
+                </div>
+              </div>
+
+              <div className="simulator-option-box">
+                <label className="simulator-checkbox-label">
+                  <input
+                    type="checkbox"
+                    checked={form.hitungMakan}
+                    onChange={(event) => {
+                      setForm((prev) => ({
+                        ...prev,
+                        hitungMakan: event.target.checked,
+                      }));
+
+                      setPesanSimpan("");
+                    }}
+                  />
+
+                  <span>
+                    Hitung kebutuhan makan selama periode simulasi
+                  </span>
+                </label>
+
+                <p>
+                  Hasil akan dibandingkan dengan uang
+                  saku bulanan.
+                </p>
+              </div>
+
+              <div className="simulator-actions">
+                <button
+                  type="submit"
+                  className="simulator-submit"
+                  disabled={menyimpan}
+                >
+                  Hitung Simulasi →
+                </button>
+
+                <button
+                  type="button"
+                  className="simulator-reset"
+                  onClick={handleReset}
+                  disabled={menyimpan}
+                >
+                  Reset
+                </button>
+              </div>
+            </form>
+          </section>
+
+          <section className="simulator-card simulator-result-card">
+            <div className="simulator-card-heading">
+              <h2>Hasil simulasi</h2>
+              <p>Pratinjau otomatis</p>
+            </div>
+
+            <div className="simulator-balance">
+              <span>Sisa uang</span>
+
+              <strong>
+                {hasil.sisa < 0 ? "-" : ""}
+                {formatRupiah(Math.abs(hasil.sisa))}
+              </strong>
+
+              <div className="simulator-balance-status">
+                <span className="simulator-status-dot" />
+                {kondisi}
+              </div>
+            </div>
+
+            <div className="simulator-result-details">
+              <div className="simulator-result-row">
+                <span>Total pengeluaran</span>
+                <strong>
+                  {formatRupiah(hasil.totalPengeluaran)}
+                </strong>
+              </div>
+
+              <div className="simulator-result-row">
+                <span>Anggaran makan / hari</span>
+                <strong>
+                  {formatRupiah(hasil.makan)}
+                </strong>
+              </div>
+
+              <div className="simulator-result-row">
+                <span>Batas aman makan / hari</span>
+                <strong>
+                  {formatRupiah(hasil.batasAman)}
+                </strong>
+              </div>
+
+              <div className="simulator-result-row">
+                <span>Potensi tabungan</span>
+                <strong>
+                  {formatRupiah(hasil.potensiTabungan)}
+                </strong>
+              </div>
+            </div>
+
+            <div className="simulator-advice">
+              <h3>Saran:</h3>
+              <p>{saran}</p>
+            </div>
+
+            <div className="simulator-save-area">
+              <label htmlFor="nama-simulasi">
+                Nama simulasi
+              </label>
+
+              <input
+                id="nama-simulasi"
+                type="text"
+                placeholder="Contoh: Hemat Makan"
+                value={namaSimulasi}
+                maxLength={60}
+                disabled={menyimpan}
+                onChange={(event) => {
+                  setNamaSimulasi(event.target.value);
+                  setPesanSimpan("");
+                }}
+              />
+
+              <button
+                type="button"
+                className="simulator-save-button"
+                onClick={handleSimpan}
+                disabled={perluDihitungUlang || menyimpan}
+              >
+                {menyimpan
+                  ? "Menyimpan ke Firebase..."
+                  : "Simpan Simulasi"}
+              </button>
+
+              {perluDihitungUlang && (
+                <p className="simulator-save-hint">
+                  Anggaran berubah. Klik Hitung Simulasi
+                  terlebih dahulu.
+                </p>
+              )}
+
+              {pesanSimpan && (
+                <p
+                  className="simulator-save-message"
+                  role="status"
+                  style={{
+                    color:
+                      tipePesan === "error"
+                        ? "#c0392b"
+                        : "#147d66",
+                  }}
+                >
+                  {pesanSimpan}
+                </p>
+              )}
+            </div>
+          </section>
+        </div>
+      </main>
+    </div>
+  );
+}
+
+===== src/pages/StrategiHemat.jsx =====
+
+import { useEffect, useState } from "react";
+import { onAuthStateChanged } from "firebase/auth";
+import { Link } from "react-router-dom";
+import Sidebar from "../components/Sidebar";
+import { auth } from "../lib/firebase";
+import { ambilSimulasi } from "../lib/firestore";
+import "./StrategiHemat.css";
+
+const skenarios = [
+  {
+    id: "super",
+    nama: "Super Hemat",
+    biaya: 10000,
+  },
+  {
+    id: "seimbang",
+    nama: "Hemat Seimbang",
+    biaya: 15000,
+  },
+  {
+    id: "standar",
+    nama: "Standar",
+    biaya: 25000,
+  },
+];
+
+const formatRupiah = (angka) => {
+  return `Rp${Number(angka || 0).toLocaleString("id-ID")}`;
+};
+
+const angkaAman = (nilai, fallback = 0) => {
+  const angka = Number(nilai);
+  return Number.isFinite(angka) ? angka : fallback;
+};
+
+const ambilPeriode = (nilai) => {
+  const angka = Number(nilai);
+
+  if (Number.isFinite(angka) && angka > 0) {
+    return angka;
+  }
+
+  if (typeof nilai === "string") {
+    const cocok = nilai.match(/\d+/);
+
+    if (cocok) {
+      return Number(cocok[0]);
+    }
+  }
+
+  return 30;
+};
+
+export default function StrategiHemat() {
+  const [pilihan, setPilihan] = useState("seimbang");
+  const [simulasi, setSimulasi] = useState(null);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState("");
+
+  // Navigasi mobile
+  const [menuTerbuka, setMenuTerbuka] = useState(false);
+
+  useEffect(() => {
+    let aktif = true;
+
+    const unsubscribe = onAuthStateChanged(
+      auth,
+      async (user) => {
+        if (!aktif) return;
+
+        if (!user) {
+          setSimulasi(null);
+          setLoading(false);
+          return;
+        }
+
+        setLoading(true);
+        setError("");
+        setSimulasi(null);
+
+        try {
+          const data = await ambilSimulasi();
+
+          if (!aktif || auth.currentUser?.uid !== user.uid) {
+            return;
+          }
+
+          const dataTerurut = [...data].sort(
+            (a, b) =>
+              angkaAman(b.dibuatPada) -
+              angkaAman(a.dibuatPada)
+          );
+
+          setSimulasi(dataTerurut[0] || null);
+        } catch (err) {
+          if (!aktif || auth.currentUser?.uid !== user.uid) {
+            return;
+          }
+
+          console.error(
+            "Gagal mengambil simulasi:",
+            err
+          );
+
+          setError(
+            "Data simulasi gagal dimuat. Silakan coba refresh halaman."
+          );
+        } finally {
+          if (aktif && auth.currentUser?.uid === user.uid) {
+            setLoading(false);
+          }
+        }
+      }
+    );
+
+    return () => {
+      aktif = false;
+      unsubscribe();
+    };
+  }, []);
+
+  // Tutup sidebar saat tombol Escape ditekan
+  useEffect(() => {
+    const handleEscape = (event) => {
+      if (event.key === "Escape") {
+        setMenuTerbuka(false);
+      }
+    };
+
+    window.addEventListener("keydown", handleEscape);
+
+    return () => {
+      window.removeEventListener("keydown", handleEscape);
+    };
+  }, []);
+
+  const uangBulanan = angkaAman(
+    simulasi?.uangBulanan
+  );
+
+  const pengeluaranAwal = angkaAman(
+    simulasi?.pengeluaran
+  );
+
+  const makanAwal = angkaAman(
+    simulasi?.rincian?.makanPerHari
+  );
+
+  const periode = ambilPeriode(
+    simulasi?.rincian?.periode
+  );
+
+  const skenarioAktif =
+    skenarios.find((item) => item.id === pilihan) ||
+    skenarios[1];
+
+  const hematPerHari =
+    makanAwal - skenarioAktif.biaya;
+
+  const totalHemat =
+    hematPerHari * periode;
+
+  const sisaAwal =
+    uangBulanan - pengeluaranAwal;
+
+  const sisaSetelahHemat =
+    sisaAwal + totalHemat;
+
+  const adaDataMakan =
+    Number.isFinite(
+      Number(simulasi?.rincian?.makanPerHari)
+    ) &&
+    Number(simulasi?.rincian?.makanPerHari) > 0 &&
+    simulasi?.rincian?.hitungMakan !== false;
+
+  const siap = Boolean(simulasi) && adaDataMakan;
+
+  return (
+    <div className="dashboard-layout strategi-layout">
+
+      {/* HEADER MOBILE */}
+      <div className="dashboard-mobile-header">
+        <button
+          type="button"
+          className="dashboard-menu-toggle"
+          onClick={() =>
+            setMenuTerbuka((prev) => !prev)
+          }
+          aria-label={
+            menuTerbuka
+              ? "Tutup menu navigasi"
+              : "Buka menu navigasi"
+          }
+          aria-expanded={menuTerbuka}
+          aria-controls="strategi-sidebar"
+        >
+          {menuTerbuka ? "✕" : "☰"}
+        </button>
+
+        <span className="dashboard-mobile-brand">
+          Dompetku
+        </span>
+      </div>
+
+      {/* OVERLAY MOBILE */}
+      {menuTerbuka && (
+        <button
+          type="button"
+          className="dashboard-sidebar-overlay"
+          onClick={() => setMenuTerbuka(false)}
+          aria-label="Tutup menu"
+        />
+      )}
+
+      {/* SIDEBAR */}
+      <div
+        id="strategi-sidebar"
+        className={`dashboard-sidebar-wrapper ${
+          menuTerbuka ? "is-open" : ""
+        }`}
+      >
+        <Sidebar
+          onNavigate={() => setMenuTerbuka(false)}
+        />
+      </div>
+
+      {/* KONTEN STRATEGI HEMAT */}
+      <main className="strategi-content">
+
+        <header className="strategi-header">
+          <div>
+            <h1>Strategi Hemat</h1>
+
+            <p>
+              Bandingkan skenario satu sama lain untuk efesiensi
+            </p>
+          </div>
+
+          <span className="strategi-badge">
+            <span className="strategi-badge-dot" />
+            Simulasi
+          </span>
+        </header>
+
+        {loading ? (
+          <section className="strategi-perbandingan">
+            <div className="strategi-section-heading">
+              <h2>Memuat simulasi...</h2>
+
+              <p>
+                Mengambil data keuanganmu dari Firebase.
+              </p>
+            </div>
+          </section>
+        ) : error ? (
+          <section className="strategi-perbandingan">
+            <div className="strategi-section-heading">
+              <h2>Gagal memuat data</h2>
+              <p>{error}</p>
+            </div>
+          </section>
+        ) : !siap ? (
+          <section className="strategi-perbandingan">
+            <div className="strategi-section-heading">
+              <h2>Belum ada simulasi makan</h2>
+
+              <p>
+                Buat simulasi keuangan terlebih dahulu
+                dan aktifkan perhitungan biaya makan
+                agar strategi hemat dapat dihitung.
+              </p>
+
+              <Link
+                to="/simulator"
+                style={{
+                  display: "inline-block",
+                  marginTop: "16px",
+                  padding: "12px 20px",
+                  background: "#147D66",
+                  color: "#FFFFFF",
+                  borderRadius: "10px",
+                  textDecoration: "none",
+                  fontWeight: 600,
+                }}
+              >
+                Buat Simulasi →
+              </Link>
+            </div>
+          </section>
+        ) : (
+          <>
+            {/* BANNER */}
+            <section className="strategi-banner">
+              <div className="strategi-banner-total">
+                <span>
+                  {totalHemat >= 0
+                    ? "Potensi hemat bulan ini"
+                    : "Tambahan biaya bulan ini"}
+                </span>
+
+                <strong>
+                  {formatRupiah(Math.abs(totalHemat))}
+                </strong>
+              </div>
+
+              <div className="strategi-banner-description">
+                <h2>
+                  {totalHemat > 0
+                    ? "Cukup dengan mengurangi biaya makan"
+                    : totalHemat < 0
+                      ? "Biaya makan skenario ini lebih tinggi"
+                      : "Biaya makan tetap sama"}
+                </h2>
+
+                <p>
+                  {totalHemat > 0
+                    ? "Hemat "
+                    : totalHemat < 0
+                      ? "Tambahan "
+                      : "Selisih "}
+                  {formatRupiah(Math.abs(hematPerHari))}
+                  /hari selama {periode} hari
+                </p>
+              </div>
+            </section>
+
+            {/* PILIH SKENARIO */}
+            <section className="strategi-skenario-section">
+              <div className="strategi-section-heading">
+                <h2>Pilih skenario makan</h2>
+
+                <p>
+                  Setiap kartu dibandingkan dengan
+                  pola makan awal{" "}
+                  {formatRupiah(makanAwal)} per hari
+                  dari simulasi terakhirmu.
+                </p>
+              </div>
+
+              <div className="strategi-skenario-grid">
+                {skenarios.map((skenario) => {
+                  const terpilih =
+                    pilihan === skenario.id;
+
+                  const hemat =
+                    (makanAwal - skenario.biaya) *
+                    periode;
+
+                  return (
+                    <article
+                      key={skenario.id}
+                      className={`strategi-skenario-card ${
+                        terpilih ? "selected" : ""
+                      }`}
+                    >
+                      <h3>{skenario.nama}</h3>
+
+                      <strong className="strategi-biaya">
+                        {formatRupiah(skenario.biaya)}
+                      </strong>
+
+                      <span className="strategi-periode">
+                        per hari
+                      </span>
+
+                      <div className="strategi-hemat-label">
+                        {hemat > 0
+                          ? `Hemat ${formatRupiah(hemat)}`
+                          : hemat < 0
+                            ? `Tambahan ${formatRupiah(
+                                Math.abs(hemat)
+                              )}`
+                            : "Tanpa penghematan"}
+                      </div>
+
+                      <button
+                        type="button"
+                        className={`strategi-pilih-button ${
+                          terpilih ? "selected" : ""
+                        }`}
+                        onClick={() =>
+                          setPilihan(skenario.id)
+                        }
+                        aria-pressed={terpilih}
+                      >
+                        {terpilih
+                          ? "✓ Skenario Terpilih"
+                          : "Pilih Skenario"}
+                      </button>
+                    </article>
+                  );
+                })}
+              </div>
+            </section>
+
+            {/* PERBANDINGAN HASIL */}
+            <section className="strategi-perbandingan">
+              <div className="strategi-section-heading">
+                <h2>Perbandingan hasil</h2>
+
+                <p>
+                  Skenario terpilih dibandingkan
+                  dengan kondisi awal dari
+                  simulasi terakhirmu.
+                </p>
+              </div>
+
+              <div className="strategi-perbandingan-content">
+                <div className="strategi-sisa-awal">
+                  Sisa awal:{" "}
+                  {formatRupiah(sisaAwal)}
+                </div>
+
+                <span
+                  className="strategi-arrow"
+                  aria-hidden="true"
+                >
+                  →
+                </span>
+
+                <div className="strategi-sisa-akhir">
+                  Sisa setelah hemat:{" "}
+                  {formatRupiah(sisaSetelahHemat)}
+                </div>
+              </div>
+            </section>
+          </>
+        )}
+      </main>
+    </div>
+  );
+}
+
+===== src/pages/Target.jsx =====
+
+
+import { useEffect, useState } from "react";
+
+import { onAuthStateChanged } from "firebase/auth";
+
+import Sidebar from "../components/Sidebar";
+
+import { auth } from "../lib/firebase";
+
+import {
+
+  ambilTarget,
+
+  simpanTarget,
+
+  perbaruiTarget,
+
+  hapusTarget as hapusTargetFirebase,
+
+} from "../lib/firestore";
+
+import "./Target.css";
+
+const dataAwal = {
+
+  nama: "Beli laptop untuk kuliah",
+
+  jumlah: "5000000",
+
+  bulanan: "250000",
+
+  awal: "500000",
+
+};
+
+const tips = [
+
+  "Sisihkan uang di awal bulan.",
+
+  "Kurangi belanja impulsif.",
+
+  "Pantau progres setiap bulan.",
+
+  "Naikkan target bila memungkinkan.",
+
+];
+
+const inputNominal = [
+
+  { name: "jumlah", label: "Jumlah target" },
+
+  { name: "bulanan", label: "Tabungan setiap bulan" },
+
+  { name: "awal", label: "Tabungan awal" },
+
+];
+
+function formatRupiah(value) {
+
+  const angka = Number(value) || 0;
+
+  return `Rp${angka.toLocaleString("id-ID")}`;
+
+}
+
+function hitungTarget(data) {
+
+  const target = Math.max(0, Number(data.jumlah) || 0);
+
+  const bulanan = Math.max(0, Number(data.bulanan) || 0);
+
+  const awal = Math.max(0, Number(data.awal) || 0);
+
+  const kekurangan = Math.max(0, target - awal);
+
+  const progres =
+
+    target > 0 ? Math.min(100, (awal / target) * 100) : 0;
+
+  const bulan =
+
+    kekurangan === 0
+
+      ? 0
+
+      : bulanan > 0
+
+        ? Math.ceil(kekurangan / bulanan)
+
+        : null;
+
+  return {
+
+    progres,
+
+    bulan,
+
+    kekurangan,
+
+    terkumpul: awal,
+
+    target,
+  };
+
+}
+
+function urutkanTarget(data) {
+
+  return [...data].sort(
+
+    (a, b) =>
+
+      (Number(b.dibuatPada) || 0) -
+
+      (Number(a.dibuatPada) || 0)
+  );
+
+}
+
+function pesanErrorFirebase(error) {
+
+  console.error("Firebase Target Tabungan:", error);
+
+  if (
+
+    error?.code === "permission-denied" ||
+
+    error?.code === "firestore/permission-denied"
+  ) {
+
+    return "Akses ditolak. Periksa Security Rules Firestore.";
+  }
+
+  if (
+
+    error?.code === "unavailable" ||
+
+    error?.code === "firestore/unavailable"
+  ) {
+
+    return "Firestore tidak tersedia. Periksa koneksi internet.";
+  }
+
+  return error?.message || "Terjadi kesalahan pada Firebase.";
+
+}
+
+export default function Target() {
+
+  const [form, setForm] = useState({ ...dataAwal });
+
+  const [formTerhitung, setFormTerhitung] = useState({
+
+    ...dataAwal,
+  });
+
+  const [hasil, setHasil] = useState(() =>
+
+    hitungTarget(dataAwal)
+  );
+
+  const [targetTersimpan, setTargetTersimpan] = useState([]);
+
+  const [targetAktif, setTargetAktif] = useState(null);
+
+  const [tambahan, setTambahan] = useState("");
+
+  const [konfirmasiHapus, setKonfirmasiHapus] = useState(null);
+
+  const [loading, setLoading] = useState(true);
+
+  const [proses, setProses] = useState("");
+
+  const [pesan, setPesan] = useState("");
+
+  const [pesanError, setPesanError] = useState(false);
+  const [menuTerbuka, setMenuTerbuka] = useState(false);
+
+  const sedangProses = proses !== "";
+
+  const perluHitungUlang =
+
+    JSON.stringify(form) !== JSON.stringify(formTerhitung);
+
+  useEffect(() => {
+
+    let aktif = true;
+
+    let versi = 0;
+
+    const unsubscribe = onAuthStateChanged(
+
+      auth,
+
+      async (user) => {
+
+        const versiSekarang = ++versi;
+
+        setLoading(true);
+
+        setPesan("");
+
+        if (!user) {
+
+          setTargetTersimpan([]);
+
+          setTargetAktif(null);
+
+          setLoading(false);
+
+          return;
+        }
+
+        try {
+
+          const data = await ambilTarget();
+
+          if (!aktif || versiSekarang !== versi) return;
+
+          setTargetTersimpan(urutkanTarget(data));
+        } catch (error) {
+
+          if (!aktif || versiSekarang !== versi) return;
+
+          setPesan(pesanErrorFirebase(error));
+
+          setPesanError(true);
+        } finally {
+
+          if (aktif && versiSekarang === versi) {
+
+            setLoading(false);
+          }
+        }
+      },
+
+      (error) => {
+
+        if (!aktif) return;
+
+        setPesan(pesanErrorFirebase(error));
+
+        setPesanError(true);
+
+        setLoading(false);
+      }
+    );
+
+    return () => {
+
+      aktif = false;
+
+      versi++;
+
+      unsubscribe();
+    };
+  }, []);
+
+  useEffect(() => {
+    const handleEscape = (event) => {
+      if (event.key === "Escape") setMenuTerbuka(false);
+    };
+
+    window.addEventListener("keydown", handleEscape);
+    return () => window.removeEventListener("keydown", handleEscape);
+  }, []);
+
+  function tampilkanPesan(teks, error = false) {
+
+    setPesan(teks);
+
+    setPesanError(error);
+  }
+
+  function ubahInput(nama, nilai) {
+
+    if (sedangProses) return;
+
+    setForm((sebelumnya) => ({
+
+      ...sebelumnya,
+
+      [nama]:
+
+        nama === "nama"
+
+          ? nilai
+
+          : nilai.replace(/\D/g, ""),
+    }));
+
+    setTargetAktif(null);
+
+    setKonfirmasiHapus(null);
+
+    tampilkanPesan("");
+  }
+
+  function handleSubmit(event) {
+
+    event.preventDefault();
+
+    if (!form.nama.trim()) {
+
+      tampilkanPesan("Nama tujuan wajib diisi.", true);
+
+      return;
+    }
+
+    if (Number(form.jumlah) <= 0) {
+
+      tampilkanPesan(
+
+        "Jumlah target harus lebih dari Rp0.",
+
+        true
+      );
+
+      return;
+    }
+
+    const data = {
+
+      ...form,
+
+      nama: form.nama.trim(),
+    };
+
+    setForm(data);
+
+    setFormTerhitung(data);
+
+    setHasil(hitungTarget(data));
+
+    setTargetAktif(null);
+
+    tampilkanPesan(
+
+      "Perhitungan selesai. Kamu bisa menyimpan target ini."
+    );
+  }
+
+  async function handleSimpan() {
+
+    if (proses || loading) return;
+
+    if (targetAktif) {
+
+      setPesan("Target ini sudah tersimpan di Firebase.");
+
+      setPesanError(false);
+
+      return;
+    }
+
+    if (!auth.currentUser) {
+
+      setPesan("Silakan login terlebih dahulu.");
+
+      setPesanError(true);
+
+      return;
+    }
+
+    const dataBaru = {
+
+      nama: form.nama.trim(),
+
+      jumlah: Number(form.jumlah),
+
+      bulanan: Number(form.bulanan) || 0,
+
+      awal: Number(form.awal) || 0,
+
+      tanggal: new Date().toISOString(),
+
+      dibuatPada: Date.now(),
+    };
+
+    if (!dataBaru.nama || dataBaru.jumlah <= 0) {
+
+      setPesan("Isi nama dan jumlah target dengan benar.");
+
+      setPesanError(true);
+
+      return;
+    }
+
+    setProses("simpan");
+
+    setPesan("");
+
+    setPesanError(false);
+
+    try {
+
+      const id = await simpanTarget(dataBaru);
+
+      const targetBaru = {
+
+        ...dataBaru,
+
+        id,
+      };
+
+      setTargetTersimpan((prev) =>
+
+        urutkanTarget([targetBaru, ...prev])
+      );
+
+      const formBaru = {
+
+        nama: dataBaru.nama,
+
+        jumlah: String(dataBaru.jumlah),
+
+        bulanan: String(dataBaru.bulanan),
+
+        awal: String(dataBaru.awal),
+      };
+
+      setForm(formBaru);
+
+      setFormTerhitung(formBaru);
+
+      setHasil(hitungTarget(formBaru));
+
+      setTargetAktif(id);
+
+      setTambahan("");
+
+      setPesan(`Target "${dataBaru.nama}" berhasil disimpan.`);
+
+      setPesanError(false);
+    } catch (error) {
+
+      console.error("Gagal menyimpan target:", error);
+
+      setPesan(
+
+        `Gagal menyimpan target: ${error.code || error.message}`
+      );
+
+      setPesanError(true);
+    } finally {
+
+      setProses("");
+    }
+  }
+
+  function pilihTarget(item) {
+
+    if (sedangProses) return;
+
+    const data = {
+
+      nama: item.nama,
+
+      jumlah: String(item.jumlah),
+
+      bulanan: String(item.bulanan),
+
+      awal: String(item.awal),
+    };
+
+    setForm(data);
+
+    setFormTerhitung(data);
+
+    setHasil(hitungTarget(data));
+
+    setTargetAktif(item.id);
+
+    setTambahan("");
+
+    setKonfirmasiHapus(null);
+
+    tampilkanPesan("");
+  }
+
+  async function tambahTabungan() {
+
+    if (sedangProses) return;
+
+    if (!targetAktif) {
+
+      tampilkanPesan(
+
+        "Pilih target tersimpan terlebih dahulu.",
+
+        true
+      );
+
+      return;
+    }
+
+    const nominal = Number(tambahan);
+
+    if (!Number.isFinite(nominal) || nominal <= 0) {
+
+      tampilkanPesan(
+
+        "Masukkan nominal tambahan yang valid.",
+
+        true
+      );
+
+      return;
+    }
+
+    const targetDipilih = targetTersimpan.find(
+
+      (item) => item.id === targetAktif
+    );
+
+    if (!targetDipilih) {
+
+      tampilkanPesan("Target tidak ditemukan.", true);
+
+      return;
+    }
+
+    setProses("tambah");
+
+    tampilkanPesan("");
+
+    try {
+
+      const { increment } = await import("firebase/firestore");
+
+      await perbaruiTarget(targetAktif, {
+
+        awal: increment(nominal),
+      });
+
+      const dataTerbaru = await ambilTarget();
+
+      const dataUrut = urutkanTarget(dataTerbaru);
+
+      setTargetTersimpan(dataUrut);
+
+      const targetBaru = dataUrut.find(
+
+        (item) => item.id === targetAktif
+      );
+
+      if (targetBaru) {
+
+        const formBaru = {
+
+          nama: targetBaru.nama,
+
+          jumlah: String(targetBaru.jumlah),
+
+          bulanan: String(targetBaru.bulanan),
+
+          awal: String(targetBaru.awal),
+        };
+
+        setForm(formBaru);
+
+        setFormTerhitung(formBaru);
+
+        setHasil(hitungTarget(formBaru));
+      }
+
+      setTambahan("");
+
+      tampilkanPesan(
+
+        `${formatRupiah(nominal)} berhasil ditambahkan ke tabungan.`
+      );
+    } catch (error) {
+
+      tampilkanPesan(
+
+        `Gagal memperbarui tabungan: ${pesanErrorFirebase(error)}`,
+
+        true
+      );
+    } finally {
+
+      setProses("");
+    }
+  }
+
+  async function hapusTarget(id) {
+
+    if (sedangProses) return;
+
+    setProses(`hapus-${id}`);
+
+    tampilkanPesan("");
+
+    try {
+
+      await hapusTargetFirebase(id);
+
+      setTargetTersimpan((sebelumnya) =>
+
+        sebelumnya.filter((item) => item.id !== id)
+      );
+
+      if (targetAktif === id) {
+
+        setTargetAktif(null);
+
+        setForm({ ...dataAwal });
+
+        setFormTerhitung({ ...dataAwal });
+
+        setHasil(hitungTarget(dataAwal));
+      }
+
+      setTambahan("");
+
+      setKonfirmasiHapus(null);
+
+      tampilkanPesan(
+
+        "Target berhasil dihapus dari Firebase."
+      );
+    } catch (error) {
+
+      tampilkanPesan(
+
+        `Gagal menghapus target: ${pesanErrorFirebase(error)}`,
+
+        true
+      );
+    } finally {
+
+      setProses("");
+    }
+  }
+
+  return (
+
+    <div className="dashboard-layout target-layout">
+
+      {/* Header mobile */}
+    <div className="dashboard-mobile-header">
+      <button
+        type="button"
+        className="dashboard-menu-toggle"
+        onClick={() => setMenuTerbuka((prev) => !prev)}
+        aria-label={menuTerbuka ? "Tutup menu navigasi" : "Buka menu navigasi"}
+        aria-expanded={menuTerbuka}
+        aria-controls="target-sidebar"
+      >
+        {menuTerbuka ? "✕" : "☰"}
+      </button>
+      <span className="dashboard-mobile-brand">Dompetku</span>
+    </div>
+
+    {/* Overlay untuk menutup sidebar */}
+    {menuTerbuka && (
+      <button
+        type="button"
+        className="dashboard-sidebar-overlay"
+        onClick={() => setMenuTerbuka(false)}
+        aria-label="Tutup menu"
+      />
+    )}
+
+    {/* Sidebar desktop dan mobile */}
+    <div
+      id="target-sidebar"
+      className={`dashboard-sidebar-wrapper ${menuTerbuka ? "is-open" : ""}`}
+    >
+      <Sidebar onNavigate={() => setMenuTerbuka(false)} />
+    </div>
+
+      <main className="target-content">
+
+        <header className="target-header">
+
+          <div>
+
+            <h1>Target Tabungan</h1>
+
+            <p>
+
+              Buat rencana menabung untuk tujuan impianmu.
+
+            </p>
+
+          </div>
+
+          <span className="target-badge">
+
+            <span className="target-badge-dot" />
+
+            Simulasi
+
+          </span>
+
+        </header>
+
+        <div className="target-grid">
+
+          <section className="target-card target-form-card">
+
+            <div className="target-card-heading">
+
+              <h2>Buat target baru</h2>
+
+              <p>
+
+                Tentukan berapa uang yang ingin kamu kumpulkan.
+
+              </p>
+
+            </div>
+
+            <form onSubmit={handleSubmit}>
+
+              <div className="target-field">
+
+                <label htmlFor="target-nama">
+
+                  Nama tujuan
+
+                </label>
+
+                <input
+
+id="target-nama"
+
+type="text"
+
+value={form.nama}
+
+disabled={sedangProses}
+
+onChange={(event) =>
+
+                    ubahInput("nama", event.target.value)
+                  }
+
+placeholder="Masukkan nama tujuan"
+
+required
+
+                />
+
+              </div>
+
+              {inputNominal.map((item) => (
+
+                <div
+
+className="target-field"
+
+key={item.name}
+
+                >
+
+                  <label htmlFor={`target-${item.name}`}>
+
+                    {item.label}
+
+                  </label>
+
+                  <input
+
+id={`target-${item.name}`}
+
+type="text"
+
+inputMode="numeric"
+
+value={formatRupiah(form[item.name])}
+
+disabled={sedangProses}
+
+onChange={(event) =>
+
+                      ubahInput(
+
+                        item.name,
+
+                        event.target.value
+                      )
+                    }
+
+autoComplete="off"
+
+                  />
+
+                </div>
+              ))}
+
+              <button
+
+type="submit"
+
+className="target-submit"
+
+disabled={sedangProses}
+
+              >
+
+                Hitung Target Tabungan →
+
+              </button>
+
+            </form>
+
+            <button
+
+type="button"
+
+onClick={handleSimpan}
+
+disabled={sedangProses || loading || Boolean(targetAktif)}
+
+className="target-submit"
+
+style={{
+
+                width: "100%",
+
+                marginTop: "12px",
+
+                background: "#e6f3ee",
+
+                color: "#147d66",
+
+                border: "1px solid #147d66",
+
+                opacity:
+
+                  sedangProses || loading || targetAktif ? 0.5 : 1,
+
+                cursor:
+
+                  sedangProses || loading || targetAktif
+
+                    ? "not-allowed"
+
+                    : "pointer",
+              }}
+
+            >
+
+              {proses === "simpan"
+
+                ? "Menyimpan..."
+
+                : targetAktif
+
+                  ? "Target Sudah Tersimpan ✓"
+
+                  : "Simpan Target Tabungan"}
+
+            </button>
+
+            {pesan && (
+
+              <p
+
+role="status"
+
+style={{
+
+                  marginTop: "12px",
+
+                  fontSize: "13px",
+
+                  color: pesanError
+
+                    ? "#c0392b"
+
+                    : "#147d66",
+
+                  lineHeight: 1.6,
+                }}
+
+              >
+
+                {pesan}
+
+              </p>
+            )}
+
+          </section>
+
+          <div className="target-right-column">
+
+            <section className="target-card target-estimate-card">
+
+              <div className="target-card-heading">
+
+                <h2>Estimasi pencapaian</h2>
+
+                <p>Dihitung tanpa bunga</p>
+
+              </div>
+
+              <div
+
+className="target-time-box"
+
+role="status"
+
+              >
+
+                <span>Waktu yang dibutuhkan</span>
+
+                <strong>
+
+                  {hasil.bulan === null
+
+                    ? "Belum dapat dihitung"
+
+                    : `${hasil.bulan} bulan`}
+
+                </strong>
+
+              </div>
+
+              <div className="target-progress-description">
+
+                {Math.round(hasil.progres)}% dari target
+
+                sudah terkumpul
+
+              </div>
+
+              <div
+
+className="target-progress-track"
+
+role="progressbar"
+
+aria-label="Progres tabungan"
+
+aria-valuemin={0}
+
+aria-valuemax={100}
+
+aria-valuenow={Math.round(hasil.progres)}
+
+              >
+
+                <div
+
+className="target-progress-fill"
+
+style={{
+
+                    width: `${hasil.progres}%`,
+                  }}
+
+                />
+
+              </div>
+
+              <div
+
+style={{
+
+                  display: "flex",
+
+                  justifyContent: "space-between",
+
+                  gap: "12px",
+
+                  marginTop: "14px",
+
+                  fontSize: "13px",
+
+                  color: "#193b32",
+                }}
+
+              >
+
+                <span>
+
+                  Terkumpul:{" "}
+
+                  <strong>
+
+                    {formatRupiah(hasil.terkumpul)}
+
+                  </strong>
+
+                </span>
+
+                <span>
+
+                  Target:{" "}
+
+                  <strong>
+
+                    {formatRupiah(hasil.target)}
+
+                  </strong>
+
+                </span>
+
+              </div>
+
+              <p
+
+style={{
+
+                  marginTop: "12px",
+
+                  fontSize: "13px",
+
+                  color: "#81918a",
+                }}
+
+              >
+
+                Sisa yang perlu dikumpulkan:{" "}
+
+                <strong>
+
+                  {formatRupiah(hasil.kekurangan)}
+
+                </strong>
+
+              </p>
+
+            </section>
+
+            <section className="target-card target-tips-card">
+
+              <div className="target-card-heading">
+
+                <h2>Tips menabung</h2>
+
+                <p>Langkah kecil, hasilnya terasa.</p>
+
+              </div>
+
+              <div className="target-tips-list">
+
+                {tips.map((tip) => (
+
+                  <div
+
+className="target-tip-item"
+
+key={tip}
+
+                  >
+
+                    <span
+
+className="target-tip-check"
+
+aria-hidden="true"
+
+                    >
+
+                      ✓
+
+                    </span>
+
+                    <span>{tip}</span>
+
+                  </div>
+                ))}
+
+              </div>
+
+            </section>
+
+          </div>
+
+        </div>
+
+        <section
+
+className="target-card"
+
+style={{ marginTop: "24px" }}
+
+        >
+
+          <div className="target-card-heading">
+
+            <h2>Target Tabungan Tersimpan</h2>
+
+            <p>
+
+              Pilih target untuk melihat progres dan
+
+              menambahkan tabungan.
+
+            </p>
+
+          </div>
+
+          {loading ? (
+
+            <p
+
+style={{
+
+                marginTop: "18px",
+
+                color: "#81918a",
+
+                fontSize: "14px",
+              }}
+
+            >
+
+              Memuat target dari Firebase...
+
+            </p>
+          ) : targetTersimpan.length === 0 ? (
+
+            <p
+
+style={{
+
+                color: "#81918a",
+
+                fontSize: "14px",
+
+                marginTop: "18px",
+              }}
+
+            >
+
+              Belum ada target tersimpan di Firebase.
+
+              Buat dan simpan target pertamamu.
+
+            </p>
+          ) : (
+
+            <div
+
+style={{
+
+                display: "grid",
+
+                gap: "12px",
+
+                marginTop: "18px",
+              }}
+
+            >
+
+              {targetTersimpan.map((item) => {
+
+                const info = hitungTarget(item);
+
+                const aktif = targetAktif === item.id;
+
+                return (
+
+                  <div
+
+key={item.id}
+
+style={{
+
+                      padding: "16px",
+
+                      border: aktif
+
+                        ? "1px solid #147d66"
+
+                        : "1px solid #e1ebe5",
+
+                      borderRadius: "12px",
+
+                      background: aktif
+
+                        ? "#e6f3ee"
+
+                        : "#ffffff",
+                    }}
+
+                  >
+
+                    <div
+
+style={{
+
+                        display: "flex",
+
+                        justifyContent: "space-between",
+
+                        alignItems: "center",
+
+                        flexWrap: "wrap",
+
+                        gap: "12px",
+                      }}
+
+                    >
+
+                      <div>
+
+                        <strong
+
+style={{
+
+                            color: "#193b32",
+
+                            fontSize: "15px",
+                          }}
+
+                        >
+
+                          {item.nama}
+
+                        </strong>
+
+                        <p
+
+style={{
+
+                            margin: "6px 0 0",
+
+                            color: "#81918a",
+
+                            fontSize: "13px",
+                          }}
+
+                        >
+
+                          {formatRupiah(item.awal)}
+
+                          {" / "}
+
+                          {formatRupiah(item.jumlah)}
+
+                          {" — "}
+
+                          {Math.round(info.progres)}%
+
+                        </p>
+
+                      </div>
+
+                      <div
+
+style={{
+
+                          display: "flex",
+
+                          gap: "8px",
+
+                          flexWrap: "wrap",
+                        }}
+
+                      >
+
+                        <button
+
+type="button"
+
+onClick={() => pilihTarget(item)}
+
+disabled={sedangProses}
+
+style={{
+
+                            padding: "9px 14px",
+
+                            borderRadius: "8px",
+
+                            border: "none",
+
+                            background: "#147d66",
+
+                            color: "#ffffff",
+
+                            fontWeight: "700",
+
+                            cursor: "pointer",
+                          }}
+
+                        >
+
+                          Pilih
+
+                        </button>
+
+                        {konfirmasiHapus === item.id ? (
+
+                          <>
+
+                            <button
+
+type="button"
+
+onClick={() =>
+
+                                hapusTarget(item.id)
+                              }
+
+disabled={sedangProses}
+
+style={{
+
+                                padding: "9px 12px",
+
+                                borderRadius: "8px",
+
+                                border: "none",
+
+                                background: "#c0392b",
+
+                                color: "#fff",
+
+                                fontWeight: "700",
+
+                                cursor: "pointer",
+                              }}
+
+                            >
+
+                              {proses === `hapus-${item.id}`
+
+                                ? "Menghapus..."
+
+                                : "Ya, Hapus"}
+
+                            </button>
+
+                            <button
+
+type="button"
+
+onClick={() =>
+
+                                setKonfirmasiHapus(null)
+                              }
+
+disabled={sedangProses}
+
+style={{
+
+                                padding: "9px 12px",
+
+                                borderRadius: "8px",
+
+                                border: "1px solid #dce9e2",
+
+                                background: "#fff",
+
+                                color: "#193b32",
+
+                                cursor: "pointer",
+                              }}
+
+                            >
+
+                              Batal
+
+                            </button>
+
+                          </>
+                        ) : (
+
+                          <button
+
+type="button"
+
+onClick={() =>
+
+                              setKonfirmasiHapus(item.id)
+                            }
+
+disabled={sedangProses}
+
+style={{
+
+                              padding: "9px 14px",
+
+                              borderRadius: "8px",
+
+                              border: "1px solid #f1cccc",
+
+                              background: "#fff5f5",
+
+                              color: "#c0392b",
+
+                              fontWeight: "700",
+
+                              cursor: "pointer",
+                            }}
+
+                          >
+
+                            Hapus
+
+                          </button>
+                        )}
+
+                      </div>
+
+                    </div>
+
+                    <div
+
+style={{
+
+                        width: "100%",
+
+                        height: "8px",
+
+                        marginTop: "14px",
+
+                        background: "#e0e9e4",
+
+                        borderRadius: "999px",
+
+                        overflow: "hidden",
+                      }}
+
+                    >
+
+                      <div
+
+style={{
+
+                          width: `${info.progres}%`,
+
+                          height: "100%",
+
+                          background: "#147d66",
+
+                          borderRadius: "999px",
+                        }}
+
+                      />
+
+                    </div>
+
+                    {aktif && (
+
+                      <div
+
+style={{
+
+                          marginTop: "16px",
+
+                          paddingTop: "14px",
+
+                          borderTop: "1px solid #cde2d7",
+                        }}
+
+                      >
+
+                        <label
+
+htmlFor="tambahan-tabungan"
+
+style={{
+
+                            display: "block",
+
+                            marginBottom: "8px",
+
+                            fontWeight: "700",
+
+                            fontSize: "13px",
+
+                            color: "#193b32",
+                          }}
+
+                        >
+
+                          Tambah uang tabungan
+
+                        </label>
+
+                        <div
+
+style={{
+
+                            display: "flex",
+
+                            gap: "10px",
+
+                            flexWrap: "wrap",
+                          }}
+
+                        >
+
+                          <input
+
+id="tambahan-tabungan"
+
+type="text"
+
+inputMode="numeric"
+
+placeholder="Rp0"
+
+value={
+
+                              tambahan
+
+                                ? formatRupiah(tambahan)
+
+                                : ""
+                            }
+
+disabled={sedangProses}
+
+onChange={(event) =>
+
+                              setTambahan(
+
+                                event.target.value.replace(
+
+                                  /\D/g,
+
+                                  ""
+                                )
+                              )
+                            }
+
+style={{
+
+                              flex: "1 1 180px",
+
+                              minWidth: 0,
+
+                              padding: "11px 14px",
+
+                              border: "1px solid #cde2d7",
+
+                              borderRadius: "9px",
+
+                              outline: "none",
+
+                              fontSize: "14px",
+                            }}
+
+                          />
+
+                          <button
+
+type="button"
+
+onClick={tambahTabungan}
+
+disabled={sedangProses}
+
+style={{
+
+                              padding: "11px 18px",
+
+                              border: "none",
+
+                              borderRadius: "9px",
+
+                              background: "#147d66",
+
+                              color: "#ffffff",
+
+                              fontWeight: "700",
+
+                              cursor: "pointer",
+                            }}
+
+                          >
+
+                            {proses === "tambah"
+
+                              ? "Menyimpan..."
+
+                              : "+ Tambah Tabungan"}
+
+                          </button>
+
+                        </div>
+
+                      </div>
+                    )}
+
+                  </div>
+                );
+              })}
+
+            </div>
+          )}
+
+        </section>
+
+      </main>
+
+    </div>
+  );
+
+}
+===== src/pages/Dashboard.css =====
+
+/* DASHBOARD - FIGMA 1440 x 1024 */
+
+.dashboard-layout {
+  display: flex;
+  width: 100%;
+  min-height: 100vh;
+  background: #f6f9f7;
+  font-family: "Inter", sans-serif;
+}
+
+/* SIDEBAR */
+
+.dashboard-layout .sidebar {
+  width: 252px;
+  flex: 0 0 252px;
+  min-height: 100vh;
+  padding: 29px 17px;
+  background: #ffffff;
+  border-right: 1px solid #e5ebe7;
+}
+
+.dashboard-layout .sidebar h2 {
+  margin: 0 0 45px 10px;
+  font-size: 23px;
+  color: #193b32;
+}
+
+.dashboard-layout .sidebar nav {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+}
+
+.dashboard-layout .sidebar nav a {
+  display: flex;
+  align-items: center;
+  min-height: 48px;
+  padding: 0 17px;
+  font-size: 16px;
+  text-decoration: none;
+  color: #81918a;
+  border-radius: 10px;
+}
+
+.dashboard-layout .sidebar nav a.active {
+  background: #e6f3ee;
+  color: #147d66;
+  font-weight: 700;
+}
+
+/* MAIN CONTENT */
+
+.dashboard-layout .dashboard-content {
+  flex: 1;
+  min-width: 0;
+  padding: 35px 44px 40px 42px;
+}
+
+.dashboard-layout .dashboard-content h1 {
+  margin: 0;
+  color: #193b32;
+  font-size: 30px;
+  font-weight: 700;
+}
+
+.dashboard-layout .dashboard-content > p {
+  margin: 6px 0 0;
+  font-size: 15px;
+  color: #81918a;
+}
+
+/* SUMMARY CARDS */
+
+.dashboard-layout .summary-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+  margin-top: 45px;
+}
+
+.dashboard-layout .summary-card {
+  min-width: 0;
+  height: 145px;
+  min-height: 145px;
+  padding: 20px 23px;
+  border-radius: 14px;
+  background: white;
+  border: 1px solid #e5ebe7;
+}
+
+.dashboard-layout .summary-card.primary {
+  background: #147d66;
+  border-color: #147d66;
+}
+
+.dashboard-layout .summary-card p {
+  font-size: 14px;
+  margin: 0;
+}
+
+.dashboard-layout .summary-card h2 {
+  margin: 16px 0 0;
+  font-size: 30px;
+}
+
+/* BUDGET + SAVING ASSISTANT */
+
+.dashboard-layout .dashboard-panels {
+  display: grid !important;
+  grid-template-columns: minmax(0, 685fr) minmax(0, 398fr) !important;
+  gap: 19px;
+  margin-top: 22px;
+  align-items: stretch;
+  width: 100%;
+}
+
+.dashboard-layout .dashboard-panels > .budget-card,
+.dashboard-layout .dashboard-panels > .saving-assistant {
+  width: 100% !important;
+  min-width: 0;
+  max-width: none !important;
+  min-height: 339px;
+  height: 339px;
+  margin: 0 !important;
+  border-radius: 14px;
+  padding: 23px;
+  box-sizing: border-box;
+}
+
+/* BUDGET CHART */
+
+.dashboard-layout .budget-body {
+  display: grid;
+  grid-template-columns: 188px minmax(0, 1fr);
+  align-items: center;
+  gap: 26px;
+  margin-top: 28px;
+}
+
+.dashboard-layout .budget-donut {
+  width: 188px;
+  height: 188px;
+  min-width: 188px;
+}
+
+.dashboard-layout .budget-legend {
+  width: 100%;
+  min-width: 0;
+}
+
+.dashboard-layout .budget-item {
+  display: grid;
+  grid-template-columns: 12px minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.dashboard-layout .budget-item strong {
+  white-space: nowrap;
+  font-size: 13px;
+}
+
+.dashboard-layout .budget-name {
+  min-width: 0;
+  font-size: 14px;
+}
+
+/* SAVING ASSISTANT */
+
+.dashboard-layout .saving-assistant {
+  display: flex;
+  flex-direction: column;
+}
+
+.dashboard-layout .saving-assistant h3 {
+  margin: 0;
+  font-size: 20px;
+}
+
+.dashboard-layout .saving-description {
+  margin: 10px 0 24px;
+  font-size: 13px;
+}
+
+.dashboard-layout .saving-insight {
+  flex: 1;
+  min-height: 0;
+  padding: 14px 20px;
+  background: #e6f3ee;
+  border-radius: 12px;
+}
+
+.dashboard-layout .saving-insight h4 {
+  margin: 0 0 12px;
+  font-size: 17px;
+}
+
+.dashboard-layout .saving-insight p {
+  font-size: 15px;
+  line-height: 1.65;
+  margin: 0;
+}
+
+.dashboard-layout .saving-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  min-height: 46px;
+  margin-top: 19px;
+  padding: 8px 12px;
+  font-size: 15px;
+  line-height: 1.4;
+}
+
+/* QUICK SIMULATION */
+
+.dashboard-layout .quick-simulation {
+  width: 100%;
+  min-height: 184px;
+  margin-top: 19px;
+  padding: 15px 24px 24px;
+  background: #ffffff;
+  border: 1px solid #e5ebe7;
+  border-radius: 14px;
+}
+
+.dashboard-layout .quick-form {
+  display: grid;
+  grid-template-columns: 378fr 348fr 282fr;
+  gap: 19px;
+  align-items: end;
+}
+
+
+@media (max-width: 1200px) {
+  .dashboard-layout .dashboard-panels {
+    grid-template-columns: 1fr !important;
+  }
+
+  .dashboard-layout .dashboard-panels > .budget-card,
+  .dashboard-layout .dashboard-panels > .saving-assistant {
+    height: auto;
+    min-height: 339px;
+  }
+}
+
+@media (max-width: 900px) {
+  .dashboard-layout .sidebar {
+    width: 200px;
+    flex-basis: 200px;
+  }
+
+  .dashboard-layout .dashboard-content {
+    padding: 25px;
+  }
+
+  .dashboard-layout .summary-grid,
+  .dashboard-layout .quick-form {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .dashboard-layout {
+    flex-direction: column;
+  }
+
+  .dashboard-layout .sidebar {
+    width: 100%;
+    min-height: auto;
+    flex-basis: auto;
+  }
+
+  .dashboard-layout .budget-body {
+    grid-template-columns: 1fr;
+    justify-items: center;
+  }
+}
+.dashboard-layout .dashboard-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.dashboard-layout .dashboard-header h1 {
+  margin: 0;
+  font-size: 30px;
+  font-weight: 700;
+  color: #193b32;
+}
+
+.dashboard-layout .dashboard-header p {
+  margin: 8px 0 0;
+  font-size: 15px;
+  color: #81918a;
+}
+
+.dashboard-layout .simulation-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 9px 18px;
+  border-radius: 999px;
+  background: #e6f3ee;
+  color: #147d66;
+  font-size: 13px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+@media (max-width: 600px) {
+  .dashboard-layout .dashboard-header {
+    flex-wrap: wrap;
+  }
+
+}
+
+.dashboard-layout .summary-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 9px;
+  height: 145px;
+  min-height: 145px;
+  padding: 20px 23px;
+}
+
+.dashboard-layout .summary-card .summary-title {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 500;
+  color: #81918a;
+}
+
+.dashboard-layout .summary-card .summary-amount {
+  margin: 0;
+  font-size: 29px;
+  line-height: 1.2;
+  font-weight: 700;
+  color: #193b32;
+}
+
+.dashboard-layout .summary-card .summary-description {
+  font-size: 12px;
+  line-height: 1.4;
+  color: #81918a;
+}
+
+.dashboard-layout .summary-card.primary {
+  background: #147d66;
+  border-color: #147d66;
+}
+
+.dashboard-layout .summary-card.primary .summary-title,
+.dashboard-layout .summary-card.primary .summary-amount {
+  color: #ffffff;
+}
+
+.dashboard-layout .summary-card.primary .summary-description {
+  color: #d0efe2;
+}
+
+/* Header mobile disembunyikan di desktop */
+.dashboard-mobile-header {
+  display: none;
+}
+
+.dashboard-sidebar-overlay {
+  display: none;
+}
+
+.dashboard-sidebar-wrapper {
+  flex-shrink: 0;
+}
+
+/* Tampilan HP */
+@media (max-width: 768px) {
+  .dashboard-layout {
+    display: block;
+    min-height: 100vh;
+    overflow-x: clip;
+  }
+
+  .dashboard-mobile-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    position: sticky;
+    top: 0;
+    z-index: 1001;
+    width: 100%;
+    box-sizing: border-box;
+    height: 60px;
+    padding: 0 16px;
+    background: #ffffff;
+    border-bottom: 1px solid #e6eee9;
+  }
+
+  .dashboard-menu-toggle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 38px;
+    height: 38px;
+    background: #e6f3ee;
+    border: none;
+    border-radius: 10px;
+    color: #147d66;
+    font-size: 23px;
+    cursor: pointer;
+  }
+
+  .dashboard-mobile-brand {
+    color: #193b32;
+    font-size: 19px;
+    font-weight: 700;
+  }
+
+  .dashboard-sidebar-wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1003;
+    height: 100dvh;
+    width: min(300px, 85vw);
+    transform: translateX(-105%);
+    transition: transform 0.25s ease;
+    background: white;
+    overflow-y: auto;
+    box-shadow: 4px 0 20px rgba(0, 0, 0, 0.08);
+  }
+
+  .dashboard-sidebar-wrapper.is-open {
+    transform: translateX(0);
+  }
+
+  .dashboard-sidebar-wrapper .sidebar {
+    position: relative;
+    top: auto;
+    left: auto;
+    width: 100%;
+    min-width: 0;
+    max-width: none;
+    height: 100%;
+    min-height: 100%;
+    box-sizing: border-box;
+  }
+
+  .dashboard-sidebar-overlay {
+    display: block;
+    position: fixed;
+    inset: 0;
+    z-index: 1002;
+    border: none;
+    background: rgba(0, 0, 0, 0.35);
+    padding: 0;
+    cursor: pointer;
+  }
+
+  .dashboard-content {
+    width: 100%;
+    max-width: 100%;
+    margin-left: 0;
+    padding: 24px 16px;
+    box-sizing: border-box;
+    min-width: 0;
+  }
+
+  .dashboard-header {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  .dashboard-header h1 {
+    font-size: 25px;
+  }
+
+  .summary-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .dashboard-panels {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .summary-grid > *,
+  .dashboard-panels > * {
+    min-width: 0;
+    max-width: 100%;
+  }
+}
+
+===== src/pages/Profil.css =====
+
+/* PROFIL KANTONGKOS */
+
+.profil-layout {
+  display: flex;
+  min-height: 100vh;
+  background: #f6f9f7;
+}
+
+.profil-layout .profil-content {
+  flex: 1;
+  min-width: 0;
+  padding: 35px 44px 40px 42px;
+}
+
+/* HEADER */
+
+.profil-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 20px;
+  margin-bottom: 32px;
+}
+
+.profil-header h1 {
+  margin: 0;
+  color: #193b32;
+  font-size: 30px;
+  font-weight: 700;
+}
+
+.profil-header p {
+  margin: 8px 0 0;
+  color: #81918a;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.profil-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 9px 18px;
+  border-radius: 999px;
+  background: #e6f3ee;
+  color: #147d66;
+  font-size: 13px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.profil-badge-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #147d66;
+}
+
+/* BANNER PROFIL */
+
+.profil-banner {
+  display: flex;
+  align-items: center;
+  gap: 23px;
+  min-height: 160px;
+  padding: 28px 32px;
+  background: #147d66;
+  border-radius: 14px;
+  color: #ffffff;
+}
+
+.profil-avatar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 86px;
+  height: 86px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  background: #ffffff;
+  color: #147d66;
+  font-size: 35px;
+  font-weight: 800;
+}
+
+.profil-banner-info {
+  min-width: 0;
+}
+
+.profil-banner-info h2 {
+  margin: 0 0 8px;
+  color: white;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.profil-banner-info p {
+  margin: 0 0 12px;
+  color: #d0efe2;
+  font-size: 14px;
+  overflow-wrap: anywhere;
+}
+
+.profil-banner-info span {
+  display: inline-flex;
+  padding: 6px 12px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.16);
+  color: #ffffff;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+/* LAYOUT */
+
+.profil-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.55fr) minmax(0, 1fr);
+  gap: 20px;
+  align-items: start;
+  margin-top: 22px;
+}
+
+.profil-card {
+  min-width: 0;
+  padding: 27px 29px;
+  border: 1px solid #e5ebe7;
+  border-radius: 14px;
+  background: #ffffff;
+}
+
+.profil-card h2 {
+  margin: 0;
+  color: #193b32;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.profil-card p {
+  color: #81918a;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.profil-card-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 25px;
+}
+
+.profil-card-header p {
+  margin: 8px 0 0;
+}
+
+.profil-edit-button {
+  flex-shrink: 0;
+  padding: 10px 15px;
+  border: 1px solid #147d66;
+  border-radius: 9px;
+  background: #e6f3ee;
+  color: #147d66;
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+/* FORM */
+
+.profil-field {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+  margin-bottom: 22px;
+}
+
+.profil-field label {
+  color: #81918a;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.profil-field input,
+.profil-field select {
+  width: 100%;
+  height: 49px;
+  padding: 0 14px;
+  border: 1px solid #dce9e2;
+  border-radius: 10px;
+  background: white;
+  color: #193b32;
+  font-family: inherit;
+  font-size: 14px;
+  outline: none;
+}
+
+.profil-field input:focus,
+.profil-field select:focus {
+  border-color: #147d66;
+  box-shadow: 0 0 0 3px #147d6620;
+}
+
+.profil-field input:disabled,
+.profil-field select:disabled {
+  background: #f6f9f7;
+  color: #60766b;
+  opacity: 1;
+}
+
+.profil-message {
+  padding: 12px 15px;
+  background: #e6f3ee;
+  border-radius: 9px;
+  color: #147d66 !important;
+  font-size: 13px;
+}
+
+.profil-actions {
+  display: grid;
+  grid-template-columns: 1fr 0.6fr;
+  gap: 13px;
+  margin-top: 10px;
+}
+
+.profil-save-button,
+.profil-cancel-button {
+  height: 46px;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.profil-save-button {
+  border: none;
+  background: #147d66;
+  color: white;
+}
+
+.profil-cancel-button {
+  border: 1px solid #dce9e2;
+  background: white;
+  color: #147d66;
+}
+
+/* SIDE CARDS */
+
+.profil-side {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.profil-info-card > p,
+.profil-account-card > p {
+  margin: 12px 0 22px;
+}
+
+.profil-info-highlight {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+  padding: 19px;
+  border-radius: 11px;
+  background: #e6f3ee;
+}
+
+.profil-info-highlight strong {
+  color: #147d66;
+  font-size: 14px;
+}
+
+.profil-info-highlight span {
+  color: #193b32;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.profil-logout-button {
+  width: 100%;
+  height: 46px;
+  border: 1px solid #e8b0a6;
+  border-radius: 10px;
+  background: #fff3f0;
+  color: #b44d3c;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.profil-logout-button:hover {
+  background: #ffe6df;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 1100px) {
+  .profil-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 800px) {
+  .profil-layout .profil-content {
+    padding: 25px;
+  }
+}
+
+@media (max-width: 600px) {
+  .profil-layout .profil-content {
+    padding: 20px;
+  }
+
+  .profil-header,
+  .profil-banner,
+  .profil-card-header {
+    flex-wrap: wrap;
+  }
+
+  .profil-header h1 {
+    font-size: 25px;
+  }
+
+  .profil-banner {
+    padding: 22px;
+  }
+
+  .profil-card {
+    padding: 20px;
+  }
+
+  .profil-actions {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ==========================================
+   PROFIL DOMPETKU - RESPONSIVE MOBILE
+   Tidak mengubah tampilan desktop Figma
+   ========================================== */
+
+/* Desktop: sembunyikan navigasi mobile */
+.profil-layout .dashboard-mobile-header {
+  display: none;
+}
+
+.profil-layout .dashboard-sidebar-overlay {
+  display: none;
+}
+
+.profil-layout .dashboard-sidebar-wrapper {
+  flex-shrink: 0;
+}
+
+/* ==========================================
+   TABLET & HP
+   ========================================== */
+@media (max-width: 768px) {
+
+  .profil-layout.dashboard-layout {
+    display: block;
+    min-height: 100vh;
+    overflow-x: clip;
+  }
+
+  /* Header mobile */
+  .profil-layout .dashboard-mobile-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    position: sticky;
+    top: 0;
+    z-index: 1001;
+    width: 100%;
+    height: 60px;
+    padding: 0 16px;
+    box-sizing: border-box;
+    background: #ffffff;
+    border-bottom: 1px solid #e6eee9;
+  }
+
+  .profil-layout .dashboard-menu-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 38px;
+    height: 38px;
+    flex-shrink: 0;
+    border: none;
+    border-radius: 10px;
+    background: #e6f3ee;
+    color: #147d66;
+    font-size: 23px;
+    cursor: pointer;
+  }
+
+  .profil-layout .dashboard-mobile-brand {
+    color: #193b32;
+    font-size: 19px;
+    font-weight: 700;
+  }
+
+  /* Sidebar geser */
+  .profil-layout .dashboard-sidebar-wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1003;
+    width: min(300px, 85vw);
+    height: 100dvh;
+    background: #ffffff;
+    transform: translateX(-105%);
+    transition: transform 0.25s ease;
+    overflow-x: hidden;
+    overflow-y: auto;
+    box-shadow: 4px 0 20px rgba(0, 0, 0, 0.08);
+  }
+
+  .profil-layout .dashboard-sidebar-wrapper.is-open {
+    transform: translateX(0);
+  }
+
+  .profil-layout .dashboard-sidebar-wrapper .sidebar {
+    position: relative;
+    top: auto;
+    left: auto;
+    width: 100%;
+    min-width: 0;
+    max-width: none;
+    height: auto;
+    min-height: 100%;
+    box-sizing: border-box;
+  }
+
+  /* Overlay gelap */
+  .profil-layout .dashboard-sidebar-overlay {
+    display: block;
+    position: fixed;
+    inset: 0;
+    z-index: 1002;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    border: none;
+    background: rgba(0, 0, 0, 0.35);
+    cursor: pointer;
+  }
+
+  /* Konten Profil */
+  .profil-layout .profil-content {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    margin-left: 0;
+    padding: 24px 16px;
+    box-sizing: border-box;
+  }
+
+  /* Header halaman */
+  .profil-layout .profil-header {
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  .profil-layout .profil-header h1 {
+    font-size: 25px;
+  }
+
+  /* Kartu profil dan informasi */
+  .profil-layout .profil-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 16px;
+  }
+
+  .profil-layout .profil-grid > *,
+  .profil-layout .profil-card,
+  .profil-layout .profil-side {
+    min-width: 0;
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+
+  /* Banner identitas pengguna */
+  .profil-layout .profil-banner {
+    flex-wrap: wrap;
+    gap: 14px;
+  }
+
+  .profil-layout .profil-banner-info {
+    min-width: 0;
+    overflow-wrap: anywhere;
+  }
+
+  /* Input */
+  .profil-layout .profil-field input,
+  .profil-layout .profil-field select {
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+
+  /* Tombol */
+  .profil-layout .profil-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+}
+
+/* ==========================================
+   HP KECIL
+   ========================================== */
+@media (max-width: 480px) {
+
+  .profil-layout .profil-card {
+    padding: 20px;
+  }
+
+  .profil-layout .profil-banner {
+    padding: 20px;
+  }
+
+  .profil-layout .profil-card-header {
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  .profil-layout .profil-actions {
+    flex-direction: column;
+  }
+
+  .profil-layout .profil-actions button,
+  .profil-layout .profil-logout-button {
+    width: 100%;
+  }
+
+  .profil-layout .profil-banner-info h2,
+  .profil-layout .profil-banner-info p {
+    overflow-wrap: anywhere;
+  }
+}
+
+===== src/pages/Riwayat.css =====
+
+/* RIWAYAT SIMULASI - KANTONGKOS */
+
+.riwayat-layout {
+  display: flex;
+  min-height: 100vh;
+  background: #f6f9f7;
+}
+
+.riwayat-layout .riwayat-content {
+  flex: 1;
+  min-width: 0;
+  padding: 35px 44px 40px 42px;
+}
+
+/* HEADER */
+
+.riwayat-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 20px;
+  margin-bottom: 36px;
+}
+
+.riwayat-header h1 {
+  margin: 0;
+  color: #193b32;
+  font-size: 30px;
+  font-weight: 700;
+}
+
+.riwayat-header p {
+  margin: 8px 0 0;
+  color: #81918a;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.riwayat-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 9px 18px;
+  border-radius: 999px;
+  background: #e6f3ee;
+  color: #147d66;
+  font-size: 13px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.riwayat-badge-dot {
+  width: 8px;
+  height: 8px;
+  background: #147d66;
+  border-radius: 50%;
+}
+
+/* SEARCH */
+
+.riwayat-search-card {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 24px;
+  min-height: 86px;
+  padding: 16px 21px;
+  background: #ffffff;
+  border: 1px solid #e5ebe7;
+  border-radius: 14px;
+}
+
+.riwayat-search-field {
+  width: min(100%, 490px);
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.riwayat-search-field label {
+  color: #81918a;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.riwayat-search-field input {
+  width: 100%;
+  height: 38px;
+  padding: 0 14px;
+  background: #f6f9f7;
+  border: 1px solid #e5ebe7;
+  border-radius: 9px;
+  color: #193b32;
+  font-family: inherit;
+  font-size: 13px;
+  outline: none;
+}
+
+.riwayat-search-field input:focus {
+  border-color: #147d66;
+}
+
+.riwayat-search-field input::placeholder {
+  color: #9aa9a2;
+}
+
+.riwayat-new-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 160px;
+  height: 38px;
+  padding: 0 17px;
+  border-radius: 9px;
+  background: #147d66;
+  color: #ffffff;
+  font-size: 13px;
+  font-weight: 700;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.riwayat-new-button:hover {
+  background: #106752;
+}
+
+/* TABLE CARD */
+
+.riwayat-table-card {
+  min-height: 384px;
+  margin-top: 18px;
+  padding: 19px 21px 25px;
+  background: #ffffff;
+  border: 1px solid #e5ebe7;
+  border-radius: 14px;
+}
+
+.riwayat-table-heading h2 {
+  margin: 0;
+  color: #193b32;
+  font-size: 19px;
+  font-weight: 700;
+}
+
+.riwayat-table-heading p {
+  margin: 6px 0 0;
+  color: #81918a;
+  font-size: 12px;
+}
+
+.riwayat-table-scroll {
+  width: 100%;
+  overflow-x: auto;
+  margin-top: 7px;
+}
+
+.riwayat-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+  color: #193b32;
+  font-size: 13px;
+}
+
+.riwayat-table thead {
+  background: #f6f9f7;
+}
+
+.riwayat-table th {
+  height: 43px;
+  padding: 11px 17px;
+  color: #81918a;
+  font-size: 12px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.riwayat-table th:first-child {
+  border-radius: 9px 0 0 9px;
+}
+
+.riwayat-table th:last-child {
+  border-radius: 0 9px 9px 0;
+  text-align: center;
+}
+
+.riwayat-table td {
+  height: 58px;
+  padding: 12px 17px;
+  border-bottom: 1px solid #e5ebe7;
+  white-space: nowrap;
+}
+
+.riwayat-table .riwayat-nama {
+  color: #193b32;
+  font-weight: 700;
+}
+
+.riwayat-positive {
+  color: #147d66 !important;
+  font-weight: 700;
+}
+
+.riwayat-negative {
+  color: #e45d59 !important;
+  font-weight: 700;
+}
+
+.riwayat-table td:last-child {
+  text-align: center;
+}
+
+.riwayat-detail-button {
+  min-width: 84px;
+  height: 30px;
+  padding: 0 12px;
+  background: #e6f3ee;
+  color: #147d66;
+  border: none;
+  border-radius: 8px;
+  font-size: 12px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.riwayat-detail-button:hover {
+  background: #d2e9df;
+}
+
+.riwayat-empty {
+  padding: 30px !important;
+  text-align: center !important;
+  color: #81918a;
+  white-space: normal !important;
+}
+
+/* BOTTOM TIP */
+
+.riwayat-tip {
+  margin-top: 18px;
+  padding: 17px 21px;
+  background: #e6f3ee;
+  border-radius: 11px;
+  color: #147d66;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+/* DETAIL MODAL */
+
+.riwayat-modal-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background: rgba(18, 43, 36, 0.45);
+}
+
+.riwayat-modal {
+  width: 100%;
+  max-width: 440px;
+  padding: 26px;
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 15px 55px rgba(0, 0, 0, 0.12);
+}
+
+.riwayat-modal-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.riwayat-modal-heading h2 {
+  margin: 0;
+  color: #193b32;
+  font-size: 22px;
+}
+
+.riwayat-modal-heading button {
+  border: none;
+  background: transparent;
+  color: #81918a;
+  font-size: 30px;
+  cursor: pointer;
+}
+
+.riwayat-modal h3 {
+  margin: 24px 0 5px;
+  color: #193b32;
+  font-size: 18px;
+}
+
+.riwayat-modal-date {
+  margin: 0 0 20px;
+  color: #81918a;
+  font-size: 13px;
+}
+
+.riwayat-modal-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 15px 0;
+  border-bottom: 1px solid #e5ebe7;
+  font-size: 14px;
+}
+
+.riwayat-modal-row span {
+  color: #81918a;
+}
+
+.riwayat-modal-row strong {
+  color: #193b32;
+}
+
+.riwayat-modal-note {
+  margin-top: 20px;
+  padding: 15px;
+  background: #e6f3ee;
+  border-radius: 10px;
+  color: #193b32;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.riwayat-modal-close {
+  width: 100%;
+  height: 44px;
+  margin-top: 20px;
+  border: none;
+  border-radius: 9px;
+  background: #147d66;
+  color: #ffffff;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 900px) {
+  .riwayat-layout .riwayat-content {
+    padding: 25px;
+  }
+}
+
+@media (max-width: 600px) {
+  .riwayat-layout .riwayat-content {
+    padding: 20px;
+  }
+
+  .riwayat-header,
+  .riwayat-search-card {
+    flex-wrap: wrap;
+  }
+
+  .riwayat-header h1 {
+    font-size: 25px;
+  }
+
+  .riwayat-search-field {
+    width: 100%;
+  }
+
+  .riwayat-new-button {
+    width: 100%;
+  }
+
+  .riwayat-table {
+    min-width: 660px;
+  }
+
+  .riwayat-table-card {
+    padding: 16px;
+  }
+}
+
+===== src/pages/Simulator.css =====
+
+/* SIMULATOR KANTONGKOS - FIGMA */
+
+.simulator-layout {
+  display: flex;
+  min-height: 100vh;
+  background: #f6f9f7;
+}
+
+.simulator-layout .simulator-content {
+  flex: 1;
+  min-width: 0;
+  padding: 35px 44px 40px 42px;
+}
+
+/* HEADER */
+
+.simulator-layout .simulator-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 20px;
+  margin-bottom: 35px;
+}
+
+.simulator-layout .simulator-header h1 {
+  margin: 0;
+  color: #193b32;
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 1.25;
+}
+
+.simulator-layout .simulator-header p {
+  margin: 9px 0 0;
+  color: #81918a;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.simulator-layout .simulator-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  padding: 9px 19px;
+  border-radius: 999px;
+  background: #e6f3ee;
+  color: #147d66;
+  font-size: 13px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.simulator-badge-dot,
+.simulator-status-dot {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  background: #147d66;
+}
+
+/* TWO COLUMN LAYOUT */
+
+.simulator-layout .simulator-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.61fr) minmax(0, 1fr);
+  gap: 22px;
+  align-items: stretch;
+}
+
+.simulator-layout .simulator-card {
+  min-width: 0;
+  min-height: 692px;
+  padding: 27px 29px;
+  background: #ffffff;
+  border: 1px solid #e5ebe7;
+  border-radius: 15px;
+}
+
+.simulator-card-heading h2 {
+  margin: 0;
+  color: #193b32;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.simulator-card-heading p {
+  margin: 8px 0 0;
+  color: #81918a;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+/* FORM */
+
+.simulator-layout .simulator-form-card form {
+  margin-top: 7px;
+}
+
+.simulator-layout .simulator-fields-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  column-gap: 29px;
+  row-gap: 35px;
+}
+
+.simulator-layout .simulator-field {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  min-width: 0;
+  margin: 0;
+}
+
+.simulator-layout .simulator-field label {
+  color: #81918a;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.simulator-layout .simulator-field input,
+.simulator-layout .simulator-field select {
+  display: block;
+  width: 100%;
+  height: 52px;
+  min-width: 0;
+  padding: 0 15px;
+  border: 1px solid #dce9e2;
+  border-radius: 10px;
+  background: #ffffff;
+  color: #193b32;
+  font-family: inherit;
+  font-size: 15px;
+  outline: none;
+}
+
+.simulator-layout .simulator-field select {
+  appearance: none;
+  cursor: pointer;
+}
+
+.simulator-layout .simulator-field input:focus,
+.simulator-layout .simulator-field select:focus {
+  border-color: #147d66;
+  box-shadow: 0 0 0 3px #147d6620;
+}
+
+/* CHECKBOX BOX */
+
+.simulator-layout .simulator-option-box {
+  margin-top: 62px;
+  padding: 16px 19px;
+  background: #e6f3ee;
+  border-radius: 12px;
+}
+
+.simulator-layout .simulator-checkbox-label {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  color: #147d66;
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 1.5;
+  cursor: pointer;
+}
+
+.simulator-layout .simulator-checkbox-label input {
+  width: 15px;
+  height: 15px;
+  flex-shrink: 0;
+  margin: 2px 0 0;
+  accent-color: #147d66;
+}
+
+.simulator-layout .simulator-option-box p {
+  margin: 10px 0 0;
+  color: #81918a;
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+/* BUTTONS */
+
+.simulator-layout .simulator-actions {
+  display: grid;
+  grid-template-columns: minmax(0, 2fr) minmax(0, 1fr);
+  gap: 16px;
+  margin-top: 36px;
+}
+
+.simulator-layout .simulator-submit,
+.simulator-layout .simulator-reset {
+  width: 100%;
+  height: 46px;
+  margin: 0;
+  padding: 0 12px;
+  border-radius: 10px;
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.simulator-layout .simulator-submit {
+  background: #147d66;
+  color: #ffffff;
+  border: 1px solid #147d66;
+}
+
+.simulator-layout .simulator-submit:hover {
+  background: #106752;
+}
+
+.simulator-layout .simulator-reset {
+  background: #ffffff;
+  color: #147d66;
+  border: 1px solid #dce9e2;
+}
+
+.simulator-layout .simulator-reset:hover {
+  background: #f0f7f3;
+}
+
+/* RESULT CARD */
+
+.simulator-layout .simulator-result-card {
+  display: flex;
+  flex-direction: column;
+}
+
+.simulator-layout .simulator-balance {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 17px;
+  padding: 20px 23px;
+  min-height: 150px;
+  background: #e6f3ee;
+  border-radius: 12px;
+}
+
+.simulator-layout .simulator-balance > span {
+  color: #147d66;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.simulator-layout .simulator-balance > strong {
+  color: #147d66;
+  font-size: 36px;
+  font-weight: 800;
+  line-height: 1.2;
+  overflow-wrap: anywhere;
+}
+
+.simulator-layout .simulator-balance-status {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  color: #147d66;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+/* RESULT ROWS */
+
+.simulator-layout .simulator-result-details {
+  margin-top: 13px;
+}
+
+.simulator-layout .simulator-result-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  min-height: 65px;
+  padding: 12px 0;
+  margin: 0;
+  border-bottom: 1px solid #e5ebe7;
+}
+
+.simulator-layout .simulator-result-row span {
+  min-width: 0;
+  color: #81918a;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.simulator-layout .simulator-result-row strong {
+  flex-shrink: 0;
+  color: #193b32;
+  font-size: 15px;
+  font-weight: 700;
+  text-align: right;
+  white-space: nowrap;
+}
+
+/* ADVICE */
+
+.simulator-layout .simulator-advice {
+  margin-top: auto;
+  padding: 17px 19px;
+  min-height: 95px;
+  background: #fff4e4;
+  border-radius: 12px;
+}
+
+.simulator-layout .simulator-advice h3 {
+  margin: 0 0 10px;
+  color: #b66b13;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.simulator-layout .simulator-advice p {
+  margin: 0;
+  color: #a2783a;
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 1150px) {
+  .simulator-layout .simulator-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .simulator-layout .simulator-card {
+    min-height: auto;
+  }
+
+  .simulator-layout .simulator-advice {
+    margin-top: 35px;
+  }
+}
+
+@media (max-width: 800px) {
+  .simulator-layout .simulator-content {
+    padding: 25px;
+  }
+}
+
+@media (max-width: 600px) {
+  .simulator-layout .simulator-content {
+    padding: 20px;
+  }
+
+  .simulator-layout .simulator-header {
+    flex-wrap: wrap;
+  }
+
+  .simulator-layout .simulator-header h1 {
+    font-size: 25px;
+  }
+
+  .simulator-layout .simulator-card {
+    padding: 20px;
+  }
+
+  .simulator-layout .simulator-fields-grid {
+    grid-template-columns: 1fr;
+    row-gap: 20px;
+  }
+
+  .simulator-layout .simulator-option-box {
+    margin-top: 30px;
+  }
+
+  .simulator-layout .simulator-actions {
+    grid-template-columns: 1fr;
+  }
+
+  .simulator-layout .simulator-result-row {
+    flex-wrap: wrap;
+  }
+}
+
+/* SIMPAN HASIL SIMULASI */
+
+.simulator-layout .simulator-save-area {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 20px;
+  padding-top: 18px;
+  border-top: 1px solid #e5ebe7;
+}
+
+.simulator-layout .simulator-save-area label {
+  color: #81918a;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.simulator-layout .simulator-save-area input {
+  width: 100%;
+  height: 46px;
+  padding: 0 14px;
+  border: 1px solid #dce9e2;
+  border-radius: 10px;
+  background: #ffffff;
+  color: #193b32;
+  font: inherit;
+  font-size: 14px;
+  outline: none;
+}
+
+.simulator-layout .simulator-save-area input:focus {
+  border-color: #147d66;
+}
+
+.simulator-layout .simulator-save-button {
+  width: 100%;
+  height: 46px;
+  border: 1px solid #147d66;
+  border-radius: 10px;
+  background: #147d66;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.simulator-layout .simulator-save-button:hover {
+  background: #106752;
+}
+
+.simulator-layout .simulator-save-button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.simulator-layout .simulator-save-hint,
+.simulator-layout .simulator-save-message {
+  margin: 0;
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.simulator-layout .simulator-save-hint {
+  color: #81918a;
+}
+
+.simulator-layout .simulator-save-message {
+  color: #147d66;
+}
+
+/* =========================================
+   SIMULATOR - RESPONSIVE NAVIGATION
+   Tampilan desktop Figma tetap dipertahankan
+   ========================================= */
+
+/* DESKTOP */
+.simulator-layout .dashboard-mobile-header {
+  display: none;
+}
+
+.simulator-layout .dashboard-sidebar-overlay {
+  display: none;
+}
+
+.simulator-layout .dashboard-sidebar-wrapper {
+  flex-shrink: 0;
+}
+
+/* TABLET & HP */
+@media (max-width: 768px) {
+
+  .simulator-layout.dashboard-layout {
+    display: block;
+    min-height: 100vh;
+    overflow-x: clip;
+  }
+
+  /* Header mobile */
+  .simulator-layout .dashboard-mobile-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    position: sticky;
+    top: 0;
+    z-index: 1001;
+    width: 100%;
+    height: 60px;
+    padding: 0 16px;
+    box-sizing: border-box;
+    background: #ffffff;
+    border-bottom: 1px solid #e6eee9;
+  }
+
+  .simulator-layout .dashboard-menu-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 38px;
+    height: 38px;
+    flex-shrink: 0;
+    border: none;
+    border-radius: 10px;
+    background: #e6f3ee;
+    color: #147d66;
+    font-size: 23px;
+    cursor: pointer;
+  }
+
+  .simulator-layout .dashboard-mobile-brand {
+    color: #193b32;
+    font-size: 19px;
+    font-weight: 700;
+  }
+
+  /* Sidebar tersembunyi di luar layar */
+  .simulator-layout .dashboard-sidebar-wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1003;
+    width: min(300px, 85vw);
+    height: 100dvh;
+    background: #ffffff;
+    transform: translateX(-105%);
+    transition: transform 0.25s ease;
+    overflow-y: auto;
+    box-shadow: 4px 0 20px rgba(0, 0, 0, 0.08);
+  }
+
+  /* Sidebar saat dibuka */
+  .simulator-layout .dashboard-sidebar-wrapper.is-open {
+    transform: translateX(0);
+  }
+
+  .simulator-layout .dashboard-sidebar-wrapper .sidebar {
+    position: relative;
+    top: auto;
+    left: auto;
+    width: 100%;
+    min-width: 0;
+    max-width: none;
+    height: 100%;
+    min-height: 100%;
+    box-sizing: border-box;
+  }
+
+  /* Latar gelap saat Sidebar terbuka */
+  .simulator-layout .dashboard-sidebar-overlay {
+    display: block;
+    position: fixed;
+    inset: 0;
+    z-index: 1002;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    border: none;
+    background: rgba(0, 0, 0, 0.35);
+    cursor: pointer;
+  }
+
+  /* Konten utama */
+  .simulator-layout .simulator-content {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    margin-left: 0;
+    padding: 24px 16px;
+    box-sizing: border-box;
+  }
+
+  /* Header */
+  .simulator-layout .simulator-header {
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-bottom: 24px;
+  }
+
+  .simulator-layout .simulator-header h1 {
+    font-size: 25px;
+  }
+
+  /* Form dan hasil ditumpuk vertikal */
+  .simulator-layout .simulator-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 16px;
+  }
+
+  .simulator-layout .simulator-card {
+    min-width: 0;
+    min-height: auto;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+
+  /* Input tidak melewati batas kartu */
+  .simulator-layout .simulator-field input,
+  .simulator-layout .simulator-field select,
+  .simulator-layout .simulator-save-area input {
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+
+  /* Nominal tetap terbaca */
+  .simulator-layout .simulator-balance > strong {
+    font-size: clamp(24px, 7vw, 36px);
+    overflow-wrap: anywhere;
+  }
+}
+
+/* HP KECIL */
+@media (max-width: 480px) {
+
+  .simulator-layout .simulator-fields-grid {
+    grid-template-columns: minmax(0, 1fr);
+    row-gap: 20px;
+  }
+
+  .simulator-layout .simulator-actions {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 12px;
+  }
+
+  .simulator-layout .simulator-option-box {
+    margin-top: 30px;
+  }
+
+  .simulator-layout .simulator-result-row {
+    flex-wrap: wrap;
+  }
+
+  .simulator-layout .simulator-result-row strong {
+    max-width: 100%;
+    overflow-wrap: anywhere;
+    white-space: normal;
+  }
+}
+
+===== src/pages/StrategiHemat.css =====
+
+/* STRATEGI HEMAT - KANTONGKOS */
+
+.strategi-layout {
+  display: flex;
+  min-height: 100vh;
+  background: #f6f9f7;
+}
+
+.strategi-layout .strategi-content {
+  flex: 1;
+  min-width: 0;
+  padding: 35px 44px 40px 42px;
+}
+
+/* HEADER */
+
+.strategi-layout .strategi-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 20px;
+  margin-bottom: 36px;
+}
+
+.strategi-layout .strategi-header h1 {
+  margin: 0;
+  color: #193b32;
+  font-size: 30px;
+  font-weight: 700;
+}
+
+.strategi-layout .strategi-header p {
+  margin: 8px 0 0;
+  color: #81918a;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.strategi-layout .strategi-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  padding: 9px 18px;
+  border-radius: 999px;
+  background: #e6f3ee;
+  color: #147d66;
+  font-size: 13px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.strategi-badge-dot {
+  width: 8px;
+  height: 8px;
+  background: #147d66;
+  border-radius: 50%;
+}
+
+/* BANNER HIJAU */
+
+.strategi-layout .strategi-banner {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 30px;
+  align-items: center;
+  min-height: 140px;
+  padding: 25px 32px;
+  background: #147d66;
+  border-radius: 14px;
+  color: white;
+}
+
+.strategi-banner-total {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.strategi-banner-total span {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.strategi-banner-total strong {
+  font-size: 38px;
+  font-weight: 800;
+  line-height: 1.2;
+}
+
+.strategi-banner-description h2 {
+  margin: 0 0 9px;
+  font-size: 19px;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.strategi-banner-description p {
+  margin: 0;
+  color: #d0efe2;
+  font-size: 16px;
+}
+
+/* BAGIAN SKENARIO */
+
+.strategi-layout .strategi-skenario-section {
+  margin-top: 37px;
+}
+
+.strategi-section-heading h2 {
+  margin: 0;
+  color: #193b32;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.strategi-section-heading p {
+  margin: 8px 0 0;
+  color: #81918a;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.strategi-layout .strategi-skenario-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+  margin-top: 0;
+}
+
+.strategi-layout .strategi-skenario-card {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  min-height: 265px;
+  padding: 22px;
+  background: #ffffff;
+  border: 1px solid #dce9e2;
+  border-radius: 14px;
+  transition: border-color 0.2s, background 0.2s;
+}
+
+.strategi-layout .strategi-skenario-card.selected {
+  background: #e6f3ee;
+  border-color: #147d66;
+}
+
+.strategi-skenario-card h3 {
+  margin: 0;
+  color: #193b32;
+  font-size: 19px;
+  font-weight: 700;
+}
+
+.strategi-skenario-card .strategi-biaya {
+  display: block;
+  margin-top: 24px;
+  color: #147d66;
+  font-size: 34px;
+  font-weight: 800;
+  line-height: 1.15;
+}
+
+.strategi-skenario-card .strategi-periode {
+  display: block;
+  margin-top: 5px;
+  color: #81918a;
+  font-size: 13px;
+}
+
+.strategi-hemat-label {
+  display: flex;
+  align-items: center;
+  min-height: 38px;
+  margin-top: 21px;
+  padding: 9px 13px;
+  background: #eef3f0;
+  border-radius: 9px;
+  color: #147d66;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.strategi-skenario-card.selected .strategi-hemat-label {
+  background: #ffffff;
+}
+
+.strategi-layout .strategi-pilih-button {
+  width: 100%;
+  min-height: 46px;
+  margin-top: 14px;
+  padding: 8px 12px;
+  background: #ffffff;
+  color: #147d66;
+  border: 1px solid #dce9e2;
+  border-radius: 10px;
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.strategi-layout .strategi-pilih-button:hover {
+  background: #f0f7f3;
+}
+
+.strategi-layout .strategi-pilih-button.selected {
+  background: #147d66;
+  border-color: #147d66;
+  color: #ffffff;
+}
+
+.strategi-layout .strategi-pilih-button.selected:hover {
+  background: #106752;
+}
+
+/* PERBANDINGAN HASIL */
+
+.strategi-layout .strategi-perbandingan {
+  min-height: 153px;
+  margin-top: 33px;
+  padding: 20px 23px;
+  background: #ffffff;
+  border: 1px solid #e5ebe7;
+  border-radius: 14px;
+}
+
+.strategi-layout .strategi-perbandingan-content {
+  display: grid;
+  grid-template-columns: 1fr 45px 1.4fr;
+  align-items: center;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.strategi-sisa-awal {
+  color: #81918a;
+  font-size: 19px;
+  font-weight: 700;
+}
+
+.strategi-arrow {
+  color: #81918a;
+  font-size: 26px;
+  font-weight: 700;
+  text-align: center;
+}
+
+.strategi-sisa-akhir {
+  color: #147d66;
+  font-size: 19px;
+  font-weight: 700;
+  text-align: center;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 1100px) {
+  .strategi-layout .strategi-skenario-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .strategi-layout .strategi-skenario-card {
+    min-height: auto;
+  }
+}
+
+@media (max-width: 800px) {
+  .strategi-layout .strategi-content {
+    padding: 25px;
+  }
+
+  .strategi-layout .strategi-banner {
+    grid-template-columns: 1fr;
+  }
+
+  .strategi-layout .strategi-perbandingan-content {
+    grid-template-columns: 1fr;
+    gap: 10px;
+    text-align: center;
+  }
+
+  .strategi-sisa-akhir {
+    text-align: center;
+  }
+}
+
+@media (max-width: 600px) {
+  .strategi-layout .strategi-content {
+    padding: 20px;
+  }
+
+  .strategi-layout .strategi-header {
+    flex-wrap: wrap;
+  }
+
+  .strategi-layout .strategi-header h1 {
+    font-size: 25px;
+  }
+
+  .strategi-layout .strategi-banner {
+    padding: 22px;
+  }
+
+  .strategi-banner-total strong {
+    font-size: 31px;
+  }
+
+  .strategi-layout .strategi-perbandingan {
+    padding: 18px;
+  }
+}
+
+===== src/pages/Target.css =====
+
+/* TARGET TABUNGAN - FIGMA KANTONGKOS */
+
+.target-layout {
+  display: flex;
+  min-height: 100vh;
+  background: #f6f9f7;
+}
+
+.target-layout .target-content {
+  flex: 1;
+  min-width: 0;
+  padding: 35px 44px 40px 42px;
+}
+
+/* HEADER */
+
+.target-layout .target-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 20px;
+  margin-bottom: 36px;
+}
+
+.target-layout .target-header h1 {
+  margin: 0;
+  color: #193b32;
+  font-size: 30px;
+  font-weight: 700;
+}
+
+.target-layout .target-header p {
+  margin: 8px 0 0;
+  color: #81918a;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.target-layout .target-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 9px 18px;
+  border-radius: 999px;
+  background: #e6f3ee;
+  color: #147d66;
+  font-size: 13px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.target-badge-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #147d66;
+}
+
+/* MAIN LAYOUT */
+
+.target-layout .target-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.55fr) minmax(0, 1fr);
+  gap: 22px;
+  align-items: stretch;
+}
+
+.target-layout .target-card {
+  min-width: 0;
+  padding: 27px 29px;
+  background: #ffffff;
+  border: 1px solid #e5ebe7;
+  border-radius: 15px;
+}
+
+.target-layout .target-card-heading h2 {
+  margin: 0;
+  color: #193b32;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.target-layout .target-card-heading p {
+  margin: 8px 0 0;
+  color: #81918a;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+/* FORM KIRI */
+
+.target-layout .target-form-card {
+  min-height: 685px;
+  display: flex;
+  flex-direction: column;
+}
+
+.target-layout .target-form-card form {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  margin-top: 15px;
+}
+
+.target-layout .target-field {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+  margin-bottom: 29px;
+}
+
+.target-layout .target-field label {
+  color: #81918a;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.target-layout .target-field input {
+  width: 100%;
+  height: 52px;
+  padding: 0 15px;
+  border: 1px solid #dce9e2;
+  border-radius: 10px;
+  background: #ffffff;
+  color: #193b32;
+  font-family: inherit;
+  font-size: 15px;
+  outline: none;
+}
+
+.target-layout .target-field input:focus {
+  border-color: #147d66;
+  box-shadow: 0 0 0 3px #147d6620;
+}
+
+.target-layout .target-submit {
+  width: 100%;
+  height: 46px;
+  flex-shrink: 0;
+  margin-top: auto;
+  padding: 0 14px;
+  border: none;
+  border-radius: 10px;
+  background: #147d66;
+  color: #ffffff;
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.target-layout .target-submit:hover {
+  background: #106752;
+}
+
+/* RIGHT COLUMN */
+
+.target-layout .target-right-column {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  min-width: 0;
+}
+
+.target-layout .target-estimate-card {
+  min-height: 325px;
+}
+
+.target-layout .target-time-box {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  min-height: 120px;
+  margin-top: 19px;
+  padding: 19px 22px;
+  background: #e6f3ee;
+  border-radius: 12px;
+}
+
+.target-layout .target-time-box span {
+  color: #147d66;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.target-layout .target-time-box strong {
+  color: #147d66;
+  font-size: 36px;
+  font-weight: 800;
+  line-height: 1.2;
+}
+
+.target-layout .target-progress-description {
+  margin-top: 23px;
+  margin-bottom: 12px;
+  color: #81918a;
+  font-size: 13px;
+}
+
+.target-layout .target-progress-track {
+  width: 100%;
+  height: 12px;
+  margin: 0;
+  border-radius: 999px;
+  background: #e9efeb;
+  overflow: hidden;
+}
+
+.target-layout .target-progress-fill {
+  height: 100%;
+  background: #147d66;
+  border-radius: inherit;
+  transition: width 0.25s ease;
+}
+
+/* TIPS MENABUNG */
+
+.target-layout .target-tips-card {
+  flex: 1;
+  min-height: 340px;
+}
+
+.target-layout .target-tips-list {
+  display: flex;
+  flex-direction: column;
+  gap: 27px;
+  margin-top: 26px;
+}
+
+.target-layout .target-tip-item {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  color: #193b32;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.target-layout .target-tip-check {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 27px;
+  height: 27px;
+  flex-shrink: 0;
+  background: #e6f3ee;
+  border-radius: 7px;
+  color: #147d66;
+  font-size: 15px;
+  font-weight: 800;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 1150px) {
+  .target-layout .target-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .target-layout .target-form-card {
+    min-height: 580px;
+  }
+
+  .target-layout .target-tips-card {
+    min-height: 300px;
+  }
+}
+
+@media (max-width: 800px) {
+  .target-layout .target-content {
+    padding: 25px;
+  }
+}
+
+@media (max-width: 600px) {
+  .target-layout .target-content {
+    padding: 20px;
+  }
+
+  .target-layout .target-header {
+    flex-wrap: wrap;
+  }
+
+  .target-layout .target-header h1 {
+    font-size: 25px;
+  }
+
+  .target-layout .target-card {
+    padding: 20px;
+  }
+
+  .target-layout .target-form-card {
+    min-height: 560px;
+  }
+
+  .target-layout .target-time-box strong {
+    font-size: 30px;
+  }
+}
+
+===== src/components/Sidebar.jsx =====
+
+import { NavLink } from "react-router-dom";
+import "./Sidebar.css";
+import logoDompetku from "./Logodompet.png";
+
+const menus = [
+  { label: "Dashboard", path: "/dashboard", icon: "▦" },
+  { label: "Simulator", path: "/simulator", icon: "◫" },
+  { label: "Strategi Hemat", path: "/strategi", icon: "◉" },
+  { label: "Target Tabungan", path: "/target", icon: "◎" },
+  { label: "Riwayat Simulasi", path: "/riwayat", icon: "▤" },
+  { label: "Profil", path: "/profil", icon: "◯" }
+];
+
+export default function Sidebar({ onNavigate }) {
+  return (
+    <aside className="sidebar">
+      <div className="sidebar-brand">
+        <img
+          src={logoDompetku}
+          alt="Logo Dompetku"
+          className="sidebar-wallet-logo"
+        />
+        <span>Dompetku</span>
+      </div>
+
+      <nav className="sidebar-navigation">
+        {menus.map((menu) => (
+          <NavLink
+            key={menu.path}
+            to={menu.path}
+            onClick={() => onNavigate?.()}
+            className={({ isActive }) =>
+              `sidebar-link ${isActive ? "active" : ""}`
+            }
+          >
+            <span
+              style={{
+                width: 20,
+                fontSize: 19,
+                textAlign: "center",
+                flexShrink: 0
+              }}
+              aria-hidden="true"
+            >
+              {menu.icon}
+            </span>
+
+            <span>{menu.label}</span>
+          </NavLink>
+        ))}
+      </nav>
+
+      <div className="sidebar-tip">
+        <h4>TIPS HEMAT</h4>
+        <p>
+          Cek anggaran sebelum melakukan pengeluaran
+        </p>
+      </div>
+    </aside>
+  );
+}
+
+===== src/components/Sidebar.css =====
+
+.dashboard-layout .sidebar {
+  display: flex;
+  flex-direction: column;
+  width: 252px;
+  flex: 0 0 252px;
+  min-height: 100vh;
+  padding: 29px 17px 30px;
+  background: #ffffff;
+  border-right: 1px solid #e5ebe7;
+}
+
+.sidebar-brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 0 0 37px 10px;
+  color: #193b32;
+  font-size: 19px;
+  font-weight: 700;
+}
+
+.sidebar-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 35px;
+  height: 35px;
+  flex-shrink: 0;
+  background: #147d66;
+  color: white;
+  border-radius: 10px;
+  font-size: 21px;
+  font-weight: 800;
+}
+
+
+.dashboard-layout .sidebar .sidebar-navigation {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+}
+
+.dashboard-layout .sidebar .sidebar-link {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  width: 100%;
+  min-height: 48px;
+  padding: 0 14px;
+  border-radius: 10px;
+  color: #81918a;
+  font-size: 14px;
+  text-decoration: none;
+}
+
+.dashboard-layout .sidebar .sidebar-link:hover {
+  background: #f0f7f3;
+  color: #147d66;
+}
+
+.dashboard-layout .sidebar .sidebar-link.active {
+  background: #e6f3ee;
+  color: #147d66;
+  font-weight: 700;
+}
+
+
+
+.sidebar-tip {
+  width: calc(100% - 20px);
+  margin: auto 0 0 10px;
+  padding: 17px 14px;
+  background: #e6f3ee;
+  border-radius: 13px;
+}
+
+.sidebar-tip h4 {
+  margin: 0 0 10px;
+  color: #147d66;
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.sidebar-tip p {
+  margin: 0;
+  color: #193b32;
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+
+.dashboard-layout .sidebar .sidebar-wallet-logo {
+  display: block;
+  width: 64px;
+  height: 64px;
+  max-width: 64px;
+  max-height: 64px;
+  flex: 0 0 64px;
+  object-fit: contain;
+}
+
+.dashboard-layout .sidebar .sidebar-brand {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 70px;
+  margin-bottom: 24px;
+}
+
+.dashboard-layout .sidebar .sidebar-brand-name {
+  font-size: 20px;
+  font-weight: 800;
+  color: #147d66;
+}
+
+
+@media (min-width: 769px) and (max-width: 900px) {
+  .dashboard-layout .sidebar {
+    width: 200px;
+    flex-basis: 200px;
+  }
+}
+
+
+@media (max-width: 768px) {
+
+  .dashboard-layout .dashboard-sidebar-wrapper .sidebar {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    min-width: 0;
+    max-width: 100%;
+    flex: none;
+    height: auto;
+    min-height: 100%;
+    padding: 24px 17px 30px;
+    margin: 0;
+    box-sizing: border-box;
+    background: #ffffff;
+  }
+
+  .dashboard-layout .dashboard-sidebar-wrapper .sidebar-brand {
+    display: flex;
+    flex-shrink: 0;
+    align-items: center;
+    gap: 8px;
+    margin: 0 0 30px 10px;
+  }
+
+
+  .dashboard-layout .dashboard-sidebar-wrapper .sidebar-navigation {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 9px;
+    width: 100%;
+    height: auto;
+    min-height: 0;
+    margin: 0;
+    padding: 0;
+    overflow: visible;
+  }
+
+  .dashboard-layout .dashboard-sidebar-wrapper .sidebar-link {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-shrink: 0;
+    gap: 13px;
+    width: 100%;
+    min-height: 48px;
+    padding: 0 14px;
+    box-sizing: border-box;
+    white-space: normal;
+    text-decoration: none;
+  }
+
+
+  .dashboard-layout .dashboard-sidebar-wrapper .sidebar-tip {
+    display: block;
+    flex-shrink: 0;
+    margin: 32px 0 0 10px;
+  }
+}
