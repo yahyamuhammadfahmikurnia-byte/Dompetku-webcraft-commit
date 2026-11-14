@@ -1,5 +1,6 @@
 # Dompetku
 
+<<<<<<< HEAD
 ## Contributors
 
 **Project:** Dompetku  
@@ -23,6 +24,21 @@ The application provides financial simulations, spending strategies, savings goa
 
 ## Overview
 
+=======
+**Personal Finance Management for Students**
+
+Dompetku is a web-based personal finance application designed to help university students, particularly those living independently, manage their monthly budgets and plan their savings more effectively.
+
+The application provides financial simulations, spending strategies, savings goals, and financial summaries through a simple, responsive interface.
+
+**Live Website:** https://dompetku-joss.web.app  
+**Repository:** https://github.com/yahyamuhammadfahmikurnia-byte/Dompetku-webcraft-commit
+
+---
+
+## Overview
+
+>>>>>>> b5cba140dbc32ec266f0a3a890bea45908269ea9
 Managing personal finances can be challenging for students with limited monthly allowances. Dompetku provides a practical way to understand spending patterns, estimate remaining budgets, and plan financial goals.
 
 Instead of focusing only on expense tracking, the application emphasizes financial planning through interactive simulations and personalized budgeting scenarios.
