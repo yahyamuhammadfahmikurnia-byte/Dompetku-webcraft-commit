@@ -1,0 +1,313 @@
+
+/* STRATEGI HEMAT - KANTONGKOS */
+
+.strategi-layout {
+  display: flex;
+  min-height: 100vh;
+  background: #f6f9f7;
+}
+
+.strategi-layout .strategi-content {
+  flex: 1;
+  min-width: 0;
+  padding: 35px 44px 40px 42px;
+}
+
+/* HEADER */
+
+.strategi-layout .strategi-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 20px;
+  margin-bottom: 36px;
+}
+
+.strategi-layout .strategi-header h1 {
+  margin: 0;
+  color: #193b32;
+  font-size: 30px;
+  font-weight: 700;
+}
+
+.strategi-layout .strategi-header p {
+  margin: 8px 0 0;
+  color: #81918a;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.strategi-layout .strategi-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  padding: 9px 18px;
+  border-radius: 999px;
+  background: #e6f3ee;
+  color: #147d66;
+  font-size: 13px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.strategi-badge-dot {
+  width: 8px;
+  height: 8px;
+  background: #147d66;
+  border-radius: 50%;
+}
+
+/* BANNER HIJAU */
+
+.strategi-layout .strategi-banner {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 30px;
+  align-items: center;
+  min-height: 140px;
+  padding: 25px 32px;
+  background: #147d66;
+  border-radius: 14px;
+  color: white;
+}
+
+.strategi-banner-total {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.strategi-banner-total span {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.strategi-banner-total strong {
+  font-size: 38px;
+  font-weight: 800;
+  line-height: 1.2;
+}
+
+.strategi-banner-description h2 {
+  margin: 0 0 9px;
+  font-size: 19px;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.strategi-banner-description p {
+  margin: 0;
+  color: #d0efe2;
+  font-size: 16px;
+}
+
+/* BAGIAN SKENARIO */
+
+.strategi-layout .strategi-skenario-section {
+  margin-top: 37px;
+}
+
+.strategi-section-heading h2 {
+  margin: 0;
+  color: #193b32;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.strategi-section-heading p {
+  margin: 8px 0 0;
+  color: #81918a;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.strategi-layout .strategi-skenario-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+  margin-top: 0;
+}
+
+.strategi-layout .strategi-skenario-card {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  min-height: 265px;
+  padding: 22px;
+  background: #ffffff;
+  border: 1px solid #dce9e2;
+  border-radius: 14px;
+  transition: border-color 0.2s, background 0.2s;
+}
+
+.strategi-layout .strategi-skenario-card.selected {
+  background: #e6f3ee;
+  border-color: #147d66;
+}
+
+.strategi-skenario-card h3 {
+  margin: 0;
+  color: #193b32;
+  font-size: 19px;
+  font-weight: 700;
+}
+
+.strategi-skenario-card .strategi-biaya {
+  display: block;
+  margin-top: 24px;
+  color: #147d66;
+  font-size: 34px;
+  font-weight: 800;
+  line-height: 1.15;
+}
+
+.strategi-skenario-card .strategi-periode {
+  display: block;
+  margin-top: 5px;
+  color: #81918a;
+  font-size: 13px;
+}
+
+.strategi-hemat-label {
+  display: flex;
+  align-items: center;
+  min-height: 38px;
+  margin-top: 21px;
+  padding: 9px 13px;
+  background: #eef3f0;
+  border-radius: 9px;
+  color: #147d66;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.strategi-skenario-card.selected .strategi-hemat-label {
+  background: #ffffff;
+}
+
+.strategi-layout .strategi-pilih-button {
+  width: 100%;
+  min-height: 46px;
+  margin-top: 14px;
+  padding: 8px 12px;
+  background: #ffffff;
+  color: #147d66;
+  border: 1px solid #dce9e2;
+  border-radius: 10px;
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.strategi-layout .strategi-pilih-button:hover {
+  background: #f0f7f3;
+}
+
+.strategi-layout .strategi-pilih-button.selected {
+  background: #147d66;
+  border-color: #147d66;
+  color: #ffffff;
+}
+
+.strategi-layout .strategi-pilih-button.selected:hover {
+  background: #106752;
+}
+
+/* PERBANDINGAN HASIL */
+
+.strategi-layout .strategi-perbandingan {
+  min-height: 153px;
+  margin-top: 33px;
+  padding: 20px 23px;
+  background: #ffffff;
+  border: 1px solid #e5ebe7;
+  border-radius: 14px;
+}
+
+.strategi-layout .strategi-perbandingan-content {
+  display: grid;
+  grid-template-columns: 1fr 45px 1.4fr;
+  align-items: center;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.strategi-sisa-awal {
+  color: #81918a;
+  font-size: 19px;
+  font-weight: 700;
+}
+
+.strategi-arrow {
+  color: #81918a;
+  font-size: 26px;
+  font-weight: 700;
+  text-align: center;
+}
+
+.strategi-sisa-akhir {
+  color: #147d66;
+  font-size: 19px;
+  font-weight: 700;
+  text-align: center;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 1100px) {
+  .strategi-layout .strategi-skenario-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .strategi-layout .strategi-skenario-card {
+    min-height: auto;
+  }
+}
+
+@media (max-width: 800px) {
+  .strategi-layout .strategi-content {
+    padding: 25px;
+  }
+
+  .strategi-layout .strategi-banner {
+    grid-template-columns: 1fr;
+  }
+
+  .strategi-layout .strategi-perbandingan-content {
+    grid-template-columns: 1fr;
+    gap: 10px;
+    text-align: center;
+  }
+
+  .strategi-sisa-akhir {
+    text-align: center;
+  }
+}
+
+@media (max-width: 600px) {
+  .strategi-layout .strategi-content {
+    padding: 20px;
+  }
+
+  .strategi-layout .strategi-header {
+    flex-wrap: wrap;
+  }
+
+  .strategi-layout .strategi-header h1 {
+    font-size: 25px;
+  }
+
+  .strategi-layout .strategi-banner {
+    padding: 22px;
+  }
+
+  .strategi-banner-total strong {
+    font-size: 31px;
+  }
+
+  .strategi-layout .strategi-perbandingan {
+    padding: 18px;
+  }
+}

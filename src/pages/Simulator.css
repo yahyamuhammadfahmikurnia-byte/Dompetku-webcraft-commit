@@ -1,0 +1,640 @@
+
+/* SIMULATOR KANTONGKOS - FIGMA */
+
+.simulator-layout {
+  display: flex;
+  min-height: 100vh;
+  background: #f6f9f7;
+}
+
+.simulator-layout .simulator-content {
+  flex: 1;
+  min-width: 0;
+  padding: 35px 44px 40px 42px;
+}
+
+/* HEADER */
+
+.simulator-layout .simulator-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 20px;
+  margin-bottom: 35px;
+}
+
+.simulator-layout .simulator-header h1 {
+  margin: 0;
+  color: #193b32;
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 1.25;
+}
+
+.simulator-layout .simulator-header p {
+  margin: 9px 0 0;
+  color: #81918a;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.simulator-layout .simulator-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  padding: 9px 19px;
+  border-radius: 999px;
+  background: #e6f3ee;
+  color: #147d66;
+  font-size: 13px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.simulator-badge-dot,
+.simulator-status-dot {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  background: #147d66;
+}
+
+/* TWO COLUMN LAYOUT */
+
+.simulator-layout .simulator-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.61fr) minmax(0, 1fr);
+  gap: 22px;
+  align-items: stretch;
+}
+
+.simulator-layout .simulator-card {
+  min-width: 0;
+  min-height: 692px;
+  padding: 27px 29px;
+  background: #ffffff;
+  border: 1px solid #e5ebe7;
+  border-radius: 15px;
+}
+
+.simulator-card-heading h2 {
+  margin: 0;
+  color: #193b32;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.simulator-card-heading p {
+  margin: 8px 0 0;
+  color: #81918a;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+/* FORM */
+
+.simulator-layout .simulator-form-card form {
+  margin-top: 7px;
+}
+
+.simulator-layout .simulator-fields-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  column-gap: 29px;
+  row-gap: 35px;
+}
+
+.simulator-layout .simulator-field {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  min-width: 0;
+  margin: 0;
+}
+
+.simulator-layout .simulator-field label {
+  color: #81918a;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.simulator-layout .simulator-field input,
+.simulator-layout .simulator-field select {
+  display: block;
+  width: 100%;
+  height: 52px;
+  min-width: 0;
+  padding: 0 15px;
+  border: 1px solid #dce9e2;
+  border-radius: 10px;
+  background: #ffffff;
+  color: #193b32;
+  font-family: inherit;
+  font-size: 15px;
+  outline: none;
+}
+
+.simulator-layout .simulator-field select {
+  appearance: none;
+  cursor: pointer;
+}
+
+.simulator-layout .simulator-field input:focus,
+.simulator-layout .simulator-field select:focus {
+  border-color: #147d66;
+  box-shadow: 0 0 0 3px #147d6620;
+}
+
+/* CHECKBOX BOX */
+
+.simulator-layout .simulator-option-box {
+  margin-top: 62px;
+  padding: 16px 19px;
+  background: #e6f3ee;
+  border-radius: 12px;
+}
+
+.simulator-layout .simulator-checkbox-label {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  color: #147d66;
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 1.5;
+  cursor: pointer;
+}
+
+.simulator-layout .simulator-checkbox-label input {
+  width: 15px;
+  height: 15px;
+  flex-shrink: 0;
+  margin: 2px 0 0;
+  accent-color: #147d66;
+}
+
+.simulator-layout .simulator-option-box p {
+  margin: 10px 0 0;
+  color: #81918a;
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+/* BUTTONS */
+
+.simulator-layout .simulator-actions {
+  display: grid;
+  grid-template-columns: minmax(0, 2fr) minmax(0, 1fr);
+  gap: 16px;
+  margin-top: 36px;
+}
+
+.simulator-layout .simulator-submit,
+.simulator-layout .simulator-reset {
+  width: 100%;
+  height: 46px;
+  margin: 0;
+  padding: 0 12px;
+  border-radius: 10px;
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.simulator-layout .simulator-submit {
+  background: #147d66;
+  color: #ffffff;
+  border: 1px solid #147d66;
+}
+
+.simulator-layout .simulator-submit:hover {
+  background: #106752;
+}
+
+.simulator-layout .simulator-reset {
+  background: #ffffff;
+  color: #147d66;
+  border: 1px solid #dce9e2;
+}
+
+.simulator-layout .simulator-reset:hover {
+  background: #f0f7f3;
+}
+
+/* RESULT CARD */
+
+.simulator-layout .simulator-result-card {
+  display: flex;
+  flex-direction: column;
+}
+
+.simulator-layout .simulator-balance {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 17px;
+  padding: 20px 23px;
+  min-height: 150px;
+  background: #e6f3ee;
+  border-radius: 12px;
+}
+
+.simulator-layout .simulator-balance > span {
+  color: #147d66;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.simulator-layout .simulator-balance > strong {
+  color: #147d66;
+  font-size: 36px;
+  font-weight: 800;
+  line-height: 1.2;
+  overflow-wrap: anywhere;
+}
+
+.simulator-layout .simulator-balance-status {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  color: #147d66;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+/* RESULT ROWS */
+
+.simulator-layout .simulator-result-details {
+  margin-top: 13px;
+}
+
+.simulator-layout .simulator-result-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  min-height: 65px;
+  padding: 12px 0;
+  margin: 0;
+  border-bottom: 1px solid #e5ebe7;
+}
+
+.simulator-layout .simulator-result-row span {
+  min-width: 0;
+  color: #81918a;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.simulator-layout .simulator-result-row strong {
+  flex-shrink: 0;
+  color: #193b32;
+  font-size: 15px;
+  font-weight: 700;
+  text-align: right;
+  white-space: nowrap;
+}
+
+/* ADVICE */
+
+.simulator-layout .simulator-advice {
+  margin-top: auto;
+  padding: 17px 19px;
+  min-height: 95px;
+  background: #fff4e4;
+  border-radius: 12px;
+}
+
+.simulator-layout .simulator-advice h3 {
+  margin: 0 0 10px;
+  color: #b66b13;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.simulator-layout .simulator-advice p {
+  margin: 0;
+  color: #a2783a;
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 1150px) {
+  .simulator-layout .simulator-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .simulator-layout .simulator-card {
+    min-height: auto;
+  }
+
+  .simulator-layout .simulator-advice {
+    margin-top: 35px;
+  }
+}
+
+@media (max-width: 800px) {
+  .simulator-layout .simulator-content {
+    padding: 25px;
+  }
+}
+
+@media (max-width: 600px) {
+  .simulator-layout .simulator-content {
+    padding: 20px;
+  }
+
+  .simulator-layout .simulator-header {
+    flex-wrap: wrap;
+  }
+
+  .simulator-layout .simulator-header h1 {
+    font-size: 25px;
+  }
+
+  .simulator-layout .simulator-card {
+    padding: 20px;
+  }
+
+  .simulator-layout .simulator-fields-grid {
+    grid-template-columns: 1fr;
+    row-gap: 20px;
+  }
+
+  .simulator-layout .simulator-option-box {
+    margin-top: 30px;
+  }
+
+  .simulator-layout .simulator-actions {
+    grid-template-columns: 1fr;
+  }
+
+  .simulator-layout .simulator-result-row {
+    flex-wrap: wrap;
+  }
+}
+
+/* SIMPAN HASIL SIMULASI */
+
+.simulator-layout .simulator-save-area {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 20px;
+  padding-top: 18px;
+  border-top: 1px solid #e5ebe7;
+}
+
+.simulator-layout .simulator-save-area label {
+  color: #81918a;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.simulator-layout .simulator-save-area input {
+  width: 100%;
+  height: 46px;
+  padding: 0 14px;
+  border: 1px solid #dce9e2;
+  border-radius: 10px;
+  background: #ffffff;
+  color: #193b32;
+  font: inherit;
+  font-size: 14px;
+  outline: none;
+}
+
+.simulator-layout .simulator-save-area input:focus {
+  border-color: #147d66;
+}
+
+.simulator-layout .simulator-save-button {
+  width: 100%;
+  height: 46px;
+  border: 1px solid #147d66;
+  border-radius: 10px;
+  background: #147d66;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.simulator-layout .simulator-save-button:hover {
+  background: #106752;
+}
+
+.simulator-layout .simulator-save-button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.simulator-layout .simulator-save-hint,
+.simulator-layout .simulator-save-message {
+  margin: 0;
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.simulator-layout .simulator-save-hint {
+  color: #81918a;
+}
+
+.simulator-layout .simulator-save-message {
+  color: #147d66;
+}
+
+/* =========================================
+   SIMULATOR - RESPONSIVE NAVIGATION
+   Tampilan desktop Figma tetap dipertahankan
+   ========================================= */
+
+/* DESKTOP */
+.simulator-layout .dashboard-mobile-header {
+  display: none;
+}
+
+.simulator-layout .dashboard-sidebar-overlay {
+  display: none;
+}
+
+.simulator-layout .dashboard-sidebar-wrapper {
+  flex-shrink: 0;
+}
+
+/* TABLET & HP */
+@media (max-width: 768px) {
+
+  .simulator-layout.dashboard-layout {
+    display: block;
+    min-height: 100vh;
+    overflow-x: clip;
+  }
+
+  /* Header mobile */
+  .simulator-layout .dashboard-mobile-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    position: sticky;
+    top: 0;
+    z-index: 1001;
+    width: 100%;
+    height: 60px;
+    padding: 0 16px;
+    box-sizing: border-box;
+    background: #ffffff;
+    border-bottom: 1px solid #e6eee9;
+  }
+
+  .simulator-layout .dashboard-menu-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 38px;
+    height: 38px;
+    flex-shrink: 0;
+    border: none;
+    border-radius: 10px;
+    background: #e6f3ee;
+    color: #147d66;
+    font-size: 23px;
+    cursor: pointer;
+  }
+
+  .simulator-layout .dashboard-mobile-brand {
+    color: #193b32;
+    font-size: 19px;
+    font-weight: 700;
+  }
+
+  /* Sidebar tersembunyi di luar layar */
+  .simulator-layout .dashboard-sidebar-wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1003;
+    width: min(300px, 85vw);
+    height: 100dvh;
+    background: #ffffff;
+    transform: translateX(-105%);
+    transition: transform 0.25s ease;
+    overflow-y: auto;
+    box-shadow: 4px 0 20px rgba(0, 0, 0, 0.08);
+  }
+
+  /* Sidebar saat dibuka */
+  .simulator-layout .dashboard-sidebar-wrapper.is-open {
+    transform: translateX(0);
+  }
+
+  .simulator-layout .dashboard-sidebar-wrapper .sidebar {
+    position: relative;
+    top: auto;
+    left: auto;
+    width: 100%;
+    min-width: 0;
+    max-width: none;
+    height: 100%;
+    min-height: 100%;
+    box-sizing: border-box;
+  }
+
+  /* Latar gelap saat Sidebar terbuka */
+  .simulator-layout .dashboard-sidebar-overlay {
+    display: block;
+    position: fixed;
+    inset: 0;
+    z-index: 1002;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    border: none;
+    background: rgba(0, 0, 0, 0.35);
+    cursor: pointer;
+  }
+
+  /* Konten utama */
+  .simulator-layout .simulator-content {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    margin-left: 0;
+    padding: 24px 16px;
+    box-sizing: border-box;
+  }
+
+  /* Header */
+  .simulator-layout .simulator-header {
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-bottom: 24px;
+  }
+
+  .simulator-layout .simulator-header h1 {
+    font-size: 25px;
+  }
+
+  /* Form dan hasil ditumpuk vertikal */
+  .simulator-layout .simulator-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 16px;
+  }
+
+  .simulator-layout .simulator-card {
+    min-width: 0;
+    min-height: auto;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+
+  /* Input tidak melewati batas kartu */
+  .simulator-layout .simulator-field input,
+  .simulator-layout .simulator-field select,
+  .simulator-layout .simulator-save-area input {
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+
+  /* Nominal tetap terbaca */
+  .simulator-layout .simulator-balance > strong {
+    font-size: clamp(24px, 7vw, 36px);
+    overflow-wrap: anywhere;
+  }
+}
+
+/* HP KECIL */
+@media (max-width: 480px) {
+
+  .simulator-layout .simulator-fields-grid {
+    grid-template-columns: minmax(0, 1fr);
+    row-gap: 20px;
+  }
+
+  .simulator-layout .simulator-actions {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 12px;
+  }
+
+  .simulator-layout .simulator-option-box {
+    margin-top: 30px;
+  }
+
+  .simulator-layout .simulator-result-row {
+    flex-wrap: wrap;
+  }
+
+  .simulator-layout .simulator-result-row strong {
+    max-width: 100%;
+    overflow-wrap: anywhere;
+    white-space: normal;
+  }
+}

@@ -1,0 +1,794 @@
+
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap");
+
+/* =========================
+   RESET DAN GLOBAL
+========================= */
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  min-height: 100%;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  background-color: #f6f9f7;
+  color: #193b32;
+}
+
+button,
+input {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+/* =========================
+   LOGIN DAN REGISTER
+========================= */
+
+.login-page {
+  display: grid;
+  grid-template-columns: 47.92% 52.08%;
+  min-height: 100vh;
+  background: #f6f9f7;
+}
+
+.login-left {
+  background: #147d66;
+  color: #ffffff;
+  padding: 70px 12%;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 29px;
+  font-weight: 700;
+}
+
+.brand-logo {
+  width: 46px;
+  height: 46px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #ffffff;
+  color: #147d66;
+  border-radius: 12px;
+  font-size: 26px;
+  font-weight: 700;
+}
+
+.hero {
+  margin-top: 115px;
+}
+
+.hero h1 {
+  margin: 0;
+  color: #ffffff;
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 1.3;
+  letter-spacing: -1px;
+}
+
+.hero p {
+  margin-top: 35px;
+  color: #d0efe2;
+  font-size: 19px;
+  line-height: 1.6;
+}
+
+.quote {
+  max-width: 520px;
+  margin-top: 95px;
+  padding: 26px 24px;
+  background: #ffffff16;
+  border-radius: 17px;
+  font-size: 22px;
+  line-height: 1.65;
+  font-weight: 700;
+}
+
+.login-right {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 195px 40px 70px;
+}
+
+.login-form-container {
+  width: 100%;
+  max-width: 486px;
+}
+
+.login-form-container h2 {
+  margin: 0;
+  color: #193b32;
+  font-size: 31px;
+  font-weight: 700;
+}
+
+.description {
+  margin: 16px 0 55px;
+  color: #81918a;
+  font-size: 16px;
+}
+
+.form-group {
+  margin-bottom: 29px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 12px;
+  color: #81918a;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.form-group input {
+  width: 100%;
+  height: 52px;
+  padding: 0 16px;
+  background: #ffffff;
+  border: 1px solid #dce9e2;
+  border-radius: 10px;
+  color: #193b32;
+  font-size: 16px;
+  outline: none;
+}
+
+.form-group input:focus {
+  border-color: #147d66;
+  box-shadow: 0 0 0 3px #147d6620;
+}
+
+.forgot-password {
+  display: flex;
+  justify-content: flex-end;
+  margin: -2px 0 25px;
+}
+
+.forgot-password a,
+.register a {
+  color: #147d66;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.forgot-password a {
+  font-size: 14px;
+}
+
+.login-button {
+  width: 100%;
+  height: 46px;
+  background: #147d66;
+  color: #ffffff;
+  border: none;
+  border-radius: 11px;
+  font-size: 15px;
+  font-weight: 700;
+  transition: background 0.2s;
+}
+
+.login-button:hover {
+  background: #106752;
+}
+
+.register {
+  margin-top: 47px;
+  color: #81918a;
+  font-size: 15px;
+  text-align: center;
+}
+
+/* =========================
+   DASHBOARD LAYOUT
+========================= */
+
+.dashboard-layout {
+  display: flex;
+  width: 100%;
+  min-height: 100vh;
+  background: #f6f9f7;
+}
+
+/* =========================
+   SIDEBAR
+========================= */
+
+.sidebar {
+  width: 252px;
+  flex: 0 0 252px;
+  min-height: 100vh;
+  padding: 30px 16px;
+  background: #ffffff;
+  border-right: 1px solid #e5ebe7;
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebar h2 {
+  margin: 0 0 35px;
+  color: #193b32;
+  font-size: 23px;
+  font-weight: 700;
+}
+
+.sidebar nav {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.sidebar nav a {
+  display: flex;
+  align-items: center;
+  min-height: 46px;
+  padding: 12px 15px;
+  color: #81918a;
+  text-decoration: none;
+  font-size: 14px;
+  border-radius: 9px;
+  transition: background 0.2s, color 0.2s;
+}
+
+.sidebar nav a:hover {
+  background: #f0f7f3;
+  color: #147d66;
+}
+
+.sidebar nav a.active {
+  background: #e6f3ee;
+  color: #147d66;
+  font-weight: 700;
+}
+
+/* =========================
+   DASHBOARD CONTENT
+========================= */
+
+.dashboard-content {
+  flex: 1;
+  min-width: 0;
+  padding: 35px 44px 40px 42px;
+}
+
+.dashboard-content h1 {
+  margin: 0 0 10px;
+  color: #193b32;
+  font-size: 30px;
+  font-weight: 700;
+}
+
+.dashboard-content > p {
+  margin: 0;
+  color: #81918a;
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+/* =========================
+   KARTU RINGKASAN
+========================= */
+
+.summary-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+  margin-top: 37px;
+}
+
+.summary-card {
+  min-width: 0;
+  min-height: 145px;
+  padding: 20px 23px;
+  background: #ffffff;
+  border: 1px solid #e5ebe7;
+  border-radius: 14px;
+}
+
+.summary-card p {
+  margin: 0;
+  color: #81918a;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.summary-card h2 {
+  margin: 16px 0 0;
+  color: #193b32;
+  font-size: 30px;
+  font-weight: 700;
+  overflow-wrap: anywhere;
+}
+
+.summary-card.primary {
+  background: #147d66;
+  border-color: #147d66;
+}
+
+.summary-card.primary p,
+.summary-card.primary h2 {
+  color: #ffffff;
+}
+
+/* =========================
+   PANEL DASHBOARD
+========================= */
+
+.dashboard-panels {
+  display: grid;
+  grid-template-columns: minmax(0, 685fr) minmax(0, 398fr);
+  gap: 19px;
+  margin-top: 22px;
+  align-items: stretch;
+}
+
+.dashboard-panels .budget-card,
+.dashboard-panels .saving-assistant {
+  width: 100%;
+  max-width: none;
+  min-width: 0;
+  min-height: 339px;
+  margin: 0;
+}
+
+/* =========================
+   ALOKASI ANGGARAN
+========================= */
+
+.budget-card {
+  padding: 23px;
+  background: #ffffff;
+  border: 1px solid #e5ebe7;
+  border-radius: 14px;
+}
+
+.budget-card h3 {
+  margin: 0;
+  color: #193b32;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.budget-card > p {
+  margin: 8px 0 0;
+  color: #81918a;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.budget-body {
+  display: grid;
+  grid-template-columns: 188px minmax(0, 1fr);
+  gap: 26px;
+  align-items: center;
+  margin-top: 24px;
+}
+
+.budget-donut {
+  width: 188px;
+  height: 188px;
+  min-width: 0;
+  flex-shrink: 0;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.budget-center {
+  width: 130px;
+  height: 130px;
+  background: #ffffff;
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.budget-center strong {
+  color: #193b32;
+  font-size: 30px;
+  font-weight: 700;
+}
+
+.budget-center span {
+  color: #81918a;
+  font-size: 13px;
+}
+
+.budget-legend {
+  width: 100%;
+  min-width: 0;
+}
+
+.budget-item {
+  display: grid;
+  grid-template-columns: 12px minmax(0, 1fr) auto;
+  gap: 12px;
+  align-items: center;
+  margin-bottom: 20px;
+  min-width: 0;
+  font-size: 14px;
+}
+
+.budget-item:last-child {
+  margin-bottom: 0;
+}
+
+.budget-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 4px;
+}
+
+.budget-name {
+  min-width: 0;
+  color: #81918a;
+  line-height: 1.4;
+}
+
+.budget-item strong {
+  color: #193b32;
+  font-size: 13px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+/* =========================
+   ASISTEN HEMAT
+========================= */
+
+.saving-assistant {
+  display: flex;
+  flex-direction: column;
+  padding: 23px;
+  background: #ffffff;
+  border: 1px solid #e5ebe7;
+  border-radius: 14px;
+}
+
+.saving-assistant h3 {
+  margin: 0;
+  color: #193b32;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+.saving-description {
+  margin: 10px 0 24px;
+  color: #81918a;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.saving-insight {
+  flex: 1;
+  min-height: 155px;
+  padding: 18px 20px;
+  background: #e6f3ee;
+  border-radius: 12px;
+}
+
+.saving-insight h4 {
+  margin: 0 0 14px;
+  color: #147d66;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.saving-insight p {
+  margin: 0;
+  color: #193b32;
+  font-size: 14px;
+  line-height: 1.65;
+}
+
+.saving-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  min-height: 46px;
+  margin-top: 19px;
+  padding: 10px 14px;
+  background: #147d66;
+  color: #ffffff;
+  border-radius: 10px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.4;
+}
+
+.saving-button:hover {
+  background: #106752;
+}
+
+/* =========================
+   SIMULASI CEPAT
+========================= */
+
+.quick-simulation {
+  width: 100%;
+  min-height: 184px;
+  margin-top: 19px;
+  padding: 20px 24px 24px;
+  background: #ffffff;
+  border: 1px solid #e5ebe7;
+  border-radius: 14px;
+}
+
+.quick-simulation h3 {
+  margin: 0;
+  color: #193b32;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.quick-simulation > p {
+  margin: 8px 0 16px;
+  color: #81918a;
+  font-size: 13px;
+}
+
+.quick-form {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr 0.82fr;
+  gap: 19px;
+  align-items: end;
+}
+
+.quick-field {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+  min-width: 0;
+}
+
+.quick-field label {
+  color: #81918a;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.quick-field input {
+  width: 100%;
+  height: 52px;
+  padding: 0 16px;
+  background: #ffffff;
+  border: 1px solid #dce9e2;
+  border-radius: 10px;
+  color: #193b32;
+  font-size: 16px;
+  outline: none;
+}
+
+.quick-field input:focus {
+  border-color: #147d66;
+}
+
+.quick-button {
+  height: 46px;
+  padding: 0 14px;
+  background: #147d66;
+  color: #ffffff;
+  border: none;
+  border-radius: 10px;
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.quick-button:hover {
+  background: #106752;
+}
+
+/* =========================
+   RESPONSIVE TABLET
+========================= */
+
+@media (max-width: 1250px) {
+  .dashboard-panels {
+    grid-template-columns: 1fr;
+  }
+
+  .dashboard-panels .budget-card,
+  .dashboard-panels .saving-assistant {
+    min-height: auto;
+  }
+
+  .saving-insight {
+    flex: initial;
+  }
+}
+
+@media (max-width: 1000px) {
+  .quick-form {
+    grid-template-columns: 1fr;
+  }
+
+  .quick-button {
+    width: 100%;
+  }
+}
+
+@media (max-width: 900px) {
+  .login-page {
+    grid-template-columns: 1fr;
+  }
+
+  .login-left {
+    padding: 35px 8%;
+  }
+
+  .hero {
+    margin-top: 45px;
+  }
+
+  .hero h1 {
+    font-size: 35px;
+  }
+
+  .hero p {
+    font-size: 15px;
+  }
+
+  .hero p br {
+    display: none;
+  }
+
+  .quote {
+    margin-top: 30px;
+    font-size: 17px;
+  }
+
+  .login-right {
+    padding: 65px 25px;
+  }
+
+  .login-form-container h2 {
+    font-size: 25px;
+  }
+
+  .sidebar {
+    width: 200px;
+    flex-basis: 200px;
+    padding: 24px 12px;
+  }
+
+  .dashboard-content {
+    padding: 25px;
+  }
+}
+
+@media (max-width: 800px) {
+  .summary-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* =========================
+   RESPONSIVE MOBILE
+========================= */
+
+@media (max-width: 600px) {
+  .dashboard-layout {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100%;
+    min-height: auto;
+    flex-basis: auto;
+    padding: 20px;
+    border-right: none;
+    border-bottom: 1px solid #e5ebe7;
+  }
+
+  .sidebar nav {
+    flex-direction: row;
+    overflow-x: auto;
+    gap: 8px;
+  }
+
+  .sidebar nav a {
+    white-space: nowrap;
+  }
+
+  .dashboard-content {
+    padding: 20px;
+  }
+
+  .dashboard-content h1 {
+    font-size: 25px;
+  }
+
+  .budget-body {
+    grid-template-columns: 1fr;
+    justify-items: center;
+  }
+
+  .budget-legend {
+    width: 100%;
+  }
+
+  .summary-card h2 {
+    font-size: 26px;
+  }
+
+  .quick-simulation {
+    padding: 20px;
+  }
+  
+}
+
+.dashboard-panels {
+  display: flex !important;
+  flex-wrap: wrap !important;
+  align-items: stretch;
+  gap: 19px;
+  width: 100%;
+}
+
+.dashboard-panels > .budget-card {
+  flex: 1 1 600px !important;
+  width: auto !important;
+  max-width: none !important;
+  min-width: 0;
+  margin: 0 !important;
+  overflow: visible !important;
+}
+
+.dashboard-panels > .saving-assistant {
+  flex: 1 1 350px !important;
+  width: auto !important;
+  max-width: none !important;
+  min-width: 0;
+  margin: 0 !important;
+}
+
+.budget-body {
+  display: grid;
+  grid-template-columns: 188px minmax(0, 1fr);
+  gap: 24px;
+}
+
+.budget-legend {
+  min-width: 0;
+}
+
+.budget-item {
+  display: grid;
+  grid-template-columns: 12px minmax(0, 1fr) auto;
+  gap: 10px;
+}
+
+@media (max-width: 550px) {
+  .budget-body {
+    grid-template-columns: 1fr;
+  }
+
+  .budget-legend {
+    width: 100%;
+  }
+}
