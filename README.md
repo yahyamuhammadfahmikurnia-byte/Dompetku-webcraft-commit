@@ -1,18 +1,14 @@
 # Dompetku
 
-<<<<<<< HEAD
 ## Contributors
 
 **Project:** Dompetku  
-**Team:** [6/11, 20.03] yahya: nama timnya apa
-[7/11, 16.17] ~hasan: nama tim kita ini aja
-[7/11, 16.18] yahya: yang lebih lucu dong san
-[7/11, 16.20] ~hasan: "nama timnya apa"ini aja
+**Team:** [Team Name]
 
 |Yahya Muhammad Fahmi Kurnia| 
 |Hasan Izzudin|
 |Faisal Adi Nurhidayah|
-|Reiner Satrio Adi Saputro|
+|reiner Satrio Adi Saputro|
 
 **Personal Finance Management for Students**
 
@@ -27,21 +23,6 @@ The application provides financial simulations, spending strategies, savings goa
 
 ## Overview
 
-=======
-**Personal Finance Management for Students**
-
-Dompetku is a web-based personal finance application designed to help university students, particularly those living independently, manage their monthly budgets and plan their savings more effectively.
-
-The application provides financial simulations, spending strategies, savings goals, and financial summaries through a simple, responsive interface.
-
-**Live Website:** https://dompetku-joss.web.app  
-**Repository:** https://github.com/yahyamuhammadfahmikurnia-byte/Dompetku-webcraft-commit
-
----
-
-## Overview
-
->>>>>>> b5cba140dbc32ec266f0a3a890bea45908269ea9
 Managing personal finances can be challenging for students with limited monthly allowances. Dompetku provides a practical way to understand spending patterns, estimate remaining budgets, and plan financial goals.
 
 Instead of focusing only on expense tracking, the application emphasizes financial planning through interactive simulations and personalized budgeting scenarios.
@@ -160,7 +141,7 @@ npm run build
 npx firebase deploy --only hosting --project dompetku-f73e4
 ```
 
-**Production URL:** https://dompetku-f73e4.web.app
+**Production URL:** https://dompetku-joss.web.app
 
 ## Data Management
 
@@ -187,14 +168,6 @@ Third-party assets and dependencies remain subject to their respective licenses.
 
 ## Contributors
 
-**Project:** Dompetku  
-**Team:** [Team Name]
-
-| Name | Student ID |
-|---|---|
-| [Full Name] | [Student ID] |
-| [Full Name] | [Student ID] |
-| [Full Name] | [Student ID] |
 
 ---
 
