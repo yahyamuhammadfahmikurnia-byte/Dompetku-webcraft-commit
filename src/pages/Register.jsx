@@ -161,10 +161,10 @@ export default function Register() {
 
       <section className="login-right">
         <div className="login-form-container">
-          <h2>Buat akun Dompetku ✨</h2>
+          <h2>Segera daftar ke dompetku!</h2>
 
           <p className="description">
-            Daftar untuk mulai merencanakan keuanganmu.
+            Daftar untuk mulai rencanakan keuanganmu.
           </p>
 
           <form onSubmit={handleRegister}>

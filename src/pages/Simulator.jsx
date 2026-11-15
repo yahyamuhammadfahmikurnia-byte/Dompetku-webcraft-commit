@@ -270,7 +270,7 @@ export default function Simulator() {
           <div>
             <h1>Simulator Keuangan</h1>
             <p>
-             Isi kebutuhanmu untuk melihat anggaranmu.
+             Isi kebutuhan, sesuaikan anggaran.
             </p>
           </div>
 
